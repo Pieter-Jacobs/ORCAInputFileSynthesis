@@ -1,0 +1,14 @@
+!pal6 6-311g* rhf rijcosx strongscf autoaux opt looseopt noautostart
+%scf ConvForced true end
+%mp2 Density unrelaxed end
+%geom
+Scan
+B 0 1 = 1.59, 3.19, 5
+end
+end
+#FS
+*xyz 0 1 
+F   1.181800000  -0.251600000   0.000000000
+S  -0.147400000   0.628600000   0.000000000
+H  -1.034500000  -0.377000000   0.000000000
+*

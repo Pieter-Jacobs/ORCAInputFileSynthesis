@@ -1,0 +1,11 @@
+!pal6 pc-2 rhfb1lyp
+%mm
+CoulombCutOff 12. 
+ShiftForceCoulomb true 
+end
+#N(hashtag)[SH]
+*xyz 0 1 
+N   1.262900000  -0.231100000   0.000000000
+S  -0.214500000   0.640700000   0.000000000
+H  -1.048300000  -0.409600000   0.000000000
+*

@@ -1,0 +1,12 @@
+!pal6 tightscf maug-cc-pv(t+d)z aox-ncepa/1 uhf uno autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+density unrelaxed
+UseQROs true
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

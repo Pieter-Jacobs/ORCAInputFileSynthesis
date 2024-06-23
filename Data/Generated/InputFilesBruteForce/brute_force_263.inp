@@ -1,0 +1,10 @@
+!pal6 x2c/j tightscf mp2
+%method
+correlation mgga_c_m06_l
+LibXCZetaThreshold 2e-16 
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

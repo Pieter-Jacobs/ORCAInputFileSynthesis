@@ -1,0 +1,16 @@
+!pal6 tightscf x2c-sv(p)all b97m-d3bj ri defgrid3 gdiis-opt tightopt noautostart numfreq engrad autoaux
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 2 = 1.03, 2.05, 5
+end
+end
+%freq
+CentralDiff false
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

@@ -1,0 +1,9 @@
+! wb97m-v def2-qzvpp rijcosx def2/j finalgrid4 miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+#s=s=s
+*xyz 0 1 
+s   1.633100000  -0.418500000   0.000000000
+s  -0.000000000   0.837000000   0.000000000
+s  -1.633100000  -0.418500000   0.000000000
+*

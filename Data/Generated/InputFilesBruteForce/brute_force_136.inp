@@ -1,0 +1,7 @@
+!pal6 cc-pvdz-f12-mp2fit ri-cpf/1 dlpno-b2plyp numgrad reducedpop uco lpno-ncpf/1 smear tightpno normalopt
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 tightscf x2c-qzvppall-2c steom-ccsd rhf autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+locRandom 0
+end
+#N(hashtag)P
+*xyz 0 1 
+N   0.745700000   0.000000000   0.000000000
+P  -0.745700000   0.000000000   0.000000000
+*

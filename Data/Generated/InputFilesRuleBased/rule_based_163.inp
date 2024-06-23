@@ -1,0 +1,17 @@
+!pal6 ano-pvqz uhf rijcosx autoaux gdiis-opt verytightopt noautostart
+%geom
+Scan
+B 0 2 = 3.25, 6.50, 5
+end
+Constraints
+{B 0 1 1.85 C}
+{B 0 2 3.25 C}
+{B 1 2 1.40 C}
+end
+end
+#P(hashtag)[PH]
+*xyz 0 2 
+P   1.698000000   0.000800000   0.000000000
+P  -0.147000000  -0.001800000   0.000000000
+H  -1.551000000   0.001000000   0.000000000
+*

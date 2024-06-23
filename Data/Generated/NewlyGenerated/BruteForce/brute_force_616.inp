@@ -1,0 +1,11 @@
+!pal6 pc-0 ri34-ccsd(t) zeff-soc dlpno-hfc1 rks ncepa/1
+%mdci
+MaxIter 200
+PrintLevel 2 
+end
+#C1(hashtag)SS1
+*xyz 0 1 
+C   0.000000000  -0.840100000   0.000000000
+S   1.106400000   0.420100000   0.000000000
+S  -1.106400000   0.420100000   0.000000000
+*

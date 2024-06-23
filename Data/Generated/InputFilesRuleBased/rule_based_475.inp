@@ -1,0 +1,17 @@
+!pal6 tightscf pcj-1 tpss defgrid3 gdiis-opt tightopt noautostart anfreq autoaux
+%geom
+Constraints
+{B 0 1 0.97 C}
+{B 0 2 0.97 C}
+{B 1 2 1.53 C}
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#O
+*xyz 0 1 
+O   0.000000000   0.397800000   0.000000000
+H   0.763500000  -0.198900000   0.000000000
+H  -0.763500000  -0.198900000   0.000000000
+*

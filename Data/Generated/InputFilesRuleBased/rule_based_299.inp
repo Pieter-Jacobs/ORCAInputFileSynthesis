@@ -1,0 +1,14 @@
+!pal6 tightscf cc-pvtz-f12-optri ri34-qcisd(t) rhf autoaux anfreq defgrid3 autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%freq
+Hess2ElFlags 1,2,2,1
+end
+#N(hashtag)P=S
+*xyz 0 1 
+N   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+S  -0.000000000  -3.000000000   0.000000000
+*

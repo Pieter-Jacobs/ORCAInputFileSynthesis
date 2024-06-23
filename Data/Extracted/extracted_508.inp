@@ -1,0 +1,16 @@
+!uks b3lyp opt freq def2-svp def2/j rijcosx uno uco nofinalgrid nofinalgridx d3bj usesym moread slowconv defgrid3
+%pal nprocs 32
+end
+%moinp "opt_feiv_bistsmp_is_b3lyp_6_31gdp.gbw"
+%method symthresh 5.0e-2 
+end
+%maxcore 7500
+%scf
+maxiter 900
+end
+#[nh]f
+*xyz 0 2 
+n  -0.171500000   0.447300000   0.000000000
+f   1.064100000  -0.164900000   0.000000000
+h  -0.892600000  -0.282500000   0.000000000
+*

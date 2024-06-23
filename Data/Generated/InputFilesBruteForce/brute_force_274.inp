@@ -1,0 +1,11 @@
+!pal6 ano-pvtz cpcm(acetonitrile) nosmear lshift ri-nevpt2
+%mm
+Do_NB_For_Fixed_Fixed true 
+Rigid_MM_Water false 
+end
+#N1=NS1
+*xyz 0 1 
+N  -0.516200000   0.620200000   0.000000000
+N  -0.516200000  -0.620200000   0.000000000
+S   1.032400000  -0.000000000   0.000000000
+*

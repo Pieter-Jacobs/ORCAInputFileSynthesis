@@ -1,0 +1,18 @@
+!pal6 tightscf aug-pcsseg-4 b97m-d4 defgrid3 gdiis-opt tightopt noautostart numfreq engrad autoaux
+%scf AutoTRAH false end
+%geom
+Constraints
+{B 0 1 1.03 C}
+{B 0 2 1.03 C}
+{B 1 2 1.66 C}
+end
+end
+%freq
+CentralDiff false
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

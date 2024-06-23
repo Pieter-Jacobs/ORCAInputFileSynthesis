@@ -1,0 +1,15 @@
+!pal6 cc-pvtz-dk rhf gdiis-opt tightopt noautostart anfreq defgrid3 autoaux
+%geom
+Scan
+B 0 2 = 1.44, 2.89, 5
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#o1oo1
+*xyz 0 1 
+O  -0.641300000  -0.532500000  -0.000000000
+O  -0.140500000   0.821600000   0.000000000
+O   0.781800000  -0.289100000  -0.000000000
+*

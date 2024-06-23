@@ -1,0 +1,17 @@
+!pal6 rijcosx
+%scf
+FlipSpin 1
+# Flip spin is a vector and you can give a list of atoms
+# on which you want to have the spin flipped. For example
+# FlipSpin 17,38,56
+# REMEMBER: counting starts at atom 0!
+FinalMs 0
+# The desired Ms value of the broken symmetry determinant.
+# This value MUST be given since the program cannot determine it by itself.
+end
+#N(hashtag)CCl
+*xyz 0 1 
+N  -1.360700000   0.000000000   0.000000000
+C  -0.200700000  -0.000000000   0.000000000
+Cl   1.561300000   0.000000000   0.000000000
+*

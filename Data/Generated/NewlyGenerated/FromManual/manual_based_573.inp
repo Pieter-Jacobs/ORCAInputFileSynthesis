@@ -1,0 +1,12 @@
+!pal6 dlpno-mp2 def2-svp def2-svp/c verytightscf
+%tddft XASLoc[0] = 1,4
+OrbWin[0] = 1,1,-1,-1
+NRoots 25
+DoQuad true
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

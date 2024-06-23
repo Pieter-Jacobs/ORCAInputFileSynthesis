@@ -1,0 +1,10 @@
+!pal6 x2c-svpall-2c cpcm cpcm(ammonia) soscf aox-ncepa/1
+%output
+PrintLevel Mini
+end
+#O=C=S
+*xyz 0 1 
+O  -1.383400000  -0.000000000   0.000000000
+C  -0.207400000   0.000000000   0.000000000
+S   1.590900000  -0.000000000   0.000000000
+*

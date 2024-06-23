@@ -1,0 +1,13 @@
+!pal16 tightscf pcSseg-4 b97m-v ri defgrid2 gdiis-opt normalopt noautostart
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 2 = 3.60, 7.19, 5
+end
+end
+#S=C=S
+*xyz 0 1 
+S  -1.798300000  -0.000000000   0.000000000
+C   0.000000000   0.000000000   0.000000000
+S   1.798300000  -0.000000000   0.000000000
+*

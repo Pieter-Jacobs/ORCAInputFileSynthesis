@@ -1,0 +1,12 @@
+!pal6 zora-def2-sv(p) normalprint diis ao-ncpf/1
+%elprop
+Tol 1e-3
+Solver Pople 
+Solver DIIS
+end
+#FP=S
+*xyz 0 1 
+F  -1.214500000  -0.523100000   0.000000000
+P  -0.301300000   0.786000000   0.000000000
+S   1.515800000  -0.262900000   0.000000000
+*

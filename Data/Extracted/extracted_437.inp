@@ -1,0 +1,14 @@
+! wb97x-d3 tightopt freq def2-tzvpp def2/j rijcosx tightscf defgrid3 chelpg
+%maxcore 6144
+%pal nprocs 8 
+end
+%chelpg
+grid 0.1
+rmax 3.0
+end
+#n1=s=p1
+*xyz 0 1 
+n   0.023600000  -0.887900000   0.000000000
+s   1.045100000   0.458800000  -0.000000000
+p  -1.068700000   0.429100000  -0.000000000
+*

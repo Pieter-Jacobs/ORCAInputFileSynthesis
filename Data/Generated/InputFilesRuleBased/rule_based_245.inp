@@ -1,0 +1,11 @@
+!pal6 tightscf ano-pvqz b97m-d3bj defgrid3 opt tightopt noautostart numfreq engrad autoaux
+%scf AutoTRAH false end
+
+%freq
+CentralDiff false
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

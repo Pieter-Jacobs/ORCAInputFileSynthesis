@@ -1,0 +1,19 @@
+!pal6 tightscf aug-pcj-2 aox-cpf/1 uhf uno autoaux gdiis-opt verytightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Constraints
+{B 0 1 1.73 C}
+{B 0 2 2.34 C}
+{B 1 2 1.42 C}
+end
+end
+#N(hashtag)[PH]
+*xyz 0 2 
+N   1.259800000   0.260200000   0.000000000
+P  -0.190600000  -0.689800000   0.000000000
+H  -1.069200000   0.429600000   0.000000000
+*

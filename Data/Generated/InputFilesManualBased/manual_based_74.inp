@@ -1,0 +1,23 @@
+!dlpno-mp2 def2-svp def2-svp/c verytightscf
+%method
+Method DFT
+DoMP2 True
+Exchange X_PBE
+Correlation C_B95
+LDAOpt C_PWLDA # specific for B95
+ScalDFX 0.34
+ScalHFX 0.66
+ScalGGAC 0.55
+ScalLDAC 0.55 # must be equal to ScalGGAC
+ScalMP2C 1.00 # for all DSD-DFs
+D3S6 0.61
+D3S8 0
+D3A1 0 # for all DSD-DFs
+D3A2 6.2
+end
+#N1=P(hashtag)S1
+*xyz 0 1 
+N  -0.023600000   0.887900000   0.000000000
+P   1.068700000  -0.429100000   0.000000000
+S  -1.045100000  -0.458800000   0.000000000
+*

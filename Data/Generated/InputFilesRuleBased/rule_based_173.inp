@@ -1,0 +1,10 @@
+!pal6 sapporo-qzp-2012 rhf dlpno-b2plyp extremescf normalpno autoaux numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+
+#O=S=O
+*xyz 0 1 
+O  -1.382400000  -0.305000000   0.000000000
+S  -0.000000000   0.610000000   0.000000000
+O   1.382400000  -0.305000000   0.000000000
+*

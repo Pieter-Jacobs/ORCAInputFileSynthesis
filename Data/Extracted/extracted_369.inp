@@ -1,0 +1,18 @@
+! wb97x-d3bj opt freq def2-tzvpp def2/j rijcosx verytightscf
+! pal8 defgrid3 verytightopt
+%maxcore 4096
+%geom				    maxiter 300
+    calc_hess true
+end
+%chelpg			  grid 0.1
+  rmax 3.0
+end
+%method
+  z_tol    1e-10
+end
+#n(hashtag)p=s
+*xyz 0 1 
+n   0.000000000   0.000000000   0.000000000
+p  -0.000000000  -1.500000000   0.000000000
+s  -0.000000000  -3.000000000   0.000000000
+*

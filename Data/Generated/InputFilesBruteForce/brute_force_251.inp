@@ -1,0 +1,10 @@
+!pal6 zora-def2-tzvpp ri-somf(1x) scfconv7 ao-ccsd
+%output
+PrintLevel Nothing
+end
+#[PH]Cl
+*xyz 0 2 
+P  -0.360200000   0.709200000   0.000000000
+Cl   1.464400000  -0.205400000   0.000000000
+H  -1.104200000  -0.503800000   0.000000000
+*

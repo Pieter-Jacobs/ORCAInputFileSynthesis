@@ -1,0 +1,15 @@
+!pal6 tightscf pcj-4 dlpno-pbe-qidh rijcosx defgrid3 rhf d3bj autoaux autoaux numfreq engrad
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%mp2 Density unrelaxed end
+
+#N(hashtag)SF
+*xyz 0 1 
+N  -1.284000000   0.329800000   0.000000000
+S   0.071500000  -0.721600000   0.000000000
+F   1.212500000   0.391800000   0.000000000
+*

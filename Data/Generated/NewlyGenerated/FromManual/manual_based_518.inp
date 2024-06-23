@@ -1,0 +1,10 @@
+!pal6 hf def2-svp uhf tightscf pmodel
+%qmmm
+ORCAFFFilename "UBQ.ORCAFF.prms"
+end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

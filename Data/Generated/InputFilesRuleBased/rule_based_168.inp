@@ -1,0 +1,15 @@
+!pal6 6-31+g** rhf opt tightopt noautostart anfreq defgrid3 autoaux
+%geom
+Scan
+B 0 2 = 2.46, 4.92, 5
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#O=NCl
+*xyz 0 1 
+O  -1.111500000  -0.338100000   0.000000000
+N  -0.230600000   0.527500000   0.000000000
+Cl   1.342200000  -0.189400000   0.000000000
+*

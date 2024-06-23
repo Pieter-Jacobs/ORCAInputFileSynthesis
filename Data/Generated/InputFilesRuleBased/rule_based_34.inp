@@ -1,0 +1,13 @@
+!pal6 tightscf aug-ano-pvqz ri-cisd uhf uno autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+density orbopt
+UseQROs true
+end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

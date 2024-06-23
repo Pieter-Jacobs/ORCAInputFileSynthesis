@@ -1,0 +1,15 @@
+!pal6 b3lyp def2-tzvp opt bohrs
+%geom
+AddExtraBonds true # switch on/off assigning bonds to atom pairs that are
+# connected by more than <Max_Length> bonds and are less
+# than <MaxDist> Ang. apart (default true)
+AddExtraBonds_MaxLength 10 # cutoff for number of bonds connecting the two
+# atoms (default 10)
+AddExtraBonds_MaxDist 5 # cutoff for distance between two atoms (default 5 Ang.)
+end
+#OF
+*xyz 0 1 
+O  -0.207900000   0.422000000   0.000000000
+F   1.090500000  -0.144300000   0.000000000
+H  -0.882600000  -0.277700000   0.000000000
+*

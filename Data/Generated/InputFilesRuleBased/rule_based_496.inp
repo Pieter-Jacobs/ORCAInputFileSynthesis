@@ -1,0 +1,17 @@
+!pal6 x2c-qzvppall-s rhf gdiis-opt tightopt noautostart anfreq defgrid3 autoaux
+%geom
+Constraints
+{B 0 1 1.80 C}
+{B 0 2 3.60 C}
+{B 1 2 1.80 C}
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#S=C=S
+*xyz 0 1 
+S  -1.798300000  -0.000000000   0.000000000
+C   0.000000000   0.000000000   0.000000000
+S   1.798300000  -0.000000000   0.000000000
+*

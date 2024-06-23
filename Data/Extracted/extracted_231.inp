@@ -1,0 +1,8 @@
+! sp uhf def2-svp rijcosx def2/j miniprint nomoprint
+%pal nprocs 40 end
+%maxcore 4300
+#[sh]
+*xyz 0 2 
+s   0.676600000   0.000000000   0.000000000
+h  -0.676600000   0.000000000   0.000000000
+*

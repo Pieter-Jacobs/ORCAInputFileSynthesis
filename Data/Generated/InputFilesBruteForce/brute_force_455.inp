@@ -1,0 +1,10 @@
+!pal6 aug-cc-pvqz/jk loosepno veryslowconv dlpno-hfc2 angs nodiis cpcm(hexane)
+%md
+Timestep 1.0_fs
+end
+#FSF
+*xyz 0 1 
+F  -1.202300000  -0.349000000   0.000000000
+S   0.000000000   0.698000000   0.000000000
+F   1.202300000  -0.349000000   0.000000000
+*

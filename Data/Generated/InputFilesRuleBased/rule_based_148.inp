@@ -1,0 +1,18 @@
+!pal6 tightscf saug-ano-pvqz mo-ccsd(t) rhf autoaux opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Scan
+B 0 1 = 1.14, 2.28, 5
+end
+Constraints
+{B 0 1 1.14 C}
+end
+end
+#O=O
+*xyz 0 1 
+O   0.570800000   0.000000000   0.000000000
+O  -0.570800000   0.000000000   0.000000000
+*

@@ -1,0 +1,26 @@
+!pal6 tightscf jun-cc-pv(d+d)z dlpno-ccsd(t) rohf uno tightpno autoaux gdiis-opt tightopt noautostart numgrad engrad numfreq defgrid3 autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Scan
+B 1 2 = 2.27, 4.54, 5
+end
+Constraints
+{B 0 1 1.73 C}
+{B 0 2 1.03 C}
+{B 1 2 2.27 C}
+end
+end
+%freq
+Hess2ElFlags 1,2,2,1
+CentralDiff false
+end
+#[NH]Cl
+*xyz 0 2 
+N  -0.327100000   0.467100000   0.000000000
+Cl   1.294100000  -0.132200000   0.000000000
+H  -0.967000000  -0.334900000   0.000000000
+*

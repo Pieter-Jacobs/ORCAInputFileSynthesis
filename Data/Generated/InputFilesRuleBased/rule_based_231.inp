@@ -1,0 +1,14 @@
+!pal6 tightscf aug-pcseg-2 ri-b2k-plyp nofinalgridx uhf d3bj autoaux
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%mp2 Density relaxed end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

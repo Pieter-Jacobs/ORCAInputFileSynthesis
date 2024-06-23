@@ -1,0 +1,10 @@
+!pal6 ma-dkh-def2-sv(p) loosescf ao-ccsd(t) cpcm(dmf) veff-soc
+%conical
+ETOL 1e-4 
+end
+#N(hashtag)[PH]
+*xyz 0 2 
+N   1.259800000   0.260200000   0.000000000
+P  -0.190600000  -0.689800000   0.000000000
+H  -1.069200000   0.429600000   0.000000000
+*

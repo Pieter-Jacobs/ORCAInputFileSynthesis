@@ -1,0 +1,23 @@
+!pal6 tightscf def2-TZVPP lda rijcosx nocosx rhf d3 def2/j gdiis-opt looseopt noautostart
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%geom
+Scan
+B 0 1 = 1.68, 3.36, 5
+end
+Constraints
+{B 0 1 1.68 C}
+{B 0 2 0.97 C}
+{B 1 2 2.22 C}
+end
+end
+#OCl
+*xyz 0 1 
+O  -0.321600000   0.434800000   0.000000000
+Cl   1.264800000  -0.122400000   0.000000000
+H  -0.943200000  -0.312400000   0.000000000
+*

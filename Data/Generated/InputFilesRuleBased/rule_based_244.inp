@@ -1,0 +1,13 @@
+!pal6 tightscf pcj-0 steom-ccsd rhf autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+doTriplet true
+locRandom 0
+end
+#N1=PS1
+*xyz 0 1 
+N  -0.023600000   0.887900000   0.000000000
+P   1.068700000  -0.429100000   0.000000000
+S  -1.045100000  -0.458800000   0.000000000
+*

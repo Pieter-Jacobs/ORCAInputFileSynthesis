@@ -1,0 +1,11 @@
+!pal6 cc-pvdz-f12 xyzfile ri-nevpt2
+%mtr
+RSteps 4,5
+dxyz 0.01, 0.02 
+HessName "water.hess"
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

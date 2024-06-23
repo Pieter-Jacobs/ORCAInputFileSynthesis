@@ -1,0 +1,14 @@
+! qmmm pbe d3bj def2-svp
+%maxcore 1800
+%pal nprocs 12 end
+%qmmm
+qmatoms {1573:1677} end
+activeatoms {1573:1677} end
+orcafffilename "cdcdwto2.orcaff.prms"
+end
+#o1s(hashtag)s1
+*xyz 0 1 
+o   0.000000000  -0.859500000   0.000000000
+s   1.022900000   0.429700000  -0.000000000
+s  -1.022900000   0.429700000   0.000000000
+*

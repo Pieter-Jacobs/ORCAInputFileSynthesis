@@ -1,0 +1,17 @@
+!pal6 tightscf 3-21g tpss ri defgrid3 opt tightopt noautostart anfreq autoaux
+%geom
+Constraints
+{B 0 1 1.17 C}
+{B 0 2 1.17 C}
+{B 1 2 2.04 C}
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

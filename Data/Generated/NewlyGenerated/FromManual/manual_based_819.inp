@@ -1,0 +1,9 @@
+!pal6 dlpno-ccsd(t) cc-pvdz cc-pvdz/c cc-pvtz/jk rijk verytightscf tightpno
+%pal nprocs 4 # any number (positive integer)
+end
+#O=C=O
+*xyz 0 1 
+O  -1.405000000  -0.000000000   0.000000000
+C  -0.000000000   0.000000000   0.000000000
+O   1.405000000  -0.000000000   0.000000000
+*

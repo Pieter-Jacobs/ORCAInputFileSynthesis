@@ -1,0 +1,11 @@
+!def2-svp
+%method
+Z_GridX 2 # Lebedev 110-point grid
+Z_IntAccX 3.067 # radial integration accuracy
+end
+#B(hashtag)[PH]
+*xyz 0 2 
+B   2.115400000   0.003500000   0.000000000
+P  -0.380900000  -0.009900000   0.000000000
+H  -1.734400000   0.006400000   0.000000000
+*

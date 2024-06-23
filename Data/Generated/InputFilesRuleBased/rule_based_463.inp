@@ -1,0 +1,9 @@
+!pal6 tightscf aug-cc-pv5z-dk tpss ri defgrid3 nl
+%method NLb 5.0 end
+%scf AutoTRAH false end
+#C1=PP=1
+*xyz 0 1 
+C   0.000000000   0.939700000   0.000000000
+P   1.161900000  -0.469800000  -0.000000000
+P  -1.161900000  -0.469800000  -0.000000000
+*

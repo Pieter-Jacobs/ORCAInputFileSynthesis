@@ -1,0 +1,15 @@
+!pal6 cc-pcvdz-f12 rhf rijdx autoaux opt tightopt noautostart anfreq defgrid3 autoaux
+%geom
+Scan
+B 1 2 = 2.21, 4.43, 5
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#C1(hashtag)SS1
+*xyz 0 1 
+C   0.000000000  -0.840100000   0.000000000
+S   1.106400000   0.420100000   0.000000000
+S  -1.106400000   0.420100000   0.000000000
+*

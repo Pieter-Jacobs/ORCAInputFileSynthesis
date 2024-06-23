@@ -1,0 +1,12 @@
+!noiter moread
+%moinp "tddft_feiv_bistsmp_is_b3lyp_6_31gdp_50_roots.s1.nto"
+%output
+print[ p_basis ] 2
+print[ p_mos ] 1
+end
+#o1os1
+*xyz 0 1 
+o   0.495900000  -0.722900000  -0.000000000
+o   0.495900000   0.722900000   0.000000000
+s  -0.991800000   0.000000000  -0.000000000
+*

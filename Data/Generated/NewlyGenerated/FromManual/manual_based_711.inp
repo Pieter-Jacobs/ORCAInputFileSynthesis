@@ -1,0 +1,10 @@
+!pal6 sv(p) rijk def2/jk
+%method
+SpecialGridAtoms 26 #Increase the radial integration accuracy on Fe
+SpecialGridIntAcc 7 #Requested radial integration accuracy values
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

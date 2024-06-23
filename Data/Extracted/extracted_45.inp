@@ -1,0 +1,10 @@
+!uks b3lyp d3bj def2-svp rijcosx def2/j tightscf defgrid3 nofinalgrid opt freq uno uco
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+#[ch]=s
+*xyz 0 2 
+c  -0.244400000  -0.000000000   0.000000000
+s   1.553900000   0.000000000   0.000000000
+h  -1.309400000   0.000000000   0.000000000
+*

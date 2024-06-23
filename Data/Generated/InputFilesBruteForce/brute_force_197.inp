@@ -1,0 +1,12 @@
+!pal6 def2-tzvppd/c nosmear cpcm(pyridine) aox-ccsd mo-ccsd ri-qcisd(t)dlpno-b2k-plyp
+%geom
+ACOH = 120.0; 
+Print[P_ReducedOrbPopMO_L] 1
+TS_ModefM 1g
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

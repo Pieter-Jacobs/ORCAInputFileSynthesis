@@ -1,0 +1,16 @@
+!pal6 tightscf def2-tzvpd ri-dsd-blyp rijonx defgrid1 uhf autoaux autoaux
+%mp2 Density relaxed end
+%tddft
+nroots 9
+upop true
+dcorr 1
+doscs true
+tda true
+end
+%scf convforced true end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

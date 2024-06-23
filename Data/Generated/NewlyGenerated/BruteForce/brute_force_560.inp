@@ -1,0 +1,11 @@
+!pal6 decontractbas engrad
+%basis
+NewGTO S "Def2-TZVP" end 
+DelECP S 
+end
+#[CH]=O
+*xyz 0 2 
+C  -0.037000000  -0.000000000   0.000000000
+O   1.139000000   0.000000000   0.000000000
+H  -1.102000000   0.000000000   0.000000000
+*

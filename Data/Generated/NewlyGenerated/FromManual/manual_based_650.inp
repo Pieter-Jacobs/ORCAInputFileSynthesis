@@ -1,0 +1,11 @@
+!pal6 mp2 3-21g tightscf bohrs nbo
+%neb
+product "propionicAcid_prod.xyz"
+preopt true
+end
+#C1=S=S=1
+*xyz 0 1 
+C   0.000000000  -0.840100000  -0.000000000
+S  -1.106400000   0.420100000  -0.000000000
+S   1.106400000   0.420100000  -0.000000000
+*

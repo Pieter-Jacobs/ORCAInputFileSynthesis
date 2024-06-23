@@ -1,0 +1,11 @@
+!b97m-v
+%mp2 # These settings are default for response properties
+Density Relaxed
+PAOOverlapThresh 1e-5
+TScalePNO_LShift 0.1
+end
+#B(hashtag)N
+*xyz 0 1 
+B   0.425800000   0.000000000   0.000000000
+N  -0.425800000   0.000000000   0.000000000
+*

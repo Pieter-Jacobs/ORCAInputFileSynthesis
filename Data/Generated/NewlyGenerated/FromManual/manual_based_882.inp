@@ -1,0 +1,11 @@
+!pal6 pbe def2-svp opt numfreq
+%mp2
+density unrelaxed
+natorbs true
+end
+#O
+*xyz 0 1 
+O   0.000000000   0.397800000   0.000000000
+H   0.763500000  -0.198900000   0.000000000
+H  -0.763500000  -0.198900000   0.000000000
+*

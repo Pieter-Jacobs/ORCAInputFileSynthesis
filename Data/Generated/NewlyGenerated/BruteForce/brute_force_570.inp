@@ -1,0 +1,9 @@
+!pal6 6-311g(2d) loosepno cpcm(toluene) rijonx nolshift
+%tddft
+beta1 8.00
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

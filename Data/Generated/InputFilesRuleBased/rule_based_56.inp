@@ -1,0 +1,18 @@
+!pal6 tightscf maug-cc-pv(t+d)z aox-ncepa/1 rhf autoaux gdiis-opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Constraints
+{B 0 1 1.72 C}
+{B 0 2 2.32 C}
+{B 1 2 1.34 C}
+end
+end
+#N(hashtag)[SH]
+*xyz 0 1 
+N   1.262900000  -0.231100000   0.000000000
+S  -0.214500000   0.640700000   0.000000000
+H  -1.048300000  -0.409600000   0.000000000
+*

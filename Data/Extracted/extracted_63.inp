@@ -1,0 +1,16 @@
+! rohf def2-svp nori moread noiter
+%moinp "rohf_from_restart_from_opt_feiv_bistsmp_is_tpssh_6_31gdp_nori_loc_pm.loc"
+%pal
+nprocs 32
+end
+%maxcore 7500 
+%output
+print[ p_basis ] 2
+print[ p_mos ] 1
+end
+#p(hashtag)[ph]
+*xyz 0 2 
+p   1.698000000   0.000800000   0.000000000
+p  -0.147000000  -0.001800000   0.000000000
+h  -1.551000000   0.001000000   0.000000000
+*

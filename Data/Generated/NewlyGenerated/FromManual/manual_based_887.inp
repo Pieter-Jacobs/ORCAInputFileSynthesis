@@ -1,0 +1,8 @@
+!pal6 dkh-def2-tzvpp extremescf dkh
+%MDCI Density Unrelaxed End
+#[CH]=O
+*xyz 0 2 
+C  -0.037000000  -0.000000000   0.000000000
+O   1.139000000   0.000000000   0.000000000
+H  -1.102000000   0.000000000   0.000000000
+*

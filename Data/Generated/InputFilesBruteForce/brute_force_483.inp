@@ -1,0 +1,10 @@
+!pal6 tzvpp zora nori veff-soc smallprint smear diis aox-ccsd(t)
+%conical
+ETOL 1e-4 
+end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

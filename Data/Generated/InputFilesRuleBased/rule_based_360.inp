@@ -1,0 +1,13 @@
+!pal6 tightscf cc-pvtz mo-ncepa/1 uhf uno autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+density unrelaxed
+UseQROs true
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

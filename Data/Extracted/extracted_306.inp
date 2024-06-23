@@ -1,0 +1,9 @@
+!rks bp86 d3bj ri def2-svp def2/j tightscf nofinalgrid opt freq defgrid3
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+#o=s
+*xyz 0 1 
+o   0.828900000   0.000000000   0.000000000
+s  -0.828900000   0.000000000   0.000000000
+*

@@ -1,0 +1,10 @@
+!pal6 3-21gsp normalscf extremescf
+%cpcm
+surfacetype gepol_ses
+CPCMccm 2
+end
+#N(hashtag)P
+*xyz 0 1 
+N   0.745700000   0.000000000   0.000000000
+P  -0.745700000   0.000000000   0.000000000
+*

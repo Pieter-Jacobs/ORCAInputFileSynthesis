@@ -1,0 +1,9 @@
+! sp pbe d3bj def2-svp def2/j finalgrid4 miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4300
+#fc(hashtag)p
+*xyz 0 1 
+f  -1.386900000   0.003500000   0.000000000
+c  -0.069200000  -0.006400000   0.000000000
+p   1.456100000   0.003000000   0.000000000
+*

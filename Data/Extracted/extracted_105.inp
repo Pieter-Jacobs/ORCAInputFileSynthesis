@@ -1,0 +1,12 @@
+!rks bp86 opt def2-tzvp uno uco kdiis def2-tzvp/c nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 1000
+end
+#o=pcl
+*xyz 0 1 
+o  -1.254200000  -0.506100000   0.000000000
+p  -0.228300000   0.809600000   0.000000000
+cl   1.482500000  -0.303500000   0.000000000
+*

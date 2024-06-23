@@ -1,0 +1,7 @@
+!pal6 aug-cc-pwcvtz/c mass2016 scfconv9 aox-qcisd cpcm(ch2cl2) noreadints dlpno-hfc2
+#B(hashtag)S(hashtag)N
+*xyz 0 1 
+B   2.029200000   0.003000000   0.000000000
+S  -0.414900000  -0.009000000   0.000000000
+N  -1.614200000   0.006000000   0.000000000
+*

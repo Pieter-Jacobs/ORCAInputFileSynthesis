@@ -1,0 +1,8 @@
+!pal6 aug-cc-pcvqz rhf rijcosx normalscf autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+#ClCl
+*xyz 0 1 
+Cl   1.010000000   0.000000000   0.000000000
+Cl  -1.010000000   0.000000000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 zora-def2-svp pdbfile
+%autoci
+RootType 0
+nroots 2
+nroots 10
+citype IPROCI
+XPSORB=0,1
+end
+#C1(hashtag)SS1
+*xyz 0 1 
+C   0.000000000  -0.840100000   0.000000000
+S   1.106400000   0.420100000   0.000000000
+S  -1.106400000   0.420100000   0.000000000
+*

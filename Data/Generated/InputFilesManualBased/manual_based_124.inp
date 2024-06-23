@@ -1,0 +1,13 @@
+!hf sv
+%TDDFT IROOT 2
+JROOT 1
+#IROOTMULT TRIPLET would search in the triplet PES
+#SF TRUE would search for the S0-S1 CI from a T1 reference, using SF-TD-DFT
+# (but remember to set the multiplicity as 3 instead of 1)
+END
+#P(hashtag)[PH]
+*xyz 0 2 
+P   1.698000000   0.000800000   0.000000000
+P  -0.147000000  -0.001800000   0.000000000
+H  -1.551000000   0.001000000   0.000000000
+*

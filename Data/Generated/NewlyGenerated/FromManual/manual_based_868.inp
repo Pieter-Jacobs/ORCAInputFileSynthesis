@@ -1,0 +1,12 @@
+!pal6 smallprint printgap nopop
+%geom
+Trust 0.3 # Trust <0 - use fixed trust radius (default: -0.3 au)
+# Trust >0 - use trust radius update, i.e. 0.3 means:
+# start with trust radius 0.3 and use trust radius update
+end
+#C1(hashtag)P=N1
+*xyz 0 1 
+C  -0.615200000  -0.691100000   0.000000000
+P   1.091800000  -0.061100000  -0.000000000
+N  -0.476600000   0.752200000   0.000000000
+*

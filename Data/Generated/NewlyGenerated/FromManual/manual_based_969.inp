@@ -1,0 +1,6 @@
+!pal6 rohf dlpno-ccsd def2-tzvpp def2-tzvpp/c tightscf tightpno
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

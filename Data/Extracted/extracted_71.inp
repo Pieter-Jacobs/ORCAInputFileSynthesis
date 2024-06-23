@@ -1,0 +1,20 @@
+! pbe d3bj def2-svp def2/j normalopt nofinalgrid miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4300
+%geom 
+constrainfragments
+{ 1 }
+{ 2 }
+end
+connectfragments
+{1 2 o}
+end
+scan
+b 0 1 = a.aa, b.bb, 7
+end
+end
+#fcl
+*xyz 0 1 
+f   0.814300000   0.000000000   0.000000000
+cl  -0.814300000   0.000000000   0.000000000
+*

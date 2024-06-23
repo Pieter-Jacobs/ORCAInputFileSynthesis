@@ -1,0 +1,13 @@
+!pal6 ma-zora-def2-tzvp zora
+%mdci
+DTol 1e-10
+FollowCIS true
+Maxiter 2000
+DoSimpleDens False 
+end
+#C(hashtag)N
+*xyz 0 1 
+C  -0.031700000   0.000000000   0.000000000
+N   1.128300000  -0.000000000   0.000000000
+H  -1.096700000  -0.000000000   0.000000000
+*

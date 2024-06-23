@@ -1,0 +1,10 @@
+!pal6 aug-cc-pvqz rhf dlpno-b2plyp verytightscf dlpno-hfc1 autoaux numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+
+#S=C=S
+*xyz 0 1 
+S  -1.798300000  -0.000000000   0.000000000
+C   0.000000000   0.000000000   0.000000000
+S   1.798300000  -0.000000000   0.000000000
+*

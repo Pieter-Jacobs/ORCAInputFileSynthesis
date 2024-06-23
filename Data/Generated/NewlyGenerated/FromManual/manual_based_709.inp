@@ -1,0 +1,13 @@
+!pal6 sc-nevpt2
+%mdci
+#bt-PNO-EOM and STEOM parameters - defaults displayed
+DoEOMMP2 true # MP2 correction for missing pairs
+DoRECAN true # recanonicalization of the occupied
+# orbitals before the excited state calculation
+#(only relevant for the RHF implementation)
+end
+#F
+*xyz 0 1 
+F   0.493500000   0.000000000   0.000000000
+H  -0.493500000   0.000000000   0.000000000
+*

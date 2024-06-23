@@ -1,0 +1,21 @@
+!pal6 tightscf aug-ano-pvtz ccsd(t)-f12/ri rhf autoaux cc-pvtz-f12-optri gdiis-opt normalopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Scan
+B 1 2 = 1.42, 2.85, 5
+end
+Constraints
+{B 0 1 1.67 C}
+{B 0 2 2.28 C}
+{B 1 2 1.42 C}
+end
+end
+#O=P
+*xyz 0 1 
+O   1.215600000  -0.273200000   0.000000000
+P  -0.151800000   0.682800000   0.000000000
+H  -1.063800000  -0.409600000   0.000000000
+*

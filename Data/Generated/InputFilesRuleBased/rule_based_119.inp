@@ -1,0 +1,11 @@
+!pal6 saug-ano-pv5z rhf dlpno-ccsd(t1)-f12 sloppyscf tightpno autoaux cc-pvqz-f12-optri numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mdci LocRandom 0 end
+%freq
+CentralDiff false
+end
+#N(hashtag)P
+*xyz 0 1 
+N   0.745700000   0.000000000   0.000000000
+P  -0.745700000   0.000000000   0.000000000
+*

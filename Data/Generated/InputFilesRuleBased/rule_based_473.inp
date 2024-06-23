@@ -1,0 +1,11 @@
+!pal6 pcseg-0 rhf rijonx autoaux engrad
+%cis
+nroots 9
+end
+%scf convforced true end
+#o1os1
+*xyz 0 1 
+O   0.495900000  -0.722900000  -0.000000000
+O   0.495900000   0.722900000   0.000000000
+S  -0.991800000   0.000000000  -0.000000000
+*

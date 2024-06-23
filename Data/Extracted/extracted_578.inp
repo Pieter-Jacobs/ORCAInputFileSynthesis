@@ -1,0 +1,12 @@
+! neb-ts pbe d3bj def2-svp def2/j normalopt defgrid3 nofinalgrid miniprint nomoprint
+%pal nprocs 40 end
+%maxcore 4300
+%neb
+neb_end_xyzfile "end.xyz"
+end
+#p1=ps1
+*xyz 0 1 
+p  -1.092100000  -0.596600000   0.000000000
+p   1.092100000  -0.596600000  -0.000000000
+s  -0.000000000   1.193100000   0.000000000
+*

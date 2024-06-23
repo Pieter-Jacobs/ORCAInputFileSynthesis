@@ -1,0 +1,12 @@
+!pal6 tightscf aug-pc-3 m06 defgrid3 rhf numgrad
+%tddft
+nroots 9
+mode stddft
+end
+%scf convforced true end
+#S1S(hashtag)S1
+*xyz 0 1 
+S   0.625000000  -1.005100000   0.000000000
+S   0.557900000   1.043800000  -0.000000000
+S  -1.182900000  -0.038700000   0.000000000
+*

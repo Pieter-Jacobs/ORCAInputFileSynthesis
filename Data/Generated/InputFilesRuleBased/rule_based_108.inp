@@ -1,0 +1,15 @@
+!pal6 tightscf aug-pcseg-4 b97m-d4 ri defgrid2 gdiis-opt tightopt noautostart
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 1 = 0.99, 1.97, 5
+end
+Constraints
+{B 0 1 0.99 C}
+end
+end
+#F
+*xyz 0 1 
+F   0.493500000   0.000000000   0.000000000
+H  -0.493500000   0.000000000   0.000000000
+*

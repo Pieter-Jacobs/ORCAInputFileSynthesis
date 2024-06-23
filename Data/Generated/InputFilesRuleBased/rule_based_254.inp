@@ -1,0 +1,17 @@
+!pal6 tightscf aug-cc-pvqz-dk hfs rijonx defgrid3 rhf d4 autoaux gdiis-opt tightopt noautostart
+%method
+   D4s6 0.61
+   D4s8 0
+   D4a1 0
+   D4a2 6.2
+end
+%geom
+Scan
+B 0 1 = 2.06, 4.12, 5
+end
+end
+#S=S
+*xyz 0 1 
+S   1.030000000   0.000000000   0.000000000
+S  -1.030000000   0.000000000   0.000000000
+*

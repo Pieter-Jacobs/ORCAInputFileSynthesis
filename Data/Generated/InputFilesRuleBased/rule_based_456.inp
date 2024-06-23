@@ -1,0 +1,16 @@
+!pal6 tightscf pcseg-4 eom-ccsd uhf uno autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+DoCOSXEOM true
+DoAOX3e true
+KCOpt KC_AOX
+locRandom 0
+UseQROs true
+end
+#[BH]F
+*xyz 0 2 
+B  -0.117700000   0.437200000   0.000000000
+F   1.189900000  -0.184500000   0.000000000
+H  -1.072100000  -0.252700000   0.000000000
+*

@@ -1,0 +1,13 @@
+!pal6 tightscf ano-pv5z wb97x-d3 rijcosx defgrid2 uhf d3zero autoaux
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+#[CH]=O
+*xyz 0 2 
+C  -0.037000000  -0.000000000   0.000000000
+O   1.139000000   0.000000000   0.000000000
+H  -1.102000000   0.000000000   0.000000000
+*

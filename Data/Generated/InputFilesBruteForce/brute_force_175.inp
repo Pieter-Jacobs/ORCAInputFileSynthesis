@@ -1,0 +1,12 @@
+!pal6 maug-cc-pv(q+d)z cpcm(hexane) zopt zora lpno-qcisd
+%md
+Timestep 0.5_fs
+Initvel 300_K
+Timestep 0.5_fs 
+end
+#B(hashtag)[PH]
+*xyz 0 2 
+B   2.115400000   0.003500000   0.000000000
+P  -0.380900000  -0.009900000   0.000000000
+H  -1.734400000   0.006400000   0.000000000
+*

@@ -1,0 +1,29 @@
+! uks b3lyp def2-tzvpp def2/j d3bj verytightscf rijcosx nofinalgrid noautostart slowconv usesym defgrid3
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end 
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%basis
+newgto h "epr-iii" end
+newgto fe "cp(ppp)" end
+newauxgto h "autoaux" end
+newauxgto fe "def2/j" end
+end
+#[ch]=o
+*xyz 0 2 
+c  -0.037000000  -0.000000000   0.000000000
+o   1.139000000   0.000000000   0.000000000
+h  -1.102000000   0.000000000   0.000000000
+*
+%eprnmr
+gtensor 1
+dtensor so
+nuclei = all h {aiso, adip, aorb}
+nuclei = all fe {fgrad, rho}
+end

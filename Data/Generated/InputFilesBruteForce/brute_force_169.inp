@@ -1,0 +1,10 @@
+!pal6 aug-cc-pvtz/c easyconv loosescf scfconv9 veryslowconv
+%mm
+Rigid_MM_Water false 
+end
+#B1=PS1
+*xyz 0 1 
+B  -0.006500000   0.793800000   0.000000000
+P  -0.989800000  -0.400800000   0.000000000
+S   0.996300000  -0.393000000   0.000000000
+*

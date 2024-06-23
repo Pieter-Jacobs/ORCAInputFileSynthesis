@@ -1,0 +1,12 @@
+!pal6 6-31++g* uhf rijcosx loosescf autoaux cc-pvtz-f12-optri engrad
+%scf ConvForced true end
+%cis
+nroots 9
+end
+%scf convforced true end
+#N(hashtag)[PH]
+*xyz 0 2 
+N   1.259800000   0.260200000   0.000000000
+P  -0.190600000  -0.689800000   0.000000000
+H  -1.069200000   0.429600000   0.000000000
+*

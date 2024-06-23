@@ -1,0 +1,10 @@
+!pal6 aug-cc-pvtz nosplit-ri-j nori
+%autoci
+nroots 10
+RootType 0
+end
+#FCl
+*xyz 0 1 
+F   0.814300000   0.000000000   0.000000000
+Cl  -0.814300000   0.000000000   0.000000000
+*

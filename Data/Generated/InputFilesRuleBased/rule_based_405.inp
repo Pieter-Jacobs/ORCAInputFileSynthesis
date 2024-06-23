@@ -1,0 +1,12 @@
+!pal6 tightscf x2c-tzvpall ip-eom-dlpno-ccsd rhf tightpno autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+locRandom 0
+end
+#N(hashtag)P=O
+*xyz 0 1 
+N   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+O  -0.000000000  -3.000000000   0.000000000
+*

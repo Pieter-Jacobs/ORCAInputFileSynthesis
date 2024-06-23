@@ -1,0 +1,18 @@
+!pal6 tightscf sapporo-dzp-2012 ri34-qcisd rhf autoaux opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Constraints
+{B 0 1 2.05 C}
+{B 0 2 2.05 C}
+{B 1 2 2.05 C}
+end
+end
+#S1S(hashtag)S1
+*xyz 0 1 
+S   0.625000000  -1.005100000   0.000000000
+S   0.557900000   1.043800000  -0.000000000
+S  -1.182900000  -0.038700000   0.000000000
+*

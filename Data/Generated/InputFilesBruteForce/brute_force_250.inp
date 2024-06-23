@@ -1,0 +1,10 @@
+!pal6 pcsseg-0 scfconv10 pdbfile scfconv7 qcisd(t) defgrid1
+%conical
+METHOD UBP
+end
+#FS(hashtag)P
+*xyz 0 1 
+F  -1.516900000  -0.004700000   0.000000000
+S  -0.051400000   0.008900000   0.000000000
+P   1.568400000  -0.004200000   0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 bp86 def2-tzvp tightscf smallprint
+%MDCI LocMet FB
+LocTol 1.0e-6
+LocRandom 1
+End
+#N(hashtag)S(hashtag)N
+*xyz 0 1 
+N  -1.362300000   0.347500000   0.000000000
+S   0.000000000  -0.695100000   0.000000000
+N   1.362300000   0.347500000   0.000000000
+*

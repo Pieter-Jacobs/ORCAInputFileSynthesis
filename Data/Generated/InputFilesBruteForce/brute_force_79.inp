@@ -1,0 +1,13 @@
+!pal6 ano-rcc-full qcisd cim ri34-cpf/1 defgrid1 engrad ea-eom-dlpno-ccsd patom mrci+qbp86
+%cpcm
+surfacetype gepol_sas
+SOCType 1
+surfacetype gepol_ses_gaussian
+surfacetype gepol_ses
+end
+#N1=PO1
+*xyz 0 1 
+N  -0.617400000   0.652900000  -0.000000000
+P   1.023800000   0.096300000   0.000000000
+O  -0.406500000  -0.749200000   0.000000000
+*

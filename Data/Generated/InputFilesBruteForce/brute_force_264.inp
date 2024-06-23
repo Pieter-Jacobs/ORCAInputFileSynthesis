@@ -1,0 +1,12 @@
+!pal6 ano-rcc-dzp amfi cpcm(chloroform) zeff-soc noautostart rhf
+%cpcm
+surfacetype gepol_sas
+surfacetype gepol_ses
+surfacetype gepol_ses_gaussian
+end
+#C1=C=C=1
+*xyz 0 1 
+C  -0.658500000  -0.215400000  -0.000000000
+C   0.515800000  -0.462600000   0.000000000
+C   0.142700000   0.678000000   0.000000000
+*

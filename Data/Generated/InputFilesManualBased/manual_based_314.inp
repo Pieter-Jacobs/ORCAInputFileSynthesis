@@ -1,0 +1,9 @@
+!def2-tzvp
+%geom inhess Read # this command comes with:
+InHessName "yourHessian.hess" # filename of Hessian input file
+end
+#O=S
+*xyz 0 1 
+O   0.828900000   0.000000000   0.000000000
+S  -0.828900000   0.000000000   0.000000000
+*

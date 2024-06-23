@@ -1,0 +1,9 @@
+!pal6 pcj-2 rhf dlpno-ccsd(t)-f12/d loosescf dlpno-hfc1 autoaux cc-pvdz-f12-optri numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mdci LocRandom 0 end
+
+#ClCl
+*xyz 0 1 
+Cl   1.010000000   0.000000000   0.000000000
+Cl  -1.010000000   0.000000000   0.000000000
+*

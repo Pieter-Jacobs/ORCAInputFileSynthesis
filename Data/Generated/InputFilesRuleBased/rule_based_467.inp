@@ -1,0 +1,15 @@
+!pal16 6-311G rhf
+%cis
+nroots 9
+iroot 1
+upop true
+nacme true
+etf true
+end
+%scf convforced true end
+#O=BCl
+*xyz 0 1 
+O   1.736900000   0.275400000   0.000000000
+B   0.014500000  -0.544000000   0.000000000
+Cl  -1.751400000   0.268600000   0.000000000
+*

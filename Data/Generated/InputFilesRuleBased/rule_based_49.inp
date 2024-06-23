@@ -1,0 +1,22 @@
+!pal6 cpcm(water) aug-cc-pcvqz rhf rijonx tightscf autoaux gdiis-opt tightopt noautostart numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+%geom
+Scan
+B 1 2 = 2.05, 4.10, 5
+end
+Calc_Hess true
+Recalc_Hess 1
+Constraints
+{B 0 1 2.05 C}
+{B 0 2 2.05 C}
+{B 1 2 2.05 C}
+end
+end
+
+#s1ss1
+*xyz 0 1 
+S  -1.045500000  -0.554800000   0.000000000
+S   1.003200000  -0.628000000  -0.000000000
+S   0.042200000   1.182800000  -0.000000000
+*

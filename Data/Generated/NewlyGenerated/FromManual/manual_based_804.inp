@@ -1,0 +1,10 @@
+!pal6 wb97x-v
+%method RIJKSinglesFock 1 # 0 false, 1 true
+RCSinglesFock 0 # 0 false, 1 true
+end
+#P(hashtag)SCl
+*xyz 0 1 
+P  -1.696100000  -0.005300000   0.000000000
+S  -0.074200000   0.010000000   0.000000000
+Cl   1.770200000  -0.004700000   0.000000000
+*

@@ -1,0 +1,15 @@
+!pal6 rhf ri-mp2 rijcosx def2-tzvp def2/j def2-tzvp/c tightscf
+%maxcore 5000
+%tddft
+Mode sTDDFT
+Ethresh 10.0
+PThresh 1e-4
+PTLimit 30
+maxcore 20000
+end
+#[NH]F
+*xyz 0 2 
+N  -0.171500000   0.447300000   0.000000000
+F   1.064100000  -0.164900000   0.000000000
+H  -0.892600000  -0.282500000   0.000000000
+*

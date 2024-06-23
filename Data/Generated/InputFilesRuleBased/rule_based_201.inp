@@ -1,0 +1,7 @@
+!pal6 aug-pcj-4 uhf rijcosx scfconv9 autoaux
+%scf ConvForced true end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

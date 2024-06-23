@@ -1,0 +1,11 @@
+!pal6 tightscf aug-ano-pvdz b2t-plyp defgrid2 rhf autoaux
+%mp2 Density relaxed end
+%tddft
+nroots 9
+end
+%scf convforced true end
+#B(hashtag)P
+*xyz 0 1 
+B   0.709500000   0.000000000   0.000000000
+P  -0.709500000   0.000000000   0.000000000
+*

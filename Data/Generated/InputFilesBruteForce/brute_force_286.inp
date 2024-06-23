@@ -1,0 +1,12 @@
+!pal6 cc-pvdz/c scfconvergenceforced nori ri keepints scs-ri-mp2
+%mtr
+EnStep 0.001, 0.001 
+lsteps 0, 10
+ddnc 0.9091932, 0.9723073
+end
+#P(hashtag)SCl
+*xyz 0 1 
+P  -1.696100000  -0.005300000   0.000000000
+S  -0.074200000   0.010000000   0.000000000
+Cl   1.770200000  -0.004700000   0.000000000
+*

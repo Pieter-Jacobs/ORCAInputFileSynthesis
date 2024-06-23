@@ -1,0 +1,10 @@
+!pal6 zora-def2-tzvpp hf ri-caspt2 anfreq reducedpop
+%mp2
+RefBaseName "calc0"
+end
+#N(hashtag)S(hashtag)N
+*xyz 0 1 
+N  -1.362300000   0.347500000   0.000000000
+S   0.000000000  -0.695100000   0.000000000
+N   1.362300000   0.347500000   0.000000000
+*

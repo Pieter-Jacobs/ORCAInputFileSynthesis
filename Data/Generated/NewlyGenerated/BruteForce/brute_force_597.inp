@@ -1,0 +1,9 @@
+!pal6 x2c-tzvppall-2c ncpf/1
+%cpcm
+surfacetype gepol_ses_gaussian
+end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

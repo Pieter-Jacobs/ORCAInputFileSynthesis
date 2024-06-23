@@ -1,0 +1,21 @@
+!pal6 noiter nevpt2 def2-svp def2-svp/c
+%rocis NRoots 3
+Do_is true #Include DOMO->SOMO excitations
+Do_sa true #Include SOMO->Virtual excitations
+Do_ia true #Include DOMO->Virtual excitations
+Do_ista true #Include DOMO->SOMO coupled to
+#SOMO->Virtual excitations with #s not equal t
+Do_isa true #Include DOMO->SOMO coupled to
+#SOMO->Virtual excitations with #s = t
+#---------------------------------
+#by default all switches for the
+#excitation classes are set to
+#``true''
+#---------------------------------
+end
+#N(hashtag)CCl
+*xyz 0 1 
+N  -1.360700000   0.000000000   0.000000000
+C  -0.200700000  -0.000000000   0.000000000
+Cl   1.561300000   0.000000000   0.000000000
+*

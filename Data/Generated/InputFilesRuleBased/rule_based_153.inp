@@ -1,0 +1,13 @@
+!pal6 tightscf aug-cc-pwcv5z steom-ccsd rhf autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+doDbFilter true
+locRandom 0
+end
+#C1=NP=1
+*xyz 0 1 
+C  -0.587600000   0.577600000  -0.000000000
+N  -0.549200000  -0.590800000   0.000000000
+P   1.136800000   0.013200000  -0.000000000
+*

@@ -1,0 +1,14 @@
+!bp86 def2-svp opt
+%METHOD
+# non-local grids
+VdwAngularGrid 2 # same scheme as the SCF ones
+VdWIntAcc 5.0 # determines no. of radial points
+VdwGridPruning Adaptive # default
+VdwDistTCut 10 # cutoff distance between grid points, in angstroem
+END
+#C1(hashtag)S(hashtag)S1
+*xyz 0 1 
+C   0.000000000   0.840100000   0.000000000
+S   1.106400000  -0.420100000   0.000000000
+S  -1.106400000  -0.420100000   0.000000000
+*

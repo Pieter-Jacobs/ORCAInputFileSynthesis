@@ -1,0 +1,11 @@
+!pal6 ano-rcc-tzp rijcosx dkh2 cepa/1 readints slowconv cpcm(thf) cpcm(benzene) defgrid3
+%elprop
+MaxDIIS 10
+Solver Pople 
+end
+#N(hashtag)P=O
+*xyz 0 1 
+N   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+O  -0.000000000  -3.000000000   0.000000000
+*

@@ -1,0 +1,19 @@
+!pal6 tightscf pc-2 rpbe rijonx defgrid3 rhf scnl autoaux gdiis-opt tightopt noautostart numfreq engrad
+%method NLb 5.0 end
+%scf AutoTRAH false end
+%geom
+Constraints
+{B 0 1 1.71 C}
+{B 0 2 1.51 C}
+{B 1 2 1.71 C}
+end
+end
+%freq
+CentralDiff false
+end
+#C1(hashtag)S(hashtag)C1
+*xyz 0 1 
+C   0.511400000  -0.756500000   0.000000000
+S  -1.022700000   0.000000000   0.000000000
+C   0.511400000   0.756500000   0.000000000
+*

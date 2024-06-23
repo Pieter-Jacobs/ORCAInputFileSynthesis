@@ -1,0 +1,8 @@
+!pal6 ano-pv5z rhf dlpno-ccsd(t1)-f12 scfconv6 dlpno-hfc2 autoaux cc-pcvdz-f12-optri
+%scf ConvForced true end
+%mdci LocRandom 0 end
+#N(hashtag)P
+*xyz 0 1 
+N   0.745700000   0.000000000   0.000000000
+P  -0.745700000   0.000000000   0.000000000
+*

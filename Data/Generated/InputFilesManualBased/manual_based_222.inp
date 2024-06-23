@@ -1,0 +1,19 @@
+!b3lyp 6-31g* d3bj
+%cis dcorr n # n=1-4. The meaning of the four algorithms is
+# explained below.
+# algorithm 1 Is perhaps the best for small systems. May use a
+# lot of disk space
+# algorithm 2 Stores less integrals
+# algorithm 3 Is good if the system is large and only a few
+# states are calculated. Saves disk and main
+# memory.
+# algorithm 4 Uses only transformed RI integrals. May be the
+# fastest for large systems and a larger number
+# of states
+end
+#N(hashtag)[SH]
+*xyz 0 1 
+N   1.262900000  -0.231100000   0.000000000
+S  -0.214500000   0.640700000   0.000000000
+H  -1.048300000  -0.409600000   0.000000000
+*

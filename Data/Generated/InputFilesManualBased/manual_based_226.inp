@@ -1,0 +1,14 @@
+!def2-tzvp verytightscf
+%Compound
+Variable var1 = 1;
+Variable var2 = 1.0;
+Variable var3 = "This is a string";
+print("An integer variable %20d", var1);
+print("A double variable %20.3lf", var2);
+print("A string variable %-20s", var3);
+End
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

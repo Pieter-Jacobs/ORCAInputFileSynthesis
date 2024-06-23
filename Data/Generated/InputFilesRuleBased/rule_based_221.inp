@@ -1,0 +1,13 @@
+!pal6 maug-cc-pv(d+d)z rhf rijonx loosescf autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+%cis
+nroots 9
+end
+%scf convforced true end
+#O=S=O
+*xyz 0 1 
+O  -1.382400000  -0.305000000   0.000000000
+S  -0.000000000   0.610000000   0.000000000
+O   1.382400000  -0.305000000   0.000000000
+*

@@ -1,0 +1,12 @@
+!pal6 pcj-1 cpcm(benzene) hf
+%autoci
+nroots 2
+citype IPROCI
+nroots 9
+RootType 0
+end
+#FCl
+*xyz 0 1 
+F   0.814300000   0.000000000   0.000000000
+Cl  -0.814300000   0.000000000   0.000000000
+*

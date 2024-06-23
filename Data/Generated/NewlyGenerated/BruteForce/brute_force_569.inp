@@ -1,0 +1,11 @@
+!pal6 ma-zora-def2-sv(p) ri34-cepa/1 qcisd-f12 cpcm(thf) aox-cpf/1 nousesym somf(1x) autostart ccsd
+%elprop
+MaxDIIS 10
+MaxIter 64
+end
+#N1=NS1
+*xyz 0 1 
+N  -0.516200000   0.620200000   0.000000000
+N  -0.516200000  -0.620200000   0.000000000
+S   1.032400000  -0.000000000   0.000000000
+*

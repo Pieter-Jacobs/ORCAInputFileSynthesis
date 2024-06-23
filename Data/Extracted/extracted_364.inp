@@ -1,0 +1,22 @@
+! uks b3lyp def2-tzvp tightscf slowconv uno uco d3bj autoaux moread notrah noiter 
+%moinp "3-1_b3lyp_fat_pathologic_loc.loc"
+%output
+printlevel normal
+print[ p_basis       ] 2
+print[ p_mos         ] 1
+print[ p_density     ] 1
+print[ p_spindensity ] 1
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*

@@ -1,0 +1,8 @@
+!dlpno-ccsd(t) def2-tzvp def2-tzvp/c def2/j rijcosx verytightscf tightpno
+
+#ClOCl
+*xyz 0 1 
+Cl   1.380700000  -0.319900000   0.000000000
+O  -0.000000000   0.639800000   0.000000000
+Cl  -1.380700000  -0.319900000   0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 cc-pv5z/jk loewdin normalpno cpcm(pyridine)pbeh-3c
+%md
+Thermostat NHC 300_K Timecon 10.0_fs
+Initvel 300_K
+end
+#O=NF
+*xyz 0 1 
+O  -1.043200000  -0.268700000   0.000000000
+N  -0.068900000   0.490300000   0.000000000
+F   1.112100000  -0.221600000   0.000000000
+*

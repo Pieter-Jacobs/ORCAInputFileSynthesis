@@ -1,0 +1,20 @@
+! rks bp86 d3bj def2-tzvp def2/j slowconv tightscf nofinalgrid  
+%scf
+  maxiter  2000
+  end
+%maxcore 1900
+%pal
+  nprocs 4
+  end
+%cpcm
+  smd true
+  smdsolvent "dibutylether"
+  end
+%freq temp 393.15
+  end
+#ocl
+*xyz 0 1 
+o  -0.321600000   0.434800000   0.000000000
+cl   1.264800000  -0.122400000   0.000000000
+h  -0.943200000  -0.312400000   0.000000000
+*

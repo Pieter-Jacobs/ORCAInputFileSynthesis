@@ -1,0 +1,23 @@
+! b3lyp normalopt def2-svp rijcosx def2/j def2-svp/c tightscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+mode riints_disk
+nroots 4
+iroot 1
+irootmult triplet
+triplets true
+maxcore 2000
+end
+#o=s=s
+*xyz 0 1 
+o  -1.459800000  -0.393800000   0.000000000
+s  -0.186300000   0.667600000   0.000000000
+s   1.646100000  -0.273700000   0.000000000
+*

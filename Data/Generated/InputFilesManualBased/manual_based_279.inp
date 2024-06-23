@@ -1,0 +1,10 @@
+!noloewdin nomulliken
+%geom inhess Read # this command comes with:
+InHessName "yourHessian.hess" # filename of Hessian input file
+end
+#N1=NO1
+*xyz 0 1 
+N   0.415600000   0.621400000   0.000000000
+N   0.415600000  -0.621400000  -0.000000000
+O  -0.831300000   0.000000000  -0.000000000
+*

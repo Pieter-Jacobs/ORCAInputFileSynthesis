@@ -1,0 +1,24 @@
+!pal6 tightscf 6-311g* scs-b2gp-plyp21 rijcosx defgrid2 rhf d4 autoaux autoaux gdiis-opt verytightopt noautostart
+%method
+   D4s6 0.61
+   D4s8 0
+   D4a1 0
+   D4a2 6.2
+end
+%mp2 Density relaxed end
+%geom
+Scan
+B 1 2 = 2.10, 4.20, 5
+end
+Constraints
+{B 0 1 1.60 C}
+{B 0 2 2.74 C}
+{B 1 2 2.10 C}
+end
+end
+#FP=S
+*xyz 0 1 
+F  -1.214500000  -0.523100000   0.000000000
+P  -0.301300000   0.786000000   0.000000000
+S   1.515800000  -0.262900000   0.000000000
+*

@@ -1,0 +1,23 @@
+! freq pbeh-3c rijcosx cpcm(acetonitrile)
+%cpcm
+surfacetype vdw_gaussian
+end
+%output 
+xyzfile=true 
+end 
+%scf 
+maxiter 250 
+end
+%output
+print[p_hirshfeld] = 1
+end
+% maxcore
+3000
+%pal nprocs 16
+end
+#p(hashtag)scl
+*xyz 0 1 
+p  -1.696100000  -0.005300000   0.000000000
+s  -0.074200000   0.010000000   0.000000000
+cl   1.770200000  -0.004700000   0.000000000
+*

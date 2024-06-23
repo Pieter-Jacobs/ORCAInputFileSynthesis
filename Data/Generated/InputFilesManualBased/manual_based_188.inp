@@ -1,0 +1,9 @@
+!ri-mp2 def2-tzvpp def2/j def2-tzvpp/c tightscf rijcosx
+%output
+Print[ P_Mulliken ] 1 # default = on
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

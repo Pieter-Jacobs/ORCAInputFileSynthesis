@@ -1,0 +1,14 @@
+!pal6 tightscf aug-cc-pwcvtz bt-pno-steom-ccsd rhf tightpno autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+DLPNOLINEAR true
+NEWDOMAINS true
+doTriplet true
+locRandom 0
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

@@ -1,0 +1,9 @@
+!pal6 ma-dkh-def2-tzvpp looseopt anfreq rks
+%cis
+OrbWin[1] = 2,-1,-1,16 
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

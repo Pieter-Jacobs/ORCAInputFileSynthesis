@@ -1,0 +1,11 @@
+!pal6 bp86 def2-svp
+%mp2
+StoreDLPNOData true
+PAOOverlapThresh 1e-5
+TScalePNO_LShift 0.1
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

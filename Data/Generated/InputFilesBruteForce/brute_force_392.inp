@@ -1,0 +1,12 @@
+!pal6 ma-dkh-def2-tzvp reducedpop direct
+%autoci
+nroots 9
+nroots 2
+XPSORB=0,1
+RootType 0
+end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

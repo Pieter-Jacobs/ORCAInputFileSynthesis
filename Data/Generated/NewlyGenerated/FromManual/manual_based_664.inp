@@ -1,0 +1,12 @@
+!pal6 cpcm(water)
+%mp2 # These settings are default for response properties
+Density Relaxed
+PAOOverlapThresh 1e-5
+TScalePNO_LShift 0.1
+end
+#N1=S=N1
+*xyz 0 1 
+N  -0.517100000   0.727400000   0.000000000
+S   1.034200000   0.000000000  -0.000000000
+N  -0.517100000  -0.727400000   0.000000000
+*

@@ -1,0 +1,21 @@
+!pal6 tightscf jul-cc-pv(t+d)z mo-ccsd(t) rhf autoaux gdiis-opt tightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Scan
+B 0 2 = 3.00, 6.00, 5
+end
+Constraints
+{B 0 1 1.50 C}
+{B 0 2 3.00 C}
+{B 1 2 1.50 C}
+end
+end
+#O=P(hashtag)P
+*xyz 0 1 
+O   0.000000000   0.000000000   0.000000000
+P   1.299000000   0.750000000   0.000000000
+P   2.598100000   1.500000000   0.000000000
+*

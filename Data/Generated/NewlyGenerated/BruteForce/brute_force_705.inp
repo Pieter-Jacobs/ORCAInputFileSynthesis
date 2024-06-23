@@ -1,0 +1,7 @@
+!pal6 cc-pvtz/c noiter veff(-2x)-soc mp2 ri-ccsd(t) mo-qcisd(t) rijdxm062x
+#N(hashtag)CF
+*xyz 0 1 
+N  -1.221000000  -0.000000000   0.000000000
+C  -0.061000000   0.000000000   0.000000000
+F   1.282000000  -0.000000000   0.000000000
+*

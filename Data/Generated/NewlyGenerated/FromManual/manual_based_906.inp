@@ -1,0 +1,9 @@
+!pal6 noloewdin nomulliken
+%rocis NRoots 3
+PrintLevel 3
+end
+#O=O
+*xyz 0 1 
+O   0.570800000   0.000000000   0.000000000
+O  -0.570800000   0.000000000   0.000000000
+*

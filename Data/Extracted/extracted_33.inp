@@ -1,0 +1,13 @@
+!b97-3c opt cpcm(thf) tightscf def2/j miniprint nomoprint defgrid1 kdiis nososcf nopop float
+%pal nprocs 16 end
+%maxcore 3000
+%geom scan 
+  b 2 39 = 1.5, 2.5, 10
+  end
+  end
+#b(hashtag)scl
+*xyz 0 1 
+b   2.272200000  -0.005000000   0.000000000
+s  -0.247900000   0.012000000   0.000000000
+cl  -2.024300000  -0.007000000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 tightscf aug-pcseg-1 mpw1pw defgrid1 rhf numgrad
+%tddft
+nroots 9
+mode stda
+dosoc true
+scspar 0.333, 1.2, 0.43, 1.24
+end
+%scf convforced true end
+#FOCl
+*xyz 0 1 
+F  -1.209800000  -0.333500000   0.000000000
+O  -0.127200000   0.580000000   0.000000000
+Cl   1.337100000  -0.246500000   0.000000000
+*

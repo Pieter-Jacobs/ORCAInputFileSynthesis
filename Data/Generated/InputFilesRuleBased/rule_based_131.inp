@@ -1,0 +1,13 @@
+!pal6 tightscf ano-pvtz pbe0-dh nocosx rhf autoaux
+%tddft
+nroots 9
+upop true
+tda true
+end
+%scf convforced true end
+#N(hashtag)CCl
+*xyz 0 1 
+N  -1.360700000   0.000000000   0.000000000
+C  -0.200700000  -0.000000000   0.000000000
+Cl   1.561300000   0.000000000   0.000000000
+*

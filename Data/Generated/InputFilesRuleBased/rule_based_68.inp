@@ -1,0 +1,21 @@
+!pal16 tightscf aug-pcJ-0 aox-ncpf/1 rhf autoaux gdiis-opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Scan
+B 0 2 = 0.97, 1.94, 5
+end
+Constraints
+{B 0 1 1.42 C}
+{B 0 2 0.97 C}
+{B 1 2 1.98 C}
+end
+end
+#OF
+*xyz 0 1 
+O  -0.207900000   0.422000000   0.000000000
+F   1.090500000  -0.144300000   0.000000000
+H  -0.882600000  -0.277700000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 x2c-sv(p)all-2c rhf rijonx autoaux opt verytightopt noautostart
+%geom
+Constraints
+{B 0 1 2.17 C}
+{B 0 2 3.63 C}
+{B 1 2 1.46 C}
+end
+end
+#N(hashtag)S(hashtag)P
+*xyz 0 1 
+N   1.934500000  -0.003500000   0.000000000
+S  -0.237000000   0.008800000   0.000000000
+P  -1.697500000  -0.005200000   0.000000000
+*

@@ -1,0 +1,10 @@
+!pal6 aug-cc-pwcvtz/c veff(-2x)-soc fracocc sloppyscf cpcm(ethanol) npa tightpno scfconvergenceforced noautostart
+%cpcm
+surfacetype gepol_ses_gaussian
+end
+#ClOCl
+*xyz 0 1 
+Cl   1.380700000  -0.319900000   0.000000000
+O  -0.000000000   0.639800000   0.000000000
+Cl  -1.380700000  -0.319900000   0.000000000
+*

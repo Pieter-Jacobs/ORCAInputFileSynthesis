@@ -1,0 +1,10 @@
+!pal6 tightscf x2c-qzvpall-s m06l defgrid3 gdiis-copt tightopt noautostart anfreq autoaux
+
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

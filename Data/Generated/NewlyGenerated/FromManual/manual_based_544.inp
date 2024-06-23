@@ -1,0 +1,8 @@
+!pal6 rhf mp2
+%geom optimizehydrogens true
+end
+#O=O
+*xyz 0 1 
+O   0.570800000   0.000000000   0.000000000
+O  -0.570800000   0.000000000   0.000000000
+*

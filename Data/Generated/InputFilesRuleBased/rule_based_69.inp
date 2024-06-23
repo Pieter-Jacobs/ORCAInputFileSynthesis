@@ -1,0 +1,8 @@
+!pal6 maug-cc-pv(q+d)z rhf dlpno-scs-mp2 loosescf loosepno autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+#P(hashtag)P
+*xyz 0 1 
+P   0.942100000   0.000000000   0.000000000
+P  -0.942100000   0.000000000   0.000000000
+*

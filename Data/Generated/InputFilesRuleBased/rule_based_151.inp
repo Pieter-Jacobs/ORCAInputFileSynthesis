@@ -1,0 +1,15 @@
+!pal6 aug-pcsseg-2 rhf dlpno-ccsd-f12/d scfconv9 dlpno-hfc1 autoaux cc-pvtz-f12-optri
+%scf ConvForced true end
+%mdci LocRandom 0 end
+%cis
+nroots 9
+dosoc true
+scspar 0.333, 1.2, 0.43, 1.24
+end
+%scf convforced true end
+#S=S=S
+*xyz 0 1 
+S   1.633100000  -0.418500000   0.000000000
+S  -0.000000000   0.837000000   0.000000000
+S  -1.633100000  -0.418500000   0.000000000
+*

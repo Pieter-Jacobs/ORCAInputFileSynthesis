@@ -1,0 +1,14 @@
+!pal6 x2c-svpall-2c rhf dlpno-mp2 scfconv9 loosepno autoaux gdiis-opt noautostart scants
+%scf ConvForced true end
+%mp2 Density unrelaxed end
+%geom
+Scan
+B 0 2 = 2.22, 4.44, 5
+end
+end
+#FS
+*xyz 0 1 
+F   1.181800000  -0.251600000   0.000000000
+S  -0.147400000   0.628600000   0.000000000
+H  -1.034500000  -0.377000000   0.000000000
+*

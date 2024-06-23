@@ -1,0 +1,10 @@
+!pal6 decontractbas mp2 nopropfile
+%mm
+Rigid_MM_Water false 
+end
+#N(hashtag)P=S
+*xyz 0 1 
+N   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+S  -0.000000000  -3.000000000   0.000000000
+*

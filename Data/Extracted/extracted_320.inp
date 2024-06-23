@@ -1,0 +1,29 @@
+! uks b3lyp def2-tzvp tightscf slowconv uno uco d3bj autoaux moread notrah noiter 
+%moinp "3-1_b3lyp_fat_pathologic.gbw"
+%scf
+maxiter 2000
+diismaxeq 15
+directresetfreq 1
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%basis
+newgto fe "cp(ppp)" end
+newgto h "epr-iii" end
+end
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+#[nh2]
+*xyz 0 2 
+n  -0.000000000   0.400600000   0.000000000
+h  -0.831600000  -0.200300000   0.000000000
+h   0.831600000  -0.200300000   0.000000000
+*
+%eprnmr
+gtensor 1
+dtensor so
+nuclei = all h {aiso}
+end

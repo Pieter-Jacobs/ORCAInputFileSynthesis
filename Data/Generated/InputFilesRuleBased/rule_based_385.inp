@@ -1,0 +1,14 @@
+!pal6 aug-cc-pcvtz rhf opt optts noautostart
+%geom
+Constraints
+{B 0 1 1.42 C}
+{B 0 2 2.33 C}
+{B 1 2 1.42 C}
+end
+end
+#FOF
+*xyz 0 1 
+F  -1.163100000  -0.269500000   0.000000000
+O   0.000000000   0.538900000   0.000000000
+F   1.163100000  -0.269500000   0.000000000
+*

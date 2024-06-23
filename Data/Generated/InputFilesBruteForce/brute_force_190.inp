@@ -1,0 +1,9 @@
+!pal6 ma-dkh-def2-tzvpp strongscf
+%mtr
+HessName "water.hess"
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

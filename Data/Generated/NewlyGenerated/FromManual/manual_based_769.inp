@@ -1,0 +1,12 @@
+!pal6 bp86 def2-svp smallprint readints nokeepints
+%method
+method dft
+exchange mgga_x_m06_l
+correlation mgga_c_m06_l
+end
+#B1=PS1
+*xyz 0 1 
+B  -0.006500000   0.793800000   0.000000000
+P  -0.989800000  -0.400800000   0.000000000
+S   0.996300000  -0.393000000   0.000000000
+*

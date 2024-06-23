@@ -1,0 +1,12 @@
+! uks b3lyp d3bj def2-tzvpp def2/j rijcosx usesym tightscf noautostart normalprint xyzfile pal8
+! opt numfreq 
+%method 
+symthresh 5.0e-2 
+end
+%base"opt_fe_iii_hs_b3lyp_def2tzvpp_d3"
+#[ph]cl
+*xyz 0 2 
+p  -0.360200000   0.709200000   0.000000000
+cl   1.464400000  -0.205400000   0.000000000
+h  -1.104200000  -0.503800000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 ma-def2-sv(p) lshift readints
+%mtr
+rsteps 10,0
+RSteps 4,5
+modetype normal
+HessName "ethene.hess"
+LSteps 4,5
+end
+#C1(hashtag)S(hashtag)S1
+*xyz 0 1 
+C   0.000000000   0.840100000   0.000000000
+S   1.106400000  -0.420100000   0.000000000
+S  -1.106400000  -0.420100000   0.000000000
+*

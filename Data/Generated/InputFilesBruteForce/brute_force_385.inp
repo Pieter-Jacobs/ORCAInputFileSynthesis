@@ -1,0 +1,10 @@
+!pal6 cc-pvqz-f12-mp2fit cpcm(dmso) trahri-sos-wb2gp-plyp
+%mp2
+StoreDLPNOData true
+end
+#o1oo1
+*xyz 0 1 
+O  -0.641300000  -0.532500000  -0.000000000
+O  -0.140500000   0.821600000   0.000000000
+O   0.781800000  -0.289100000  -0.000000000
+*

@@ -1,0 +1,14 @@
+!uks bp86 def2-tzvp def2-tzvp/c nofinalgrid nofinalgridx d3bj moread noiter  defgrid3
+%pal nprocs 24
+end
+%moinp "p_is_opt.gbw"
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+#[bh]cl
+*xyz 0 2 
+b  -0.274000000   0.445200000   0.000000000
+cl   1.470800000  -0.154000000   0.000000000
+h  -1.196900000  -0.291200000   0.000000000
+*

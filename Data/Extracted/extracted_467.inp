@@ -1,0 +1,26 @@
+! freq pbeh-3c rijcosx cpcm(ch2cl2) 
+%freq
+scalfreq 0.95
+end
+%cpcm
+surfacetype vdw_gaussian
+end
+%output 
+xyzfile=true 
+end 
+%scf 
+maxiter 250 
+end
+%output
+print[p_hirshfeld] = 1
+end
+% maxcore
+3000
+%pal nprocs 16
+end
+#b1=po1
+*xyz 0 1 
+b  -1.160300000  -0.319200000   0.000000000
+p   1.356800000  -0.198100000   0.000000000
+o  -0.196500000   0.517300000   0.000000000
+*

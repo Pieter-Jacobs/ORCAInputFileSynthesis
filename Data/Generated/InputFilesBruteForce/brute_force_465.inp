@@ -1,0 +1,12 @@
+!pal6 nodecontractauxc cpf/1 nosmear cdouble soscf cpcm(ch2cl2) usesym
+%cpcm
+surfacetype gepol_sas
+surfacetype gepol_ses_gaussian
+surfacetype gepol_ses
+end
+#B1=PS1
+*xyz 0 1 
+B  -0.006500000   0.793800000   0.000000000
+P  -0.989800000  -0.400800000   0.000000000
+S   0.996300000  -0.393000000   0.000000000
+*

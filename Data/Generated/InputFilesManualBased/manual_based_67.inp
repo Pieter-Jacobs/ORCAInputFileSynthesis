@@ -1,0 +1,10 @@
+!bp86 svp tightscf
+%geom
+fullScan true # do not abort the scan with !ScanTS
+end
+#[CH]=O
+*xyz 0 2 
+C  -0.037000000  -0.000000000   0.000000000
+O   1.139000000   0.000000000   0.000000000
+H  -1.102000000   0.000000000   0.000000000
+*

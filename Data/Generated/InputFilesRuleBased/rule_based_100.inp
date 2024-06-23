@@ -1,0 +1,11 @@
+!pal6 cc-pvqz-f12 uhf rijcosx scfconv8 autoaux cc-pvdz-f12-optri numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%freq
+CentralDiff false
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

@@ -1,0 +1,17 @@
+!pal6 cpcm(cyclohexane) tightscf sapporo-qzp-2012 m06l defgrid3 opt verytightopt noautostart
+%geom
+Scan
+B 0 1 = 1.49, 2.98, 5
+end
+Constraints
+{B 0 1 1.49 C}
+{B 0 2 2.37 C}
+{B 1 2 1.35 C}
+end
+end
+#O=[SH]
+*xyz 0 2 
+O   1.217800000  -0.239200000   0.000000000
+S  -0.063900000   0.520600000   0.000000000
+H  -1.153900000  -0.281300000   0.000000000
+*

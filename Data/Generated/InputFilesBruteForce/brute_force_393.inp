@@ -1,0 +1,9 @@
+!pal6 zora-def2-tzvp verytightscf ncpf/1 qcisd(t)
+%mm
+Do_NB_For_Fixed_Fixed true 
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

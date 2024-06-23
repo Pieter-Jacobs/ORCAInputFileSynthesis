@@ -1,0 +1,15 @@
+!pal6 pbe def2-tzvp
+%qmmm
+# standard equilibrium bond lengths with hydrogen can be modified
+Dist_C_HLA 1.09 # d0_C-H
+Dist_O_HLA 0.98 # d0_O-H
+Dist_N_HLA 0.99 # d0_N-H
+# file can be provided which provides the used d0_X-H values specific to all atoms
+H_Dist_FileName "QM_H_dist.txt"
+end
+#[NH]Cl
+*xyz 0 2 
+N  -0.327100000   0.467100000   0.000000000
+Cl   1.294100000  -0.132200000   0.000000000
+H  -0.967000000  -0.334900000   0.000000000
+*

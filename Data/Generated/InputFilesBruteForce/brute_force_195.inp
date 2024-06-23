@@ -1,0 +1,9 @@
+!pal6 cc-pvtz-dk slowconv
+%mtr
+RSteps 4,5
+end
+#B(hashtag)P
+*xyz 0 1 
+B   0.709500000   0.000000000   0.000000000
+P  -0.709500000   0.000000000   0.000000000
+*

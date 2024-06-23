@@ -1,0 +1,9 @@
+!pal6 x2c-tzvpall-s aox-cpf/1 defgrid3 veryslowconv mo-ncepa/1 amfi cpcm(hexane) miniprint nosmear
+%mtr
+ddnc 0.9091932, 0.9723073
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

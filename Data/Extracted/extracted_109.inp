@@ -1,0 +1,11 @@
+! tpssh epr-iii tightscf largeprint keepdens
+#c1(hashtag)s(hashtag)s1
+*xyz 0 1 
+c   0.000000000   0.840100000   0.000000000
+s   1.106400000  -0.420100000   0.000000000
+s  -1.106400000  -0.420100000   0.000000000
+*
+%eprnmr 
+nuclei = all c {aiso} 
+nuclei = all h {aiso}
+end

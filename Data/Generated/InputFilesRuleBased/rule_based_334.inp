@@ -1,0 +1,24 @@
+!pal6 sapporo-qzp-2012 rhf rijcosx verytightscf autoaux opt tightopt noautostart numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mp2 Density unrelaxed end
+%geom
+Scan
+B 0 1 = 0.97, 1.94, 5
+end
+Calc_Hess true
+Recalc_Hess 1
+Constraints
+{B 0 1 0.97 C}
+{B 0 2 0.97 C}
+{B 1 2 1.53 C}
+end
+end
+%freq
+CentralDiff false
+end
+#O
+*xyz 0 1 
+O   0.000000000   0.397800000   0.000000000
+H   0.763500000  -0.198900000   0.000000000
+H  -0.763500000  -0.198900000   0.000000000
+*

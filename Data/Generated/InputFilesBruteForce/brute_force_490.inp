@@ -1,0 +1,10 @@
+!pal6 def2-tzvp/c frozencore veryslowconv noautostartscs/sos-b2plyp21
+%mtr
+HessName "water.hess"
+end
+#C1=C=C=1
+*xyz 0 1 
+C  -0.658500000  -0.215400000  -0.000000000
+C   0.515800000  -0.462600000   0.000000000
+C   0.142700000   0.678000000   0.000000000
+*

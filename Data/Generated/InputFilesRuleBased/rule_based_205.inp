@@ -1,0 +1,10 @@
+!pal6 saug-ano-pv5z rhf
+%cis
+nroots 9
+end
+%scf convforced true end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

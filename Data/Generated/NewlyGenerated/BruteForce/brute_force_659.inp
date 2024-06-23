@@ -1,0 +1,10 @@
+!pal6 pcsseg-3 scfconv9 iora/ri float pmodel
+%basis
+FragECP 3 "SK-MCDHF-RSC"
+end
+#FN=S
+*xyz 0 1 
+F  -1.174000000  -0.352100000   0.000000000
+N  -0.165300000   0.588100000   0.000000000
+S   1.339300000  -0.236100000   0.000000000
+*

@@ -1,0 +1,13 @@
+!pal6 pc-0 cpcm(water)pbeh-3c
+%autoci
+citype IPROCI
+nroots 2
+nroots 10
+XPSORB=0,1
+end
+#FS
+*xyz 0 1 
+F   1.181800000  -0.251600000   0.000000000
+S  -0.147400000   0.628600000   0.000000000
+H  -1.034500000  -0.377000000   0.000000000
+*

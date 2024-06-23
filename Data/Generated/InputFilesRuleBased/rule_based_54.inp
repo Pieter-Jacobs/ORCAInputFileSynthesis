@@ -1,0 +1,20 @@
+!pal6 tightscf aug-ano-pvtz scanfunc defgrid2 d3 gdiis-opt tightopt noautostart
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%geom
+Scan
+B 0 1 = 1.38, 2.77, 5
+end
+Constraints
+{B 0 1 1.38 C}
+end
+end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

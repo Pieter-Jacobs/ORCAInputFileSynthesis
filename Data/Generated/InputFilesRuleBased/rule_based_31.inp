@@ -1,0 +1,7 @@
+!pal6 tightscf cc-pcv5z ri-scs/sos-wb2plyp defgrid3 rhf autoaux
+%mp2 Density unrelaxed end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

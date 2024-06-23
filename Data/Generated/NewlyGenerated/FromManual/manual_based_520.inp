@@ -1,0 +1,11 @@
+!pal6 dlpno-mp2 def2-svp def2-svp/c verytightscf
+%ROCIS NROOTS 5
+DoRI true # invokes the RI approximation
+DoQuad true
+end
+#B(hashtag)P=O
+*xyz 0 1 
+B   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+O  -0.000000000  -3.000000000   0.000000000
+*

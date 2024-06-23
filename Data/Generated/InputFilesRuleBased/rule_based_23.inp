@@ -1,0 +1,10 @@
+!pal6 x2c-qzvppall uhf rijcosx autoaux engrad
+%cis
+nroots 9
+end
+%scf convforced true end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

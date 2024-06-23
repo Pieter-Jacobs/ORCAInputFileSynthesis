@@ -1,0 +1,12 @@
+!pal6 zora-def2-sv(p) fracocc notrah ri34-ccsd amfi
+%md
+Timestep 2.0_fs
+Timestep 1.0_fs
+Thermostat NHC 300_K Timecon 10.0_fs
+end
+#S=S=S
+*xyz 0 1 
+S   1.633100000  -0.418500000   0.000000000
+S  -0.000000000   0.837000000   0.000000000
+S  -1.633100000  -0.418500000   0.000000000
+*

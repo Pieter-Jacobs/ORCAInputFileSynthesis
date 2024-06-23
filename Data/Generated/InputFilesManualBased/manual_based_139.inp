@@ -1,0 +1,14 @@
+!def2-tzvp def2-tzvp/c tightscf slowconv
+%method
+UseSFitting false # equals to NoSFitting in the simple
+# input. Default is true.
+UseQGradFit true # uses the SCF fitting matrix for
+# gradient calculations. Default
+# is false.
+end
+#O=[SH]
+*xyz 0 2 
+O   1.217800000  -0.239200000   0.000000000
+S  -0.063900000   0.520600000   0.000000000
+H  -1.153900000  -0.281300000   0.000000000
+*

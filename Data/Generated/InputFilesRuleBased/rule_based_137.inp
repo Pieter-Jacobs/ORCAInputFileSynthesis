@@ -1,0 +1,20 @@
+!pal6 aug-cc-pvtz rhf rijdx autoaux opt tightopt noautostart anfreq defgrid3 autoaux
+%geom
+Scan
+B 1 2 = 1.89, 3.78, 5
+end
+Constraints
+{B 0 1 1.20 C}
+{B 0 2 1.71 C}
+{B 1 2 1.89 C}
+end
+end
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#B1=S=P1
+*xyz 0 1 
+B  -0.419400000   0.629300000   0.000000000
+S  -0.709300000  -0.530100000   0.000000000
+P   1.128800000  -0.099300000   0.000000000
+*

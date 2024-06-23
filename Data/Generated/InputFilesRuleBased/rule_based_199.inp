@@ -1,0 +1,12 @@
+!pal6 tightscf sto-3g revpbe38 rijk defgrid1 uhf autoaux gdiis-opt tightopt noautostart
+%geom
+Scan
+B 0 1 = 2.06, 4.12, 5
+end
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

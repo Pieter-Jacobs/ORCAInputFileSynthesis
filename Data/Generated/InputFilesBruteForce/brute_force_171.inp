@@ -1,0 +1,12 @@
+!pal6 cc-pwcvdz/c cpcm(ch2cl2) frozencore nori extremescf dft
+%mtr
+dxyz 0.01, 0.02 
+RSteps 4,5
+ddnc 0.9091932, 0.9723073
+end
+#C1(hashtag)CO1
+*xyz 0 1 
+C  -0.401300000  -0.594700000   0.000000000
+C  -0.401300000   0.594700000   0.000000000
+O   0.802600000  -0.000000000   0.000000000
+*

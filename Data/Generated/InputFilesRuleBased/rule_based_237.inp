@@ -1,0 +1,12 @@
+!pal6 tightscf aug-cc-pcvqz ri-qcisd rhf autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+density orbopt
+end
+#S=C=S
+*xyz 0 1 
+S  -1.798300000  -0.000000000   0.000000000
+C   0.000000000   0.000000000   0.000000000
+S   1.798300000  -0.000000000   0.000000000
+*

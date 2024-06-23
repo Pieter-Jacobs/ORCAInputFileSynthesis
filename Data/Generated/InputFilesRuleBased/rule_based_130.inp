@@ -1,0 +1,19 @@
+!pal6 tightscf x2c-tzvppall-s ao-ncepa/1 uhf uno autoaux opt tightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Constraints
+{B 0 1 1.42 C}
+{B 0 2 1.42 C}
+{B 1 2 2.10 C}
+end
+end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

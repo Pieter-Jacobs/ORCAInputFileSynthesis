@@ -1,0 +1,15 @@
+!pal6 cc-pvdz hf tightscf nososcf kdiis
+%TDDFT # or %CIS, they are equivalent
+# XC grids
+IntAccXC 3.467
+GridXC 1
+#COSX grids
+IntAccX 3.076
+GridX 1
+END
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

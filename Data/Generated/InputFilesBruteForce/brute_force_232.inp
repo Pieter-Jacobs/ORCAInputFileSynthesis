@@ -1,0 +1,7 @@
+!pal6 pcsseg-2 dft cpcm(pyridine) printbasis scfconv8 keepints frozencore
+#s1ss1
+*xyz 0 1 
+S  -1.045500000  -0.554800000   0.000000000
+S   1.003200000  -0.628000000  -0.000000000
+S   0.042200000   1.182800000  -0.000000000
+*

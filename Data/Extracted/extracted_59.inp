@@ -1,0 +1,15 @@
+! wb97x-d3 zoom-neb-ci def2-tzvpp tightscf  nofinalgrid  
+%pal nprocs 32
+end
+%neb
+neb_end_xyzfile "benzylium_oh_ethylene.xyz"
+neb_ts_xyzfile "poet_neb_neb-ts_converged.xyz"
+nimages 32
+energy_weighted true
+end
+#b1=bs1
+*xyz 0 1 
+b   1.428300000  -0.005000000   0.000000000
+b  -0.706100000   0.660500000   0.000000000
+s  -0.722300000  -0.655500000   0.000000000
+*

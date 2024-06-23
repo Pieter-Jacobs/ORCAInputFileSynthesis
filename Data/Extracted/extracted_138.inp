@@ -1,0 +1,31 @@
+! b3lyp def2-svpd ri-jk def2/jk tightopt nofinalgrid miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+%geom
+tole 1e-8
+tolmaxg 1e-5
+tolrmsg 5e-6
+tolmaxd 5e-5
+tolrmsd 1e-5
+end
+%base "opt_b97d3_2spd"
+#n1=ns1
+*xyz 0 1 
+n  -0.516200000   0.620200000   0.000000000
+n  -0.516200000  -0.620200000   0.000000000
+s   1.032400000  -0.000000000   0.000000000
+*
+$new_job
+! b3lyp def2-svpd rijcosx def2/jk sp tightscf freq nofinalgrid miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+%scf
+guessmode fmatrix
+maxiter 512
+end
+#n=s
+*xyz 0 1 
+n  -0.321600000   0.466600000   0.000000000
+s   1.285600000  -0.133300000   0.000000000
+h  -0.964000000  -0.333400000   0.000000000
+*

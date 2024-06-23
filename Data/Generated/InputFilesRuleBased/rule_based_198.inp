@@ -1,0 +1,11 @@
+!pal6 tightscf def2-tzvppd cisd rhf autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+#N(hashtag)S(hashtag)P
+*xyz 0 1 
+N   1.934500000  -0.003500000   0.000000000
+S  -0.237000000   0.008800000   0.000000000
+P  -1.697500000  -0.005200000   0.000000000
+*

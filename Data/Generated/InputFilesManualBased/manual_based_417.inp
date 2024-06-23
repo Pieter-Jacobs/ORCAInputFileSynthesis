@@ -1,0 +1,9 @@
+!pal6 b3lyp sv(p) tightscf kdiis soscf
+%scf
+AutoTRAH false
+end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

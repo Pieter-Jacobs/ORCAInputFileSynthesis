@@ -1,0 +1,11 @@
+!pal6 tightscf 6-311g* ccsd(t) rhf autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+#FS(hashtag)P
+*xyz 0 1 
+F  -1.516900000  -0.004700000   0.000000000
+S  -0.051400000   0.008900000   0.000000000
+P   1.568400000  -0.004200000   0.000000000
+*

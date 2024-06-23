@@ -1,0 +1,10 @@
+!pal6 tightscf def2-qzvppd b97m-d3bj ri defgrid3 numfreq engrad autoaux
+%scf AutoTRAH false end
+%freq
+CentralDiff false
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

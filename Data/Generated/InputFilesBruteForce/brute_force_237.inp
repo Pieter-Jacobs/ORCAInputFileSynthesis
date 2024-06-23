@@ -1,0 +1,7 @@
+!pal6 aug-cc-pwcvqz/c mo-ncepa/1 nosplit-ri-j smear somf(1x) cpcm(acetone) tightscf
+#O=C=O
+*xyz 0 1 
+O  -1.405000000  -0.000000000   0.000000000
+C  -0.000000000   0.000000000   0.000000000
+O   1.405000000  -0.000000000   0.000000000
+*

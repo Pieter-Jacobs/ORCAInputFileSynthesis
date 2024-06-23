@@ -1,0 +1,10 @@
+!pal6 tightscf cc-pwcv5z pw6b95 defgrid3 rhf nl numfreq engrad autoaux
+%method NLb 5.0 end
+%scf AutoTRAH false end
+
+#FB=S
+*xyz 0 1 
+F  -1.722900000   0.078200000   0.000000000
+B  -0.044700000  -0.150500000   0.000000000
+S   1.767600000   0.072400000   0.000000000
+*

@@ -1,0 +1,17 @@
+!pal6 pc-1 rhf gdiis-opt looseopt noautostart
+%geom
+Scan
+B 0 2 = 3.06, 6.13, 5
+end
+Constraints
+{B 0 1 2.03 C}
+{B 0 2 3.06 C}
+{B 1 2 2.03 C}
+end
+end
+#ClSCl
+*xyz 0 1 
+Cl   1.531700000  -0.444600000   0.000000000
+S  -0.000000000   0.889200000   0.000000000
+Cl  -1.531700000  -0.444600000   0.000000000
+*

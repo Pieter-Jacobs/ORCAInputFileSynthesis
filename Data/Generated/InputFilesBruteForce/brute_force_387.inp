@@ -1,0 +1,11 @@
+!pal6 6-311++g(d,p) cfloatpw1pw
+%qmmm
+NUnitCellAtoms 16 
+Embedding Electrostatic 
+end
+#C1=C=S=1
+*xyz 0 1 
+C   0.538700000   0.597400000  -0.000000000
+C   0.538700000  -0.597400000   0.000000000
+S  -1.077400000   0.000000000  -0.000000000
+*

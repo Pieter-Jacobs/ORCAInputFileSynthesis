@@ -1,0 +1,18 @@
+!pal6 tightscf aug-pcj-4 b97m-d3bj defgrid3 opt tightopt noautostart
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 1 = 1.16, 2.32, 5
+end
+Constraints
+{B 0 1 1.16 C}
+{B 0 2 2.50 C}
+{B 1 2 1.34 C}
+end
+end
+#N(hashtag)CF
+*xyz 0 1 
+N  -1.221000000  -0.000000000   0.000000000
+C  -0.061000000   0.000000000   0.000000000
+F   1.282000000  -0.000000000   0.000000000
+*

@@ -1,0 +1,23 @@
+!pal6 tightscf jul-cc-pv(q+d)z pwp nofinalgridx rhf d3zero gdiis-opt looseopt noautostart
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+%geom
+Scan
+B 0 1 = 1.47, 2.93, 5
+end
+Constraints
+{B 0 1 1.47 C}
+{B 0 2 3.09 C}
+{B 1 2 1.62 C}
+end
+end
+#FS(hashtag)P
+*xyz 0 1 
+F  -1.516900000  -0.004700000   0.000000000
+S  -0.051400000   0.008900000   0.000000000
+P   1.568400000  -0.004200000   0.000000000
+*

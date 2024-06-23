@@ -1,0 +1,6 @@
+!pal6 zora-def2-svp cpcm(toluene) easyconv scfconv9
+#FF
+*xyz 0 1 
+F   0.740000000   0.000000000   0.000000000
+F  -0.740000000   0.000000000   0.000000000
+*

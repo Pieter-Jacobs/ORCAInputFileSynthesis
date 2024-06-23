@@ -1,0 +1,12 @@
+!pal6 tightscf pcj-1 ao-qcisd uhf uno autoaux gdiis-copt tightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

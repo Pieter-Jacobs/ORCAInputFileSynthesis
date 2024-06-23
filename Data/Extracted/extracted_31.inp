@@ -1,0 +1,21 @@
+! 6-31g(d,p) autoaux normalprint moread 
+%pal nprocs 32
+end
+%maxcore 7500
+%moinp "restart_opt_feiv_bistsmp_is_tpssh_6_31gdp_casscf_2_4.gbw"
+%casscf 
+nel 4 
+norb 5 
+mult 3 
+nroots 1 
+end
+%output
+print[ p_basis ] 2
+print[ p_mos ] 1
+end
+#fscl
+*xyz 0 1 
+f  -1.245300000  -0.484800000   0.000000000
+s  -0.250500000   0.761000000   0.000000000
+cl   1.495700000  -0.276200000   0.000000000
+*

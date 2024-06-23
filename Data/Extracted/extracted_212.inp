@@ -1,0 +1,26 @@
+! wb97x-d3
+! def2-tzvpp
+! def2/j rijcosx
+! defgrid2
+! scfconv7
+! smallprint printgap noloewdin
+! nososcf
+%maxcore 8000
+%output
+       print[p_bondorder_m] 1
+       print[p_mayer] 1
+       print[p_basis] 2
+end
+%pal
+    nprocs 5
+end
+%cpcm
+    smd    true
+    smdsolvent "water"
+end
+#c1(hashtag)co1
+*xyz 0 1 
+c  -0.401300000  -0.594700000   0.000000000
+c  -0.401300000   0.594700000   0.000000000
+o   0.802600000  -0.000000000   0.000000000
+*

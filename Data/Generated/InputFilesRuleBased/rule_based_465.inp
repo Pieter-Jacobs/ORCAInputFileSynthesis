@@ -1,0 +1,11 @@
+!pal6 tightscf cc-pv5z-dk aox-ncpf/1 rhf autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+density unrelaxed
+end
+#F
+*xyz 0 1 
+F   0.493500000   0.000000000   0.000000000
+H  -0.493500000   0.000000000   0.000000000
+*

@@ -1,0 +1,13 @@
+!pal6 6-31g* kdiis scs-mp3
+%mm
+Rigid_MM_Water false 
+ORCAFFFilename "DNA_hexamer.ORCAFF.prms"
+CoulombCutOff 12. 
+ShiftForceCoulomb true 
+end
+#o1os1
+*xyz 0 1 
+O   0.495900000  -0.722900000  -0.000000000
+O   0.495900000   0.722900000   0.000000000
+S  -0.991800000   0.000000000  -0.000000000
+*

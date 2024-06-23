@@ -1,0 +1,11 @@
+!pal6 tightscf pc-1 dlpno-ccsd(t) rohf uno tightpno autoaux
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

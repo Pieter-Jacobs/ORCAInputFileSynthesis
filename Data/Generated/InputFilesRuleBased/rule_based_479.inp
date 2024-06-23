@@ -1,0 +1,12 @@
+!pal6 tightscf def2-tzvpd rpw86pbe defgrid1 rhf d3zero
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+#B(hashtag)P
+*xyz 0 1 
+B   0.709500000   0.000000000   0.000000000
+P  -0.709500000   0.000000000   0.000000000
+*

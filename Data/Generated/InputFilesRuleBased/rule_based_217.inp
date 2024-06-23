@@ -1,0 +1,19 @@
+!pal6 tightscf 6-31g blyp nocosx rhf d4 autoaux gdiis-opt looseopt noautostart
+%method
+   D4s6 0.61
+   D4s8 0
+   D4a1 0
+   D4a2 6.2
+end
+%mp2 Density relaxed end
+%geom
+Scan
+B 0 1 = 1.67, 3.34, 5
+end
+end
+#O=PCl
+*xyz 0 1 
+O  -1.254200000  -0.506100000   0.000000000
+P  -0.228300000   0.809600000   0.000000000
+Cl   1.482500000  -0.303500000   0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 ma-dkh-def2-tzvp loosepno zora/ri ri-nevpt2 rijdx floatm06l
+%elprop
+Tol 1e-3
+Solver DIIS
+end
+#SCl
+*xyz 0 1 
+S  -0.376400000   0.658200000   0.000000000
+Cl   1.471600000  -0.184300000   0.000000000
+H  -1.095100000  -0.473900000   0.000000000
+*

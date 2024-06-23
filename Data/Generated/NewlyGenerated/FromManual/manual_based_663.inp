@@ -1,0 +1,9 @@
+!pal6 blyp svp opt
+%mm
+ORCAFFFilename "DNA_hexamer.ORCAFF.prms"
+end
+#P(hashtag)P
+*xyz 0 1 
+P   0.942100000   0.000000000   0.000000000
+P  -0.942100000   0.000000000   0.000000000
+*

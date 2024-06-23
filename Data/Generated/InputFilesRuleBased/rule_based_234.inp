@@ -1,0 +1,23 @@
+!pal6 tightscf cc-pwcvqz tpss defgrid3 d3zero gdiis-opt verytightopt noautostart
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+%geom
+Scan
+B 1 2 = 1.89, 3.78, 5
+end
+Constraints
+{B 0 1 1.20 C}
+{B 0 2 1.71 C}
+{B 1 2 1.89 C}
+end
+end
+#B1=S=P1
+*xyz 0 1 
+B  -0.419400000   0.629300000   0.000000000
+S  -0.709300000  -0.530100000   0.000000000
+P   1.128800000  -0.099300000   0.000000000
+*

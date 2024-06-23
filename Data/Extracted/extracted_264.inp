@@ -1,0 +1,16 @@
+!uks b3lyp def2-tzvp def2/j rijcosx nofinalgrid nofinalgridx d3bj moread tightscf defgrid3
+%moinp "opt_feiv_bistsmp_is_b3lyp_6_31gdp.gbw"
+%pal nprocs 32
+end
+%maxcore 7500
+%tddft
+donto true
+doquad true
+nroots 50
+end
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*

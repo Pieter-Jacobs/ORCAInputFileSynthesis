@@ -1,0 +1,12 @@
+!uks b3lyp opt def2-tzvpp autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end
+#[oh]
+*xyz 0 2 
+o   0.488900000   0.000000000   0.000000000
+h  -0.488900000   0.000000000   0.000000000
+*

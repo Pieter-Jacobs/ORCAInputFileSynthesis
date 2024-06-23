@@ -1,0 +1,15 @@
+! opt rks b3lyp rijcosx pmodel slowconv tightscf d3bj def2-svp def2/j 
+%basis
+newgto au "def2-tzvp" end
+newgto pt "def2-tzvp" end
+end
+%pal
+ nprocs 32
+end
+%maxcore 3500
+#clscl
+*xyz 0 1 
+cl   1.531700000  -0.444600000   0.000000000
+s  -0.000000000   0.889200000   0.000000000
+cl  -1.531700000  -0.444600000   0.000000000
+*

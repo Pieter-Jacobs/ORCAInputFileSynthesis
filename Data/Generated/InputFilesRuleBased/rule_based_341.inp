@@ -1,0 +1,12 @@
+!pal6 tightscf aug-pcseg-1 m06l defgrid3 gdiis-opt tightopt noautostart
+%geom
+Scan
+B 0 2 = 3.25, 6.50, 5
+end
+end
+#P(hashtag)[PH]
+*xyz 0 2 
+P   1.698000000   0.000800000   0.000000000
+P  -0.147000000  -0.001800000   0.000000000
+H  -1.551000000   0.001000000   0.000000000
+*

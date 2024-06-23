@@ -1,0 +1,13 @@
+!pal6 pcj-2 printmos hueckel hf aox-ncpf/1 mo-cisd loosescf aox-ccsd(t)
+%md
+Restart IfExists
+Timestep 1.0 
+Timestep 41.3_au 
+Timestep 2.0_fs
+end
+#S1S(hashtag)S1
+*xyz 0 1 
+S   0.625000000  -1.005100000   0.000000000
+S   0.557900000   1.043800000  -0.000000000
+S  -1.182900000  -0.038700000   0.000000000
+*

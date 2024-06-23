@@ -1,0 +1,10 @@
+!svp tightscf
+%rel method DKH # relativistic method
+picturechange 2 # include the DKH correction to SOC
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

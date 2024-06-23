@@ -1,0 +1,15 @@
+!pal6 tightscf pcj-3 scs-b2gp-plyp21 rijcosx nocosx rhf autoaux autoaux
+%mp2 Density relaxed end
+%tddft
+nroots 9
+upop true
+dcorr 1
+doscs true
+end
+%scf convforced true end
+#C1=S=S=1
+*xyz 0 1 
+C   0.000000000  -0.840100000  -0.000000000
+S  -1.106400000   0.420100000  -0.000000000
+S   1.106400000   0.420100000  -0.000000000
+*

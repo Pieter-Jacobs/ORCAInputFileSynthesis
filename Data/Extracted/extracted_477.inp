@@ -1,0 +1,23 @@
+! rijcosx pbeh-3c cpcm(acetonitrile)
+%cpcm
+surfacetype vdw_gaussian
+end
+%output 
+xyzfile=true 
+end 
+%scf 
+maxiter 250 
+end
+%output
+print[p_hirshfeld] = 1
+end
+% maxcore
+3000
+%pal nprocs 16
+end
+#b1=c=b1
+*xyz 0 1 
+b  -0.372200000   0.788800000   0.000000000
+c   1.413100000  -0.214900000   0.000000000
+b  -1.040800000  -0.573800000   0.000000000
+*

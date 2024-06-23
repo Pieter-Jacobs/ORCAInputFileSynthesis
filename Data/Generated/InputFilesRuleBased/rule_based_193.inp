@@ -1,0 +1,9 @@
+!pal6 cpcm tightscf x2c-svpall-2c m06l ri defgrid3 anfreq autoaux
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

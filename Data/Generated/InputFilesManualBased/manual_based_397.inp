@@ -1,0 +1,9 @@
+!pal6 ip-eom-dlpno-ccsd extremescf cc-pvtz cc-pvtz/c autoaux def2/j tightpno
+%mdci
+density linearized
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 noiter def2-svp def2-svp/c
+%moinp "Test-SYM-MRCI-H2CO.gbw"
+%casscf nel 4
+norb 3
+irrep 0,1,1
+mult 1,1,3
+nroots 1,1,1
+end
+#C(hashtag)P
+*xyz 0 1 
+C  -0.162900000   0.002700000   0.000000000
+P   1.379300000  -0.001100000   0.000000000
+H  -1.216400000  -0.001600000   0.000000000
+*

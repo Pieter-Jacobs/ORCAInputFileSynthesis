@@ -1,0 +1,12 @@
+!pal6 def2-svp patom qcisd
+%mdci
+DoSOLV true
+DoRECAN true 
+CVSORB 6,6 
+end
+#C1(hashtag)P=P1
+*xyz 0 1 
+C  -0.000000000   0.939700000  -0.000000000
+P  -1.161900000  -0.469800000  -0.000000000
+P   1.161900000  -0.469800000   0.000000000
+*

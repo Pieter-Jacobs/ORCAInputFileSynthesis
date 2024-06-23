@@ -1,0 +1,10 @@
+!pal6 aug-pc-1 easyconv nokeepdens autostart keepdens
+%mm
+Do_NB_For_Fixed_Fixed true 
+end
+#FSF
+*xyz 0 1 
+F  -1.202300000  -0.349000000   0.000000000
+S   0.000000000   0.698000000   0.000000000
+F   1.202300000  -0.349000000   0.000000000
+*

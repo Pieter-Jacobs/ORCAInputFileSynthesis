@@ -1,0 +1,19 @@
+!pal6 tightscf x2c-qzvpall-s ao-cpf/1 uhf uno autoaux opt tightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Scan
+B 0 1 = 1.35, 2.71, 5
+end
+Constraints
+{B 0 1 1.35 C}
+end
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

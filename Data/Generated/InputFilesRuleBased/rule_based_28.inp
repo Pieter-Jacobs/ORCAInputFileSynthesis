@@ -1,0 +1,17 @@
+!pal6 cpcm(water) tightscf sapporo-tzp-2012 pw91 nofinalgridx rhf d3 opt looseopt noautostart
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%geom
+Scan
+B 0 1 = 1.46, 2.92, 5
+end
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

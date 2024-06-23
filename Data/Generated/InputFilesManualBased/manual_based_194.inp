@@ -1,0 +1,10 @@
+!sc-nevpt2 nevpt2
+%mm
+Do_NB_For_Fixed_Fixed true # Compute MM-MM nonbonded interaction also for
+# non-active atom pairs. Default true.
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

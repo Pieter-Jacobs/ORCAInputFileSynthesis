@@ -1,0 +1,15 @@
+!pal6 tightscf pc-3 tpss ri defgrid3 nl opt tightopt noautostart numfreq engrad autoaux
+%method NLb 5.0 end
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 1 = 1.72, 3.43, 5
+end
+end
+
+#S=NCl
+*xyz 0 1 
+S  -1.392500000  -0.338500000   0.000000000
+N  -0.006500000   0.672300000   0.000000000
+Cl   1.399000000  -0.333800000   0.000000000
+*

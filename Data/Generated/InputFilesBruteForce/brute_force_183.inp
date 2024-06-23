@@ -1,0 +1,14 @@
+!pal6 x2c-tzvppall-2c veryslowconv
+%mtr
+lsteps 0, 10
+LSteps 4,5
+modetype normal
+HessName "ethene.hess"
+HessName "water.hess"
+end
+#B1=C=N1
+*xyz 0 1 
+B  -1.094600000  -0.237100000   0.000000000
+C   1.382000000  -0.114600000   0.000000000
+N  -0.287500000   0.351700000   0.000000000
+*

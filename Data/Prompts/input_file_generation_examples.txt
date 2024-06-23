@@ -1,0 +1,64 @@
+Imagine you are a chemistry expert made to generate input files for the chemistry simulation language ORCA.
+Given a prompt about the type of simulation the user wants, you generate an input file for ORCA, 
+however these input files don't contain the standard xyz coordinates.
+
+The format of an ORCA input file is as follows: 
+!keyword keyword keyword
+%option
+setting_of_option value
+setting_of_option2 value2
+end
+#smiles_of_molecule
+
+In the line that starts with an ! you can define methods, density functionals and basis sets through ORCA keywords. 
+Then you can use input blocks to set certain settings.
+This block starts with % and then the option and is followed by the settings within that input block. It ends with 'end'.
+Lastly, you write down the smiles format of the molecule after a #. 
+
+Below are some example user prompts with corresponding input files to better illustrate the format at hand. Make sure to not overly rely on the keywords and settings in the input files when predicting a new input file.
+
+Prompt 1:
+Perform a quantum chemical calculation using the def2-svp basis set with new polarization functions and the def2/j basis set with Weigend’s universal Coulomb fitting, suitable for all def2 type basis sets. The calculation will be conducted with the Becke '88 exchange functional and Perdew '86 correlation functional. Use O=[SH] as molecule.
+Input file 1: 
+!bp86 def2-svp def2/j
+%scf
+maxiter 100
+end 
+#O=[SH]
+
+Prompt 2:
+Perform a closed-shell SCF calculation with the def2-TZVPP basis set for property calculations and an automatically constructed auxiliary basis for fitting Coulomb, exchange, and correlation calculations. Use the RIJCOSX algorithm for efficient treatment of Coulomb and Exchange terms via RI and seminumerical integration, along with sloppy SCF convergence criteria. Optimize the geometry with GDIIS for normal optimization and loose convergence criteria. Avoid starting from an existing GBW file. Additionally, control the SCF procedure with forced convergence and relax the density for the MP2 calculation. Use B(hashtag)N as molecule.
+Input file 2:
+!def2-tzvppd rhf rijcosx sloppyscf autoaux gdiis-opt looseopt noautostart
+%scf ConvForced true end
+%mp2 Density relaxed end
+%geom
+Calc_Hess true
+Recalc_Hess 1
+end
+#B(hashtag)N
+
+Prompt 3:
+Perform a calculation using the Hartree–Fock method and the Valence double-zeta basis set with "new" polarization functions for the O molecule. 
+Input file 3:
+!hf def2-svp
+#O
+
+Prompt 4:
+Perform a quantum mechanical calculation using the cc-pVTZ and cc-pVTZ/c basis sets for the S molecule. Additionally, include the advanced settings for the MP2 calculation, ensuring density relaxation and donatorbs. Implement the Local MP2 method for the calculation. 
+Input file 4:
+!dlpno-mp2 cc-pvtz cc-pvtz/c
+%mp2 
+density relaxed
+donatorbs true
+end
+#S
+
+Prompt 5:
+Conduct a geometry optimization calculation on the False molecule using the popular B3LYP functional with a 20% HF exchange for the O molecule. For this, employ the valence triple-zeta basis set (def2-tzvp) with "new" polarization functions, similar to TZVPP for main group elements and TZVP for hydrogen. Additionally, control the frequency calculations with a temperature range of 290 K to 300 K. 
+Input file 5:
+!b3lyp def2-tzvp opt freq
+%freq   
+    temp 290, 295, 300
+end
+#O

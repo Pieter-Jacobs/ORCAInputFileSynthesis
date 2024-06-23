@@ -1,0 +1,10 @@
+!pal6 tightscf pcj-0 scanfunc ri defgrid3 anfreq autoaux
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#[BH]Cl
+*xyz 0 2 
+B  -0.274000000   0.445200000   0.000000000
+Cl   1.470800000  -0.154000000   0.000000000
+H  -1.196900000  -0.291200000   0.000000000
+*

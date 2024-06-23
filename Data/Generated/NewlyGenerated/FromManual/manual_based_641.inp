@@ -1,0 +1,15 @@
+!pal6 smallprint printgap nopop
+%casscf
+OrbStep SuperCI # or any other from the list above
+SwitchStep DIIS # or any other from the list above9.14 The Complete Active Space Self-Consistent Field (CASSCF) Module 595
+SwitchConv 0.03 # gradient at which to switch
+SwitchIter 15 # iteration at which the switch takes place
+# irrespective of the gradient
+MaxIter 75 # Maximum number of macro-iterations
+end
+#FB=S
+*xyz 0 1 
+F  -1.722900000   0.078200000   0.000000000
+B  -0.044700000  -0.150500000   0.000000000
+S   1.767600000   0.072400000   0.000000000
+*

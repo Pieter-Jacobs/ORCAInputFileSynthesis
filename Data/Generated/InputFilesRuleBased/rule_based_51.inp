@@ -1,0 +1,8 @@
+!pal6 sapporo-tzp-2012 rhf dlpno-ccsd-f12/d loosescf normalpno autoaux cc-pvqz-f12-optri
+%scf ConvForced true end
+%mdci LocRandom 0 end
+#FCl
+*xyz 0 1 
+F   0.814300000   0.000000000   0.000000000
+Cl  -0.814300000   0.000000000   0.000000000
+*

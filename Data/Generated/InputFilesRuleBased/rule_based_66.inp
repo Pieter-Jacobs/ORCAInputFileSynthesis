@@ -1,0 +1,13 @@
+!pal6 cpcm(thf) tightscf x2c-qzvppall-s scanfunc defgrid3 d3bj numfreq engrad autoaux
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

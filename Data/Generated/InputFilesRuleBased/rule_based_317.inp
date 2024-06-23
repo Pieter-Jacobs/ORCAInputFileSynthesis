@@ -1,0 +1,19 @@
+!pal6 tightscf x2c-tzvpall-2c dlpno-ccsd(t) rohf uno tightpno autoaux gdiis-opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Constraints
+{B 0 1 2.04 C}
+{B 0 2 1.42 C}
+{B 1 2 2.59 C}
+end
+end
+#[PH]Cl
+*xyz 0 2 
+P  -0.360200000   0.709200000   0.000000000
+Cl   1.464400000  -0.205400000   0.000000000
+H  -1.104200000  -0.503800000   0.000000000
+*

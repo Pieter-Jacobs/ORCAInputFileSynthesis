@@ -1,0 +1,12 @@
+!pal6 cc-pwcvtz/c iora/ri normalscf cpcm(hexane) eom-ccsd frozencore ccsd qcisd(t) noreadints ao-ncpf/1
+%mdci
+NROOTS 8
+nroots 18
+EWIN -40, 10000
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

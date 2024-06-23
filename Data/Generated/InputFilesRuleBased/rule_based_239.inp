@@ -1,0 +1,18 @@
+!pal6 tightscf aug-pcsseg-4 mp3 rhf autoaux gdiis-opt verytightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Constraints
+{B 0 1 1.42 C}
+{B 0 2 0.97 C}
+{B 1 2 1.98 C}
+end
+end
+#OF
+*xyz 0 1 
+O  -0.207900000   0.422000000   0.000000000
+F   1.090500000  -0.144300000   0.000000000
+H  -0.882600000  -0.277700000   0.000000000
+*

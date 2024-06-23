@@ -1,0 +1,28 @@
+! ri-wb2plyp normalopt numgrad def2-sv(p) def2-svp/c rijcosx def2/j tightscf miniprint nomoprint mp2gridx2 nofinalgrid kdiis nososcf float defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%mp2
+maxcore 4000
+density none
+end
+%cis
+mode riints
+nroots 2
+iroot 1
+irootmult triplet
+triplets true
+dcorr 3
+maxcore 4000
+end
+#c1=nn=1
+*xyz 0 1 
+c   0.000000000  -0.575700000   0.000000000
+n  -0.780400000   0.287800000   0.000000000
+n   0.780400000   0.287800000   0.000000000
+*

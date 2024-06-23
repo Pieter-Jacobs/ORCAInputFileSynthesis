@@ -1,0 +1,9 @@
+!pal6 6-31+g(2d) allpop slowconv convwpbepp86
+%cpcm
+surfacetype gepol_ses
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

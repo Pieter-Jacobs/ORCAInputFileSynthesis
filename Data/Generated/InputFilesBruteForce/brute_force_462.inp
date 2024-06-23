@@ -1,0 +1,13 @@
+!pal6 cc-pv5z-dk cpcm(dmf) nopop xyzfile looseopt
+%method
+D3S8 0.9147
+D3S8 0.7220
+LDAOpt C_VWN3
+UseSFitting false 
+end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

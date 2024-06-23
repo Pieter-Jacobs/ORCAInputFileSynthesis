@@ -1,0 +1,17 @@
+!pal6 cpcm(ammonia) tightscf 6-311g* ri-scs-pbe-qidh rijcosx defgrid1 uhf autoaux autoaux gdiis-opt looseopt noautostart
+%geom
+Scan
+B 0 1 = 1.60, 3.19, 5
+end
+Constraints
+{B 0 1 1.60 C}
+{B 0 2 2.23 C}
+{B 1 2 1.42 C}
+end
+end
+#F[PH]
+*xyz 0 2 
+F   1.166600000  -0.287600000   0.000000000
+P  -0.108000000   0.673300000   0.000000000
+H  -1.058600000  -0.385700000   0.000000000
+*

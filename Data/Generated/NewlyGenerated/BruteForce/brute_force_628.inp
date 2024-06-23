@@ -1,0 +1,12 @@
+!pal6 aug-ano-pvtz rijcosxscanfunc
+%mm
+Do_NB_For_Fixed_Fixed true 
+ShiftForceCoulomb true 
+Rigid_MM_Water false 
+end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

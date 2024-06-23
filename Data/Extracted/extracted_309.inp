@@ -1,0 +1,10 @@
+!rks bp86 d3bj ri def2-svp def2/j tightscf nofinalgrid freq defgrid3
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+#b1=c=p1
+*xyz 0 1 
+b  -0.207600000   0.528400000   0.000000000
+c  -0.772400000  -0.358100000   0.000000000
+p   0.980000000  -0.170300000   0.000000000
+*

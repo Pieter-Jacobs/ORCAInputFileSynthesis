@@ -1,0 +1,11 @@
+!def2-svp def2-svp/c zora cpcm
+%eprnmr
+PrintLevel 3 # print orbital pair contributions (lots of output!)
+LocOrbGBW "H2CO_NMR_PM.loc" # use these orbitals
+end
+#ClSCl
+*xyz 0 1 
+Cl   1.531700000  -0.444600000   0.000000000
+S  -0.000000000   0.889200000   0.000000000
+Cl  -1.531700000  -0.444600000   0.000000000
+*

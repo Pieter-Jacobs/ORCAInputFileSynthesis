@@ -1,0 +1,10 @@
+!ri-mp2 def2-tzvp def2-tzvp/c tightscf
+%base "calc0"
+%mp2
+StoreDLPNOData true
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

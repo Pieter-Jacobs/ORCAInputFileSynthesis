@@ -1,0 +1,13 @@
+!pal6 tightscf 3-21g ao-ccsd(t) uhf uno autoaux gdiis-opt verytightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+
+#[CH]=O
+*xyz 0 2 
+C  -0.037000000  -0.000000000   0.000000000
+O   1.139000000   0.000000000   0.000000000
+H  -1.102000000   0.000000000   0.000000000
+*

@@ -1,0 +1,13 @@
+!mp2
+%tddft nroots 5
+DoNTO true # flag to turn on generation of natural transition orbitals
+NTOStates 1,2,3 # States to consider for NTO analysis;
+#if empty all will be done
+NTOThresh 1e-4 # threshold for printing occupation numbers
+end
+#N(hashtag)CCl
+*xyz 0 1 
+N  -1.360700000   0.000000000   0.000000000
+C  -0.200700000  -0.000000000   0.000000000
+Cl   1.561300000   0.000000000   0.000000000
+*

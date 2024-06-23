@@ -1,0 +1,11 @@
+! dlpno-ccsd(t)-f12/d cc-pvdz-f12 aug-cc-pvdz/c cc-pvdz-f12-cabs ri-jk autoaux normalpno tightscf miniprint nomoprint
+%pal nprocs 10 end
+%maxcore 16000
+%mdci
+density none
+end
+#b(hashtag)b
+*xyz 0 1 
+b   0.654800000   0.000000000   0.000000000
+b  -0.654800000   0.000000000   0.000000000
+*

@@ -1,0 +1,11 @@
+!uks bp86 def2-svp largeprint
+%pal nprocs 6 end
+%scf
+cnvshift false
+end
+#b(hashtag)[ph]
+*xyz 0 2 
+b   2.115400000   0.003500000   0.000000000
+p  -0.380900000  -0.009900000   0.000000000
+h  -1.734400000   0.006400000   0.000000000
+*

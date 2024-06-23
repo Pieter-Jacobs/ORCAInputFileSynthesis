@@ -1,0 +1,13 @@
+!pal6 svp scfconv7 rohfpw91
+%mtr
+ddnc 0.9091932, 0.9723073
+HessName "ethene.hess"
+EnStep 0.001, 0.001 
+HessName "water.hess"
+end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

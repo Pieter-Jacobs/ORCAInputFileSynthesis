@@ -1,0 +1,15 @@
+! uks b3lyp def2-tzvpp def2/j d3bj tightscf rijcosx nofinalgrid noautostart usesym moread defgrid3
+%moinp "epr_feiv_bistsmp_is_b3lyp_def2_tzvpp_epr_iii_cpppp_gd3bj.gbw"
+%pal nprocs 32
+end
+%maxcore 7500
+%tddft
+donto true
+maxdim 5
+nroots 50
+end
+#[oh]
+*xyz 0 2 
+o   0.488900000   0.000000000   0.000000000
+h  -0.488900000   0.000000000   0.000000000
+*

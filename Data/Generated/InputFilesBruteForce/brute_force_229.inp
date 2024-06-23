@@ -1,0 +1,6 @@
+!pal6 def2-tzvp(-f) fod hueckel dlpno-nevpt2 defgrid1
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

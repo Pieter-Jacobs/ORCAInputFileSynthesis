@@ -1,0 +1,12 @@
+!pal6 apr-cc-pv(q+d)z rhf
+%cis
+nroots 9
+upop true
+end
+%scf convforced true end
+#C(hashtag)P
+*xyz 0 1 
+C  -0.162900000   0.002700000   0.000000000
+P   1.379300000  -0.001100000   0.000000000
+H  -1.216400000  -0.001600000   0.000000000
+*

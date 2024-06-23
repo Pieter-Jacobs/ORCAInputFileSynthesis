@@ -1,0 +1,15 @@
+!pal6 tightscf x2c-tzvpall-2c bt-pno-steom-ccsd rhf tightpno autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+DLPNOLINEAR true
+NEWDOMAINS true
+doDbFilter true
+locRandom 0
+end
+#P(hashtag)CCl
+*xyz 0 1 
+P  -1.591500000   0.002800000   0.000000000
+C  -0.068100000  -0.005200000   0.000000000
+Cl   1.659600000   0.002400000   0.000000000
+*

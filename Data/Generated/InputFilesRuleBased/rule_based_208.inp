@@ -1,0 +1,9 @@
+!pal6 cc-pcvqz-f12-optri rhf dlpno-mp2-f12/d sloppyscf dlpno-hfc2 autoaux cc-pvtz-f12-optri numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+
+#N1=PO1
+*xyz 0 1 
+N  -0.617400000   0.652900000  -0.000000000
+P   1.023800000   0.096300000   0.000000000
+O  -0.406500000  -0.749200000   0.000000000
+*

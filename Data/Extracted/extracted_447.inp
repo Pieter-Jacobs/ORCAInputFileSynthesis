@@ -1,0 +1,20 @@
+! rijcosx pmodel slowconv tightscf d3bj zora-def2-svp sarc/j cpcm(acetonitrile) bhandhlyp zora ri-somf(1x)
+%basis
+newgto au "sarc-zora-tzvp" end
+newgto pt "sarc-zora-tzvp" end
+end
+%pal
+ nprocs 32
+end
+%maxcore 3500
+%tddft
+   nroots   30
+   donto    true
+   dosoc    true
+end
+#b(hashtag)p=o
+*xyz 0 1 
+b   0.000000000   0.000000000   0.000000000
+p  -0.000000000  -1.500000000   0.000000000
+o  -0.000000000  -3.000000000   0.000000000
+*

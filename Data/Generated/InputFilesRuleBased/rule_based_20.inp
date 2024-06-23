@@ -1,0 +1,9 @@
+!pal6 aug-cc-pvqz rhf rijcosx sloppyscf autoaux cc-pcvdz-f12-optri copt normalopt noautostart
+%scf ConvForced true end
+
+#FSCl
+*xyz 0 1 
+F  -1.245300000  -0.484800000   0.000000000
+S  -0.250500000   0.761000000   0.000000000
+Cl   1.495700000  -0.276200000   0.000000000
+*

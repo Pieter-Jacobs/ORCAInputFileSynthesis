@@ -1,0 +1,9 @@
+!pal6 bp86 zora zora-def2-tzvp(-f) sarc/j tightscf
+%scf Print[P_SCFMemInfo] 1
+end
+#B1=BO1
+*xyz 0 1 
+B  -1.053100000  -0.072900000   0.000000000
+B   1.204100000  -0.048600000   0.000000000
+O  -0.151100000   0.121500000   0.000000000
+*

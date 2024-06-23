@@ -1,0 +1,12 @@
+!pal6 cpcm(ammonia) 6-31+g** rhf dlpno-scs-mp2 strongscf dlpno-hfc1 autoaux
+%scf ConvForced true end
+%mp2 Density relaxed end
+%cis
+nroots 9
+end
+%scf convforced true end
+#N(hashtag)P
+*xyz 0 1 
+N   0.745700000   0.000000000   0.000000000
+P  -0.745700000   0.000000000   0.000000000
+*

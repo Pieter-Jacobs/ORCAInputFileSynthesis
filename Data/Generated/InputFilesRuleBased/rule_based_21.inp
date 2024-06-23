@@ -1,0 +1,18 @@
+!pal6 tightscf aug-pcj-2 ri34-ccsd(t) rhf autoaux gdiis-opt normalopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+end
+%geom
+Constraints
+{B 0 1 1.73 C}
+{B 0 2 1.42 C}
+{B 1 2 1.66 C}
+end
+end
+#N1=PO1
+*xyz 0 1 
+N  -0.617400000   0.652900000  -0.000000000
+P   1.023800000   0.096300000   0.000000000
+O  -0.406500000  -0.749200000   0.000000000
+*

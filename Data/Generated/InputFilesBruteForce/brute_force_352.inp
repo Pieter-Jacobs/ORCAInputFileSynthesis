@@ -1,0 +1,14 @@
+!pal6 pc-0 nonbo ao-qcisd(t) zopt hf
+%md
+Timestep 0.5_fs
+Restart IfExists
+Thermostat NHC 300_K Timecon 10.0_fs
+Initvel 300_K
+Timestep 0.5_fs 
+end
+#[PH]Cl
+*xyz 0 2 
+P  -0.360200000   0.709200000   0.000000000
+Cl   1.464400000  -0.205400000   0.000000000
+H  -1.104200000  -0.503800000   0.000000000
+*

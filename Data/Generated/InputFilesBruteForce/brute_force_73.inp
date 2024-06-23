@@ -1,0 +1,11 @@
+!pal6 ma-def2-tzvp(-f) ri34-cisd uks aox-cpf/1 pmodel
+%mtr
+EnStep 0.001, 0.001 
+LSteps 4,5
+end
+#C1(hashtag)S(hashtag)C1
+*xyz 0 1 
+C   0.511400000  -0.756500000   0.000000000
+S  -1.022700000   0.000000000   0.000000000
+C   0.511400000   0.756500000   0.000000000
+*

@@ -1,0 +1,9 @@
+!pal6 aug-cc-pwcvtz sloppyscf ri34-ccsd scs-mp3
+%neb
+neb_end_xyzfile "final.xyz"
+end
+#FF
+*xyz 0 1 
+F   0.740000000   0.000000000   0.000000000
+F  -0.740000000   0.000000000   0.000000000
+*

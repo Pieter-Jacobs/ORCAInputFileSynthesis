@@ -1,0 +1,14 @@
+!pal6 6-31g(d,p) rhf dlpno-ccsd(t)-f12 scfconv10 normalpno autoaux cc-pcvtz-f12-optri
+%scf ConvForced true end
+%mdci LocRandom 0 end
+%cis
+nroots 9
+upop true
+end
+%scf convforced true end
+#B1=S=P1
+*xyz 0 1 
+B  -0.419400000   0.629300000   0.000000000
+S  -0.709300000  -0.530100000   0.000000000
+P   1.128800000  -0.099300000   0.000000000
+*

@@ -1,0 +1,14 @@
+!pal6 tightscf 6-311+g ri-scs-wb88pp86 nofinalgridx rhf autoaux
+%tddft
+nroots 9
+dcorr 1
+doscs true
+tda true
+end
+%scf convforced true end
+#O=NF
+*xyz 0 1 
+O  -1.043200000  -0.268700000   0.000000000
+N  -0.068900000   0.490300000   0.000000000
+F   1.112100000  -0.221600000   0.000000000
+*

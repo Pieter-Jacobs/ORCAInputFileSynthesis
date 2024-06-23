@@ -1,0 +1,15 @@
+! rhf sp def2-tzvp def2-tzvp/c rijcosx def2/j tightscf miniprint nomoprint
+%pal nprocs 10 end
+%maxcore 16000
+%cis
+nroots 4
+triplets true
+dcorr 3
+maxcore 16000
+end
+#n(hashtag)sf
+*xyz 0 1 
+n  -1.284000000   0.329800000   0.000000000
+s   0.071500000  -0.721600000   0.000000000
+f   1.212500000   0.391800000   0.000000000
+*

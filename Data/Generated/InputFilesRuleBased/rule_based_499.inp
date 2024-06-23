@@ -1,0 +1,8 @@
+!pal6 cc-pv5z rhf f12-mp2 scfconv9 cc-pvdz-f12-optri
+%scf ConvForced true end
+#FOF
+*xyz 0 1 
+F  -1.163100000  -0.269500000   0.000000000
+O   0.000000000   0.538900000   0.000000000
+F   1.163100000  -0.269500000   0.000000000
+*

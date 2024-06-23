@@ -1,0 +1,9 @@
+!pal6 x2c-tzvppall uhf anfreq defgrid3 autoaux
+%freq
+Hess2ElFlags 1,1,1,1
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

@@ -1,0 +1,7 @@
+!pal6 aug-pc-1 loosescf loosepno cpcm(toluene) zora/ri nomoprint copt reducedpop
+#[PH]Cl
+*xyz 0 2 
+P  -0.360200000   0.709200000   0.000000000
+Cl   1.464400000  -0.205400000   0.000000000
+H  -1.104200000  -0.503800000   0.000000000
+*

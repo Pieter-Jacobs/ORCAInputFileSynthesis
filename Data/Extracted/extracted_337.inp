@@ -1,0 +1,12 @@
+! uks tpssh rijcosx zora zora-tzvp sarc/j decontractaux
+! nofinalgrid tightscf defgrid3
+%rel onecenter true
+end
+%scf flipspin 1 finalms 0.5
+     end
+#[ch]=o
+*xyz 0 2 
+c  -0.037000000  -0.000000000   0.000000000
+o   1.139000000   0.000000000   0.000000000
+h  -1.102000000   0.000000000   0.000000000
+*

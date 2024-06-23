@@ -1,0 +1,13 @@
+!pal6 dkh-sv(p) uno trah
+%mtr
+LSteps 4,5
+RSteps 4,5
+EnStep 0.001, 0.001 
+HessName "ethene.hess"
+ddnc 0.9091932, 0.9723073
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

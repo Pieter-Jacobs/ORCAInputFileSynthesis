@@ -1,0 +1,10 @@
+!pal6 sv(p) def2-svp/c rijcosx def2/j
+%geom
+fullScan true # do not abort the scan with !ScanTS
+end
+#S=PCl
+*xyz 0 1 
+S  -1.542600000  -0.449800000   0.000000000
+P   0.035900000   0.932400000   0.000000000
+Cl   1.506700000  -0.482700000   0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 ma-def2-tzvp(-f) rijonx qcisd
+%mtr
+HessName "ethene.hess"
+ddnc 0.9091932, 0.9723073
+HessName "water.hess"
+end
+#O=S
+*xyz 0 1 
+O   0.828900000   0.000000000   0.000000000
+S  -0.828900000   0.000000000   0.000000000
+*

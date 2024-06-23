@@ -1,0 +1,14 @@
+!pal6 cc-pcv6z iora/ri ri34-qcisd(t) oo-ri-scs-mp2 rohf
+%output
+VDWRADII COSMO 
+PrintLevel Normal
+Print[ P_Loewdin ] 1 
+PrintLevel Large
+density unrelaxed
+end
+#O
+*xyz 0 1 
+O   0.000000000   0.397800000   0.000000000
+H   0.763500000  -0.198900000   0.000000000
+H  -0.763500000  -0.198900000   0.000000000
+*

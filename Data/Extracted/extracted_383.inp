@@ -1,0 +1,14 @@
+! qmmm pbe d3bj def2-svp
+%maxcore 1800
+%pal nprocs 12 end
+%qmmm
+qmatoms {1573:1679} end
+activeatoms {1573:1679} end
+orcafffilename "agagrc1.orcaff.prms"
+end
+#o=p(hashtag)p
+*xyz 0 1 
+o   0.000000000   0.000000000   0.000000000
+p   1.299000000   0.750000000   0.000000000
+p   2.598100000   1.500000000   0.000000000
+*

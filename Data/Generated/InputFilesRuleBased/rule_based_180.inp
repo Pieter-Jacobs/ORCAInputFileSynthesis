@@ -1,0 +1,14 @@
+!pal6 tightscf 6-311+g scs/sos-b2plyp21 defgrid1 uhf d3bj autoaux
+%method
+   D3s6 0.61
+   D3s8 0
+   D3a1 0
+   D3a2 6.2
+end
+%mp2 Density unrelaxed end
+#[NH2]
+*xyz 0 2 
+N  -0.000000000   0.400600000   0.000000000
+H  -0.831600000  -0.200300000   0.000000000
+H   0.831600000  -0.200300000   0.000000000
+*

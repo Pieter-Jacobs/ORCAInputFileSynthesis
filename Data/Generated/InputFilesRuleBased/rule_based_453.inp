@@ -1,0 +1,15 @@
+!pal6 tightscf x2c-qzvpall-2c scs-wb88pp86 defgrid3 uhf autoaux
+%tddft
+nroots 9
+upop true
+dcorr 1
+doscs true
+tda true
+end
+%scf convforced true end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

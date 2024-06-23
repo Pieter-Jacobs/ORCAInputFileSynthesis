@@ -1,0 +1,17 @@
+!pal6 jun-cc-pv(t+d)z rhf ri-jk autoaux autoaux gdiis-opt tightopt noautostart
+%geom
+Scan
+B 0 2 = 3.00, 6.00, 5
+end
+Constraints
+{B 0 1 1.50 C}
+{B 0 2 3.00 C}
+{B 1 2 1.50 C}
+end
+end
+#N(hashtag)P=O
+*xyz 0 1 
+N   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+O  -0.000000000  -3.000000000   0.000000000
+*

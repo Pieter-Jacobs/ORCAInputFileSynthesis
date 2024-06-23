@@ -1,0 +1,15 @@
+!pal6 def2-svp opt
+%geom
+AddExtraBonds true # switch on/off assigning bonds to atom pairs that are
+# connected by more than <Max_Length> bonds and are less
+# than <MaxDist> Ang. apart (default true)
+AddExtraBonds_MaxLength 10 # cutoff for number of bonds connecting the two
+# atoms (default 10)
+AddExtraBonds_MaxDist 5 # cutoff for distance between two atoms (default 5 Ang.)
+end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

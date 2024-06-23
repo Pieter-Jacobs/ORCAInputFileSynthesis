@@ -1,0 +1,19 @@
+!uks b3lyp def2-tzvpp def2/j rijcosx nofinalgrid nofinalgridx d3bj verytightscf moread uno uco defgrid3
+%moinp "tddft_feiv_bistsmp_is_b3lyp_def2_tzvpp_150roots.gbw"
+%tddft
+donto true
+doquad true
+nroots 150
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end
+#[bh]f
+*xyz 0 2 
+b  -0.117700000   0.437200000   0.000000000
+f   1.189900000  -0.184500000   0.000000000
+h  -1.072100000  -0.252700000   0.000000000
+*

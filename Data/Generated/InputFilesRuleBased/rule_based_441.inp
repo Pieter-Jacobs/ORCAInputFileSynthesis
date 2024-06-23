@@ -1,0 +1,12 @@
+!pal6 tightscf aug-pc-4 rsx-0dh rijcosx defgrid1 rhf autoaux opt normalopt noautostart
+%geom
+Scan
+B 1 2 = 1.50, 3.00, 5
+end
+end
+#B(hashtag)P=O
+*xyz 0 1 
+B   0.000000000   0.000000000   0.000000000
+P  -0.000000000  -1.500000000   0.000000000
+O  -0.000000000  -3.000000000   0.000000000
+*

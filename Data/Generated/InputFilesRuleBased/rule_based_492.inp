@@ -1,0 +1,11 @@
+!pal6 tightscf x2c-svpall tpss defgrid3 scnl numfreq engrad autoaux
+%method NLb 5.0 end
+%scf AutoTRAH false end
+%freq
+CentralDiff false
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

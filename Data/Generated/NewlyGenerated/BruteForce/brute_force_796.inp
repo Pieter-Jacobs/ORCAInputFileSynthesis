@@ -1,0 +1,6 @@
+!pal6 x2c-svpall normalscf gdiis-copt keepdens smear defgrid1
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

@@ -1,0 +1,10 @@
+!pal6 cc-pvtz-f12-mp2fit pdbfile bohrs amfi scfconv6 mo-ccsd cpcm nokeepints ucfloat direct conv
+%method
+NLb 5.0
+Z_IntAccX 3.067 
+end
+#P(hashtag)P
+*xyz 0 1 
+P   0.942100000   0.000000000   0.000000000
+P  -0.942100000   0.000000000   0.000000000
+*

@@ -1,0 +1,20 @@
+!uks tpssh def2-svp def2/j rijcosx nofinalgrid nofinalgridx d3bj moread tightscf cpcm(ch2cl2) defgrid3
+%moinp "restart_opt_feiv_bistsmp_is_tpssh_6_31gdp.gbw"
+%pal nprocs 32
+end
+%maxcore 7500
+%basis
+newgto fe "def2-tzvp" end
+newauxgto fe "def2/j" end
+end
+%tddft
+donto true
+doquad true
+nroots 50
+end
+#[nh2]
+*xyz 0 2 
+n  -0.000000000   0.400600000   0.000000000
+h  -0.831600000  -0.200300000   0.000000000
+h   0.831600000  -0.200300000   0.000000000
+*

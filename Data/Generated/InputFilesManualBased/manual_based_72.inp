@@ -1,0 +1,11 @@
+!dlpno-ccsd(t) cc-pvdz cc-pvdz/c cc-pvtz/jk rijk verytightscf tightpno
+%paras rCO = 1.20
+ACOH = 120
+rCH = 1.08
+end
+#[NH]F
+*xyz 0 2 
+N  -0.171500000   0.447300000   0.000000000
+F   1.064100000  -0.164900000   0.000000000
+H  -0.892600000  -0.282500000   0.000000000
+*

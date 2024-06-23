@@ -1,0 +1,12 @@
+! rks wb97m-v def2-tzvpp def2-tzvpp/c def2/j tightscf rijcosx 
+! cpcm
+%cpcm
+smd true
+smdsolvent "thf"
+end
+#n1=s=n1
+*xyz 0 1 
+n  -0.517100000   0.727400000   0.000000000
+s   1.034200000   0.000000000  -0.000000000
+n  -0.517100000  -0.727400000   0.000000000
+*

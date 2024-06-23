@@ -1,0 +1,18 @@
+!pal6 tightscf aug-ano-pvqz revpbe0 nocosx rhf d3zero opt verytightopt noautostart
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+%geom
+Scan
+B 1 2 = 1.73, 3.46, 5
+end
+end
+#P(hashtag)CCl
+*xyz 0 1 
+P  -1.591500000   0.002800000   0.000000000
+C  -0.068100000  -0.005200000   0.000000000
+Cl   1.659600000   0.002400000   0.000000000
+*

@@ -1,0 +1,26 @@
+! sp def2-svp rijcosx def2/j def2-svp/c strongscf miniprint printbasis printmos defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%method
+method dft
+functional hyb_gga_xc_wb97x_v
+end
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+dosoc true
+mode aoints
+nroots 8
+triplets true
+maxcore 2000
+end
+#n1=s=p1
+*xyz 0 1 
+n   0.023600000  -0.887900000   0.000000000
+s   1.045100000   0.458800000  -0.000000000
+p  -1.068700000   0.429100000  -0.000000000
+*

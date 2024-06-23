@@ -1,0 +1,6 @@
+!pal6 def2-tzvp(-f) nomulliken cpcm(ethanol)
+#ClCl
+*xyz 0 1 
+Cl   1.010000000   0.000000000   0.000000000
+Cl  -1.010000000   0.000000000   0.000000000
+*

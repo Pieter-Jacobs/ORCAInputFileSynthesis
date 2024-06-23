@@ -1,0 +1,19 @@
+!pal6 tightscf jun-cc-pv(q+d)z ao-ccsd uhf uno autoaux gdiis-opt verytightopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Scan
+B 0 1 = 0.98, 1.96, 5
+end
+Constraints
+{B 0 1 0.98 C}
+end
+end
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

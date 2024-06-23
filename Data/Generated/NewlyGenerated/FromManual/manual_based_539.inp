@@ -1,0 +1,10 @@
+!pal6 sv(p) conv opt
+%qmmm
+QM2CustomFile "myQM2Method.txt" # File should be available in working directory.
+end
+#N1=S=N1
+*xyz 0 1 
+N  -0.517100000   0.727400000   0.000000000
+S   1.034200000   0.000000000  -0.000000000
+N  -0.517100000  -0.727400000   0.000000000
+*

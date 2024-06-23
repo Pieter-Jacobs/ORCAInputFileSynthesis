@@ -1,0 +1,13 @@
+!pal6 def2-qzvppd/c ao-ncepa/1 scs-ri-mp2 mo-ccsd(t)
+%mtr
+dxyz 0.01, 0.02 
+HessName "ethene.hess"
+HessName "water.hess"
+LSteps 4,5
+rsteps 10,0
+end
+#ClCl
+*xyz 0 1 
+Cl   1.010000000   0.000000000   0.000000000
+Cl  -1.010000000   0.000000000   0.000000000
+*

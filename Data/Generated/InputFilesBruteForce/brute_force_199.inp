@@ -1,0 +1,12 @@
+!pal6 pc-2 nocosx verytightscf
+%tddft
+PTLimit 30
+PThresh 1e-4
+axstda 0.56
+end
+#N(hashtag)[PH]
+*xyz 0 2 
+N   1.259800000   0.260200000   0.000000000
+P  -0.190600000  -0.689800000   0.000000000
+H  -1.069200000   0.429600000   0.000000000
+*

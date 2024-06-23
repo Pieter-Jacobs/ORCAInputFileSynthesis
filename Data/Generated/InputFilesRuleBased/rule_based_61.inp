@@ -1,0 +1,17 @@
+!pal6 tightscf x2c-tzvpall-2c m06l defgrid3 d3zero opt verytightopt noautostart
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+%geom
+Scan
+B 0 1 = 1.35, 2.71, 5
+end
+end
+#[SH]
+*xyz 0 2 
+S   0.676600000   0.000000000   0.000000000
+H  -0.676600000   0.000000000   0.000000000
+*

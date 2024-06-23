@@ -1,0 +1,12 @@
+!pal6 tightscf cc-pcvqz-f12-optri ri-sos-pbe-qidh defgrid3 rhf autoaux
+%tddft
+nroots 9
+upop true
+end
+%scf convforced true end
+#O=C=O
+*xyz 0 1 
+O  -1.405000000  -0.000000000   0.000000000
+C  -0.000000000   0.000000000   0.000000000
+O   1.405000000  -0.000000000   0.000000000
+*

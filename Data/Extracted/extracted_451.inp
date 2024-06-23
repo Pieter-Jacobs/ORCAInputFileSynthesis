@@ -1,0 +1,89 @@
+!usesym casscf cc-pvqz rijk autoaux conv tightscf
+%casscf
+ nel 6
+ norb 6
+ mult 7,5,3,1
+ mult    7, 5,5,5,5, 3,3,3,3,3,3,3, 1,1,1,1,1,1,1,1
+ irrep   4, 1,2,3,4, 1,2,3,4,5,6,7, 0,1,2,3,4,5,6,7    nroots  1, 1,1,1,2, 2,2,2,3,2,2,2, 1,1,1,1,1,1,1,1
+ bweight 1, 1,1,1,2, 2,2,2,3,2,2,2, 1,1,1,1,1,1,1,1
+end
+%method 
+ frozencore fc_ewin
+end
+%mrci
+ citype mrci
+ tsel 1e-8
+ tpre 1e-4
+ ewin -2,100
+ newblock 7 4    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 5 1    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 5 2    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 5 3    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 5 4    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 1    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 2    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 3    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 4    refs cas(6,6) end
+  nroots 3
+ end
+ newblock 3 5    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 6    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 3 7    refs cas(6,6) end
+  nroots 2
+ end
+ newblock 1 0    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 1    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 2    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 3    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 4    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 5    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 6    refs cas(6,6) end
+  nroots 1
+ end
+ newblock 1 7    refs cas(6,6) end
+  nroots 1
+ end
+ maxiter 200
+end
+%pointcharges "pointcharges.pc"
+%pal nprocs 4
+     end
+%maxcore 44000
+#p1=s=p1
+*xyz 0 1 
+p  -1.092100000  -0.596600000  -0.000000000
+s   0.000000000   1.193100000  -0.000000000
+p   1.092100000  -0.596600000   0.000000000
+*

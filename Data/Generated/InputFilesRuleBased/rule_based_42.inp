@@ -1,0 +1,14 @@
+!pal6 tightscf cc-pv5z-dk bt-pno-eom-ccsd rhf tightpno autoaux
+%scf ConvForced true end
+%mdci
+nroots 9
+DLPNOLINEAR true
+NEWDOMAINS true
+locRandom 0
+end
+#FP=S
+*xyz 0 1 
+F  -1.214500000  -0.523100000   0.000000000
+P  -0.301300000   0.786000000   0.000000000
+S   1.515800000  -0.262900000   0.000000000
+*

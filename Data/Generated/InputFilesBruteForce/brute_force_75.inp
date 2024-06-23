@@ -1,0 +1,13 @@
+!pal6 sv noautostart
+%mdci
+dorootwise true
+nroots 3
+DoCVS true
+DoAlpha true
+end
+#N(hashtag)SCl
+*xyz 0 1 
+N  -1.322400000   0.479900000   0.000000000
+S  -0.183700000  -0.803200000   0.000000000
+Cl   1.506200000   0.323300000   0.000000000
+*

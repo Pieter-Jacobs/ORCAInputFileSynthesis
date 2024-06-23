@@ -1,0 +1,7 @@
+!dlpno-mp2 def2-svp def2-svp/c verytightscf
+
+#B(hashtag)P
+*xyz 0 1 
+B   0.709500000   0.000000000   0.000000000
+P  -0.709500000   0.000000000   0.000000000
+*

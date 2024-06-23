@@ -1,0 +1,18 @@
+!uks b3lyp def2-tzvp def2/j d3bj verytightscf rijcosx nofinalgrid nofinalgridx noautostart moread noiter defgrid3
+%pal nprocs 24
+end
+%moinp "si_is_opt_gbw.qro"
+%basis
+newgto fe "cp(ppp)" end
+newauxgto fe "def2/j" end
+end
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+#p(hashtag)[ph]
+*xyz 0 2 
+p   1.698000000   0.000800000   0.000000000
+p  -0.147000000  -0.001800000   0.000000000
+h  -1.551000000   0.001000000   0.000000000
+*

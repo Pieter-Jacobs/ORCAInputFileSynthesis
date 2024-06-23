@@ -1,0 +1,13 @@
+!pal6 x2c-qzvpall-2c roks
+%md
+Timestep 0.5_fs
+Thermostat NHC 300_K Timecon 10.0_fs
+Timestep 41.3_au 
+Restart IfExists
+end
+#C1=NN=1
+*xyz 0 1 
+C   0.000000000  -0.575700000   0.000000000
+N  -0.780400000   0.287800000   0.000000000
+N   0.780400000   0.287800000   0.000000000
+*

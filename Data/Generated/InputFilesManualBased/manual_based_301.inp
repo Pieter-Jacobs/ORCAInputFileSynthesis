@@ -1,0 +1,7 @@
+!noloewdin nomulliken
+%scf GuessMode FMatrix end
+#Cl
+*xyz 0 1 
+Cl   0.692300000   0.000000000   0.000000000
+H  -0.692300000   0.000000000   0.000000000
+*

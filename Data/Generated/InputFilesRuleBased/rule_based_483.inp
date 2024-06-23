@@ -1,0 +1,13 @@
+!pal6 tightscf 6-31g tpss nocosx nl gdiis-opt tightopt noautostart
+%method NLb 5.0 end
+%scf AutoTRAH false end
+%geom
+Scan
+B 0 1 = 1.31, 2.62, 5
+end
+end
+#B(hashtag)B
+*xyz 0 1 
+B   0.654800000   0.000000000   0.000000000
+B  -0.654800000   0.000000000   0.000000000
+*

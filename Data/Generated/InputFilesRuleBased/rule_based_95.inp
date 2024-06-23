@@ -1,0 +1,15 @@
+!pal6 tightscf cc-pwcv5z scs/sos-wb2plyp rijcosx defgrid3 rhf autoaux autoaux
+%mp2 Density relaxed end
+%tddft
+nroots 9
+upop true
+dcorr 1
+doscs true
+tda true
+end
+%scf convforced true end
+#FCl
+*xyz 0 1 
+F   0.814300000   0.000000000   0.000000000
+Cl  -0.814300000   0.000000000   0.000000000
+*

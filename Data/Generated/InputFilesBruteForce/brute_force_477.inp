@@ -1,0 +1,11 @@
+!pal6 def2-tzvpp noloewdin sc-nevpt2 float loewdin veff-soc
+%cpcm
+surfacetype gepol_sas
+surfacetype gepol_ses
+end
+#N1=S=N1
+*xyz 0 1 
+N  -0.517100000   0.727400000   0.000000000
+S   1.034200000   0.000000000  -0.000000000
+N  -0.517100000  -0.727400000   0.000000000
+*

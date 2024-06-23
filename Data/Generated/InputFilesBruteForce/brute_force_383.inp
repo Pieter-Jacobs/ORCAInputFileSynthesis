@@ -1,0 +1,10 @@
+!pal6 def2-tzvpd/c defgrid3
+%nbo
+nbokeylist=" $nbo nbo npa aonbo=c archive $end"
+end
+#FOF
+*xyz 0 1 
+F  -1.163100000  -0.269500000   0.000000000
+O   0.000000000   0.538900000   0.000000000
+F   1.163100000  -0.269500000   0.000000000
+*

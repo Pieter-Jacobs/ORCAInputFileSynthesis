@@ -1,0 +1,15 @@
+!pal6 defgrid1 defgrid3
+%md
+Timestep 0.5_fs
+Initvel 300_K
+Thermostat NHC 300_K Timecon 10.0_fs
+Dump Position Stride 1 Filename "trajectory.xyz"
+Restart IfExists
+Run 100
+end
+#N=O
+*xyz 0 1 
+N  -0.102800000   0.417200000   0.000000000
+O   0.981500000  -0.174000000   0.000000000
+H  -0.878700000  -0.243200000   0.000000000
+*

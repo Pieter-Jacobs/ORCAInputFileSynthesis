@@ -1,0 +1,12 @@
+!pal6 ma-def2-tzvpp nofinalgridx aox-cpf/1 ri-ncpf/1 cpcm(cyclohexane) dkh2 aox-ncpf/1 ccsd-f12d/ri ao-cepa/1 ao-ccsd
+%md
+Timestep 41.3_au 
+Thermostat NHC 300_K Timecon 10.0_fs
+Timestep 2.0_fs
+end
+#B1=C=P1
+*xyz 0 1 
+B  -0.207600000   0.528400000   0.000000000
+C  -0.772400000  -0.358100000   0.000000000
+P   0.980000000  -0.170300000   0.000000000
+*

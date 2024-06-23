@@ -1,0 +1,10 @@
+!pal6 aug-cc-pv6z/c nomoprint mp2 ncepa/1 ri-qcisd(t) amfi ri34-qcisd noiter mo-ncepa/1 nomayer lpno-ncpf/1
+%mdci
+DoSOLV true
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

@@ -1,0 +1,12 @@
+!pal6 tightscf cc-pvqz qcisd(t)-f12/ri uhf uno autoaux cc-pvdz-f12-optri
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+#N(hashtag)[PH]
+*xyz 0 2 
+N   1.259800000   0.260200000   0.000000000
+P  -0.190600000  -0.689800000   0.000000000
+H  -1.069200000   0.429600000   0.000000000
+*

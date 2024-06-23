@@ -1,0 +1,11 @@
+!b3lyp def2-svp
+%geom
+Calc_Hess true # calculation of the exact Hessian
+# before the first optimization step
+end
+#FSF
+*xyz 0 1 
+F  -1.202300000  -0.349000000   0.000000000
+S   0.000000000   0.698000000   0.000000000
+F   1.202300000  -0.349000000   0.000000000
+*

@@ -1,0 +1,11 @@
+!rhf cc-pvqz usesym
+%pointcharges "pointcharges.pc"
+%pal nprocs 4
+     end
+%maxcore 11000
+#n1=ps1
+*xyz 0 1 
+n  -0.023600000   0.887900000   0.000000000
+p   1.068700000  -0.429100000   0.000000000
+s  -1.045100000  -0.458800000   0.000000000
+*

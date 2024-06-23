@@ -1,0 +1,12 @@
+!pal6 6-31g(d,p) ucdoubled2
+%mm
+Rigid_MM_Water false 
+ShiftForceCoulomb true 
+Do_NB_For_Fixed_Fixed true 
+end
+#ClSCl
+*xyz 0 1 
+Cl   1.531700000  -0.444600000   0.000000000
+S  -0.000000000   0.889200000   0.000000000
+Cl  -1.531700000  -0.444600000   0.000000000
+*

@@ -1,0 +1,18 @@
+! uks b3lyp def2-tzvp tightscf slowconv d3bj autoaux moread noiter 
+%moinp "3-2-3_b3lyp_fat_pathologic.gbw"
+%loc
+locmet pm
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+#s=[sh]
+*xyz 0 2 
+s   1.490600000  -0.180600000   0.000000000
+s  -0.390400000   0.659200000   0.000000000
+h  -1.100200000  -0.478600000   0.000000000
+*

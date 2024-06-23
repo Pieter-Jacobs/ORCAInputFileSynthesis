@@ -1,0 +1,11 @@
+!pal6 cc-pcvqz-f12 rhf dlpno-mp2-f12 sloppyscf normalpno autoaux cc-pcvqz-f12-optri gdiis-copt tightopt noautostart numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+
+%freq
+CentralDiff false
+end
+#B(hashtag)B
+*xyz 0 1 
+B   0.654800000   0.000000000   0.000000000
+B  -0.654800000   0.000000000   0.000000000
+*

@@ -1,0 +1,17 @@
+!pal6 tightscf aug-cc-pv5z tpss ri defgrid3 d2 gdiis-opt looseopt noautostart
+%geom
+Scan
+B 1 2 = 1.79, 3.58, 5
+end
+Constraints
+{B 0 1 1.17 C}
+{B 0 2 1.81 C}
+{B 1 2 1.79 C}
+end
+end
+#C1=NP=1
+*xyz 0 1 
+C  -0.587600000   0.577600000  -0.000000000
+N  -0.549200000  -0.590800000   0.000000000
+P   1.136800000   0.013200000  -0.000000000
+*

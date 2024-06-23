@@ -1,0 +1,12 @@
+!pal6 tightscf saug-ano-pv5z wb88pp86 rijcosx defgrid2 uhf autoaux autoaux
+%tddft
+nroots 9
+tda true
+end
+%scf convforced true end
+#[BH2]
+*xyz 0 2 
+B  -0.001200000   0.386800000   0.000000000
+H  -1.019500000  -0.193700000   0.000000000
+H   1.020700000  -0.193000000   0.000000000
+*

@@ -1,0 +1,17 @@
+!pal6 tightscf aug-pc-3 m06 rijcosx defgrid3 rhf d3zero autoaux opt tightopt noautostart anfreq
+%method
+   D3S6 1.0000
+   D3RS6 1.2170
+   D3S8 0.7220
+   D3ALPHA6 14.0
+end
+
+%freq
+Hess2ElFlags 1,2,2,1
+end
+#o1oo1
+*xyz 0 1 
+O  -0.641300000  -0.532500000  -0.000000000
+O  -0.140500000   0.821600000   0.000000000
+O   0.781800000  -0.289100000  -0.000000000
+*

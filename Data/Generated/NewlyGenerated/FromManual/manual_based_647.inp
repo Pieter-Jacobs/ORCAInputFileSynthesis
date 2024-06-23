@@ -1,0 +1,11 @@
+!pal6 wb97x-v
+%method
+SpecialGridAtoms 26 #Increase the radial integration accuracy on Fe
+SpecialGridIntAcc 7 #Requested radial integration accuracy values
+end
+#[PH2]
+*xyz 0 2 
+P  -0.000000000   0.641500000   0.000000000
+H   1.048300000  -0.320800000   0.000000000
+H  -1.048300000  -0.320800000   0.000000000
+*

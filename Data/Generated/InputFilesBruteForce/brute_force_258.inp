@@ -1,0 +1,11 @@
+!pal6 cc-pv5z trah hf mo-ncepa/1 nocheapints cim
+%md
+Timestep 2.0_fs
+Thermostat NHC 300_K Timecon 10.0_fs
+end
+#S1S(hashtag)S1
+*xyz 0 1 
+S   0.625000000  -1.005100000   0.000000000
+S   0.557900000   1.043800000  -0.000000000
+S  -1.182900000  -0.038700000   0.000000000
+*

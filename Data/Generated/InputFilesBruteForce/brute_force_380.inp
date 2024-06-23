@@ -1,0 +1,9 @@
+!pal6 6-311+g(d) xyzfile ucdouble float nonbo nevpt2 cpf/1
+%elprop
+Solver Pople 
+end
+#N(hashtag)N
+*xyz 0 1 
+N   0.730000000   0.000000000   0.000000000
+N  -0.730000000   0.000000000   0.000000000
+*

@@ -1,0 +1,19 @@
+!pal6 tightscf pcsseg-4 dlpno-ccsd(t1) rohf uno tightpno autoaux opt looseopt noautostart numgrad
+%scf ConvForced true end
+%mdci
+locRandom 0
+UseQROs true
+end
+%geom
+Constraints
+{B 0 1 2.06 C}
+{B 0 2 2.61 C}
+{B 1 2 1.34 C}
+end
+end
+#S=[SH]
+*xyz 0 2 
+S   1.490600000  -0.180600000   0.000000000
+S  -0.390400000   0.659200000   0.000000000
+H  -1.100200000  -0.478600000   0.000000000
+*

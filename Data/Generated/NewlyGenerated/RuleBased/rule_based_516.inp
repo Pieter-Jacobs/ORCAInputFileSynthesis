@@ -1,0 +1,12 @@
+!pal6 STO-3G rhf rijonx loosescf autoaux cc-pvdz-f12-optri engrad
+%scf ConvForced true end
+%cis
+nroots 9
+end
+%scf convforced true end
+#O1S(hashtag)S1
+*xyz 0 1 
+O   0.000000000  -0.859500000   0.000000000
+S   1.022900000   0.429700000  -0.000000000
+S  -1.022900000   0.429700000   0.000000000
+*

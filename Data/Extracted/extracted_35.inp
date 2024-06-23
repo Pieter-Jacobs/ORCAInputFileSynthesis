@@ -1,0 +1,13 @@
+! uks b3lyp zora-def2-svp sarc/j zora rijcosx
+! cpcm(water) somf(1x)
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*
+%eprnmr
+  dtensor ssandso
+  dss = uno
+  dsoc = cp
+ end

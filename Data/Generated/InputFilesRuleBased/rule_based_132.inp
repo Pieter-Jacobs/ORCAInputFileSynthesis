@@ -1,0 +1,13 @@
+!pal6 aug-ano-pvtz rhf dlpno-mp2-f12/d verytightscf tightpno autoaux cc-pcvdz-f12-optri
+%scf ConvForced true end
+%cis
+nroots 9
+upop true
+end
+%scf convforced true end
+#o1os1
+*xyz 0 1 
+O   0.495900000  -0.722900000  -0.000000000
+O   0.495900000   0.722900000   0.000000000
+S  -0.991800000   0.000000000  -0.000000000
+*

@@ -1,0 +1,11 @@
+!pal6 tzv(p) strongscf miniprint
+%mm
+Rigid_MM_Water false 
+ShiftForceCoulomb true 
+end
+#N(hashtag)S(hashtag)P
+*xyz 0 1 
+N   1.934500000  -0.003500000   0.000000000
+S  -0.237000000   0.008800000   0.000000000
+P  -1.697500000  -0.005200000   0.000000000
+*

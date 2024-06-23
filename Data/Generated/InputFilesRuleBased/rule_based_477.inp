@@ -1,0 +1,14 @@
+!pal6 sapporo-tzp-2012 uhf dlpno-ccsd(t)-f12/d scfconv9 tightpno autoaux cc-pvtz-f12-optri gdiis-opt tightopt noautostart numfreq defgrid3 engrad autoaux
+%scf ConvForced true end
+%mdci LocRandom 0 end
+%geom
+Scan
+B 0 1 = 0.98, 1.96, 5
+end
+end
+
+#[OH]
+*xyz 0 2 
+O   0.488900000   0.000000000   0.000000000
+H  -0.488900000   0.000000000   0.000000000
+*

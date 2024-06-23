@@ -1,0 +1,11 @@
+!pal6 dlpno-ccsd(t) def2-tzvp def2-tzvp/c def2/j rijcosx verytightscf tightpno
+%geom
+Calc_Hess true # calculation of the exact Hessian
+# before the first optimization step
+end
+#O=C=O
+*xyz 0 1 
+O  -1.405000000  -0.000000000   0.000000000
+C  -0.000000000   0.000000000   0.000000000
+O   1.405000000  -0.000000000   0.000000000
+*

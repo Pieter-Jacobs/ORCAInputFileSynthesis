@@ -1,0 +1,19 @@
+!uks cam-b3lyp def2-svp def2/j rijcosx nofinalgrid nofinalgridx d3bj tightscf defgrid3
+%pal nprocs 32
+end
+%maxcore 7500
+%basis
+newgto fe "def2-tzvp" end
+newauxgto fe "def2/j" end
+end
+%tddft
+donto true
+doquad true
+nroots 50
+end
+#b(hashtag)[ph]
+*xyz 0 2 
+b   2.115400000   0.003500000   0.000000000
+p  -0.380900000  -0.009900000   0.000000000
+h  -1.734400000   0.006400000   0.000000000
+*

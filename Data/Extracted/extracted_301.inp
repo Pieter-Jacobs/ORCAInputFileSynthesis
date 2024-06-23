@@ -1,0 +1,11 @@
+!rks b3lyp d3bj def2-svp rijcosx def2/j tightscf nofinalgrid opt freq defgrid3
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+%geom maxiter 500 end
+#p(hashtag)[sh]
+*xyz 0 1 
+p   1.472900000   0.003300000   0.000000000
+s  -0.155100000  -0.007800000   0.000000000
+h  -1.317800000   0.004600000   0.000000000
+*

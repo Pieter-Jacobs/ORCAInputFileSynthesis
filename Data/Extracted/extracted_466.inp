@@ -1,0 +1,16 @@
+! b97-3c tightopt nofinalgrid miniprint nomoprint defgrid3
+%pal nprocs 1 end
+%maxcore 4300
+%geom
+tole 1e-8
+tolmaxg 1e-5
+tolrmsg 5e-6
+tolmaxd 5e-5
+tolrmsd 1e-5
+end
+#fsf
+*xyz 0 1 
+f  -1.202300000  -0.349000000   0.000000000
+s   0.000000000   0.698000000   0.000000000
+f   1.202300000  -0.349000000   0.000000000
+*

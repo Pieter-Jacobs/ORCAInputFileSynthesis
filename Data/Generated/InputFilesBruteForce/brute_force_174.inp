@@ -1,0 +1,10 @@
+!pal6 x2c-tzvpall veff-soc mp3 ccsd(t)-f12 aox-qcisd scfconv8 ri-ccsd
+%cis
+Ethresh 10.0
+end
+#O=BF
+*xyz 0 1 
+O   1.749600000  -0.319800000   0.000000000
+B  -0.180100000   0.764000000   0.000000000
+F  -1.569500000  -0.444200000   0.000000000
+*

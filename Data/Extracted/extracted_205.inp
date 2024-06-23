@@ -1,0 +1,21 @@
+! ri-wb2plyp sp def2-svp def2-svp/c rijcosx def2/j tightscf miniprint nomoprint nofinalgrid kdiis nososcf float defgrid3
+%pal nprocs 10 end
+%maxcore 17200
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+nroots 4
+triplets true
+dcorr 1
+maxcore 17200
+end
+#b(hashtag)s(hashtag)p
+*xyz 0 1 
+b   2.073800000   0.000800000   0.000000000
+s  -0.211400000  -0.002000000   0.000000000
+p  -1.862500000   0.001200000   0.000000000
+*

@@ -1,0 +1,9 @@
+{
+    "TOT": "input_file_generation_tot.txt",
+    "COV": "input_file_generation_cov.txt",
+    "COT":  "input_file_generation_cot.txt",
+    "GOT":  "input_file_generation_got.txt",
+    "BASIC_EXTENDED":  "input_file_generation_examples.txt",
+    "BASIC": "input_file_generation_basic.txt",
+    "EMBEDDINGS": "embeddings.txt"
+}

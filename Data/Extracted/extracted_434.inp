@@ -1,0 +1,10 @@
+! uks tpssh def2-svp def2/j rijcosx uno largeprint keepdens
+#[sh]
+*xyz 0 2 
+s   0.676600000   0.000000000   0.000000000
+h  -0.676600000   0.000000000   0.000000000
+*
+%eprnmr
+  dtensor ss
+  dss uno
+ end
