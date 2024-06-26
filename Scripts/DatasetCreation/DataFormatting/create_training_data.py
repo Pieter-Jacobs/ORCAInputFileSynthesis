@@ -40,7 +40,7 @@ def create_dataset(prompt_engineering_technique, dataset):
         system_prompt=system_prompt_input_file
     )
     dataset.save_to_jsonl(os.path.join(
-        "Data", "Finetuning", prompt_engineering_technique), filename=f"dataset_{prompt_engineering_technique}")
+        "Data", "Finetuning", dataset), filename=f"dataset_{prompt_engineering_technique}")
 
 
 if __name__ == "__main__":

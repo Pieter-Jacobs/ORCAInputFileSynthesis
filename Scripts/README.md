@@ -1,7 +1,23 @@
 # Scripts
 This folder contain all the necassary scripts that one has to run to replicate our study.
 This involves creating and processing the training and testing datasets (including the scraping of data), 
-creating the `Gen3Molecules` dataset, and running our experiments.
+creating the `Gen3Molecules` dataset, fientuning tthe models, and running our experiments. This README will describe all of these scripts.
+
+One of the essential scripts in our research, `finetune.py`, is found at the top of the directory. It is used to start an OpenAI finetuning job and can be run from 
+the root directory with the following arguments:
+```bash
+    --dataset
+    --model
+    --prompt_engineering_technique
+    --lr
+    --epochs
+    --batch_size
+  ```
+The allowed values are found in the `parse_arguments` function. An example run, to get our best performing model would be:
+```bash
+python Scripts/finetune.py --epochs 8 --lr 2 --batch_size 1 --dataset ManualBased --prompt_engineering_technique cot
+```
+Make sure that the desired training and validation datasets are available in `Data/Finetuning` and `Data/Test`, respectively.
 
 ## DatasetCreation
 This folder contains all scripts used to gather the necassary data for inference. The most important file in this folder is
@@ -21,6 +37,9 @@ This folder contains all scripts used to gather the necassary data for inference
   ```bash
   python Scripts/DatasetCreation/generate_input_files.py --method 0 --N 50 --add_input_block
   ```
+
+Moreover, `embed.py` can be run from root when the orca manual and the scraped ORCA input libraries website are in `Data/Documents/Regular` in pdf format. 
+It then indexes these documents with FAISS, so that they can be used with RAG. 
 
 The following subsections will briefly describe the scripts in the other folders.
 

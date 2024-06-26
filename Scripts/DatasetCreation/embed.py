@@ -1,6 +1,8 @@
 import PyPDF2
 from Classes.Model.Embedder import Embedder
 import os
+import sys
+sys.path.append(os.getcwd())
 from pypdf import PdfMerger
 
 
@@ -21,6 +23,6 @@ if __name__ == "__main__":
     embedding_folder = os.path.join("Data", "Documents", "Embedded")
     pdf_folder = os.path.join("Data", "Documents", "Regular")
     pdf_paths = [os.path.join(pdf_folder, "orca_input_file_library.pdf"),
-                 os.path.join(pdf_folder, "orca_manual_5_0_4_without_tables2.pdf")]
+                 os.path.join(pdf_folder, "orca_manual_5_0_4.pdf")]
 
     embed(pdf_paths=pdf_paths, saving_folder=embedding_folder)

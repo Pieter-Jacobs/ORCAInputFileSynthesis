@@ -1,0 +1,4 @@
+- intro
+-readmes are in seperate folders, scripts are mainly used to reproduce, one can of course use classes for own research
+-use openai key
+-dependencies
