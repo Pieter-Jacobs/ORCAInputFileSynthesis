@@ -2,7 +2,7 @@ import random
 from Classes.Helpers.BasisSetHandler import BasisSetHandler
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
-from Data.Manual.ExtractedDocumentation import keywords_simple_input
+from Data.ExtractedDocumentation import keywords_simple_input
 
 from abc import ABC, abstractmethod
 

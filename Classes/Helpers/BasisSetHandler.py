@@ -3,8 +3,9 @@ from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 import re
 import basis_set_exchange as bse
 import random
-from Data.Manual.ExtractedDocumentation import basis_sets
+from Data.ExtractedDocumentation import basis_sets
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+
 class BasisSetHandler():
     
     def __init__(self, xyz):

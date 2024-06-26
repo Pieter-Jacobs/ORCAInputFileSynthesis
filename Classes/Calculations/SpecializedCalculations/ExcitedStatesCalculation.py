@@ -2,7 +2,7 @@ import random
 from Classes.Calculations.SinglePointCalculations.DFTCalculation import DFTCalculation
 from Classes.Calculations.SinglePointCalculations.HFCalculation import HFCalculation
 from Classes.Calculations.SinglePointCalculations.CCCalculation import CCCalculation
-from Data.Manual.ExtractedDocumentation import keywords_simple_input
+from Data.ExtractedDocumentation import keywords_simple_input
 from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 
 class CCExcitedStatesCalculation(CCCalculation):

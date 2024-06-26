@@ -3,7 +3,7 @@ from Classes.Calculations.SinglePointCalculations.HFCalculation import HFCalcula
 from Classes.Calculations.SinglePointCalculations.CCCalculation import CCCalculation
 from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
-from Data.Manual.ExtractedDocumentation import keywords_simple_input
+from Data.ExtractedDocumentation import keywords_simple_input
 from molmod import bond_length, Molecule, bend_angle, dihed_angle
 import random
 

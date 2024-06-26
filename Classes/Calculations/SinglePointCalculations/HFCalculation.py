@@ -1,6 +1,6 @@
 from Classes.Calculations.Calculation import Calculation
 from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
-from Data.Manual.ExtractedDocumentation import keywords_simple_input
+from Data.ExtractedDocumentation import keywords_simple_input
 import random
 
 class HFCalculation(Calculation):

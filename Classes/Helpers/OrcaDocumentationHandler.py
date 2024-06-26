@@ -1,4 +1,4 @@
-from Data.Manual.ExtractedDocumentation import basis_sets, input_blocks, keywords_density_functionals, keywords_simple_input
+from Data.ExtractedDocumentation import basis_sets, input_blocks, keywords_density_functionals, keywords_simple_input
 import random
 
 
