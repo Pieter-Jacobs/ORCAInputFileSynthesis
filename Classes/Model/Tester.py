@@ -7,7 +7,24 @@ from Classes.Helpers.ORCARunner import ORCARunner
 import re
 import os
 
+
 class Tester:
+    """
+    Tester class for evaluating GPT-3.5 model performance on predicting input files for ORCA calculations.
+
+    Parameters:
+        model (str): The GPT model identifier.
+        data (list): List of tuples containing prompts and corresponding input files.
+        system_prompt (str): System prompt used during GPT completion.
+        eval_file_path (str): File path to store evaluation metrics.
+        output_file_path (str): File path to store output prompts and full outputs.
+        metrics (list): List of metrics to compute if not provided.
+        use_embeddings (bool): Flag indicating whether to use RAG.
+        client (OpenAI): OpenAI API client instance.
+        naive_bleu (BLEU): BLEU instance for naive scoring with ordered n-grams.
+        naive_bleu_unordered (BLEU): BLEU instance for naive scoring with unordered n-grams.
+    """
+
     def __init__(self, model, data, system_prompt, eval_file_path, output_file_path, metrics=None, use_embeddings=False):
         self.client = OpenAI()
         self.system_prompt = system_prompt
@@ -25,6 +42,10 @@ class Tester:
         self.use_embeddings = use_embeddings
 
     def test(self):
+        """
+        Runs the testing process using the GPT model to predict input files, evaluates predictions, 
+        and writes evaluation metrics and outputs to files.
+        """
         with open(self.eval_file_path, 'a', encoding='utf-8') as f:
             f.write(",".join(self.metrics))
 
@@ -61,6 +82,12 @@ class Tester:
                 f.write("\n")
 
     def predict_input_file_with_gpt(self, user_prompt):
+        """
+        Uses GPT model to predict input file content based on user prompt.
+
+        Returns:
+            tuple: Tuple containing predicted input file content and full output message.
+        """
         completion = self.client.chat.completions.create(
             model=self.model,
             messages=[
@@ -82,9 +109,14 @@ class Tester:
                 return "", message
 
     def compute_evaluation_metrics(self, reference_input_file, predicted_input_file):
-        # See if the predicted file is runnable
+        """
+        Computes evaluation metrics comparing reference and predicted input files.
+
+        Returns:
+            list: List of computed evaluation metrics.
+        """
         orca_run_folder = os.path.join('Data', 'Generated', 'Evaluation')
-        input_file_name ="predicted.inp"
+        input_file_name = "predicted.inp"
         with open(os.path.join(orca_run_folder, input_file_name), 'w', encoding='utf-8') as f:
             f.write(ORCAInputFileManipulator.add_xyz(predicted_input_file,
                     molecule_type='Molecules', molecule_file='O.txt'))  # add H20 for ease of running
@@ -96,9 +128,9 @@ class Tester:
             reference_input_file)
         predicted_keywords, _ = ORCAInputFileManipulator.extract_keywords(
             predicted_input_file)
-        reference_input_blocks, reference_input_block_options, reference_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
+        _, reference_input_block_options, reference_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             reference_input_file)
-        predicted_input_blocks, predicted_input_block_options, predicted_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
+        _, predicted_input_block_options, predicted_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             predicted_input_file)
 
         # Mark the options with an % to make sure that the evaluation does not count a keyword with the same name as an option
@@ -150,6 +182,7 @@ class Tester:
                                                           setting_f1, setting_precision, setting_recall]))
 
     def calculate_f1(self, predicted, reference):
+        """Calculates F1 score for NLP settings"""
         if len(predicted) == 0 and len(reference) == 0:
             return 1, 1, 1
         # TP: Amount of ngrams that were predicted that are also in the reference
@@ -173,5 +206,6 @@ class Tester:
         return f1_score, precision, recall
 
     def remove_unnecessary_empty_lines(self, input_file):
+        """Remove unnecasary whitespace from the input file, if there is any left."""
         # Replace multiple whitespace characters including double newlines with a single space
         return re.sub(r'\n\s*\n+', '\n', input_file).strip()

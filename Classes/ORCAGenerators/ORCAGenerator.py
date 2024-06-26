@@ -4,6 +4,17 @@ from abc import ABC, abstractmethod
 
 
 class ORCAGenerator(ABC):
+    """
+    Abstract base class for generating ORCA input files and handling outputs.
+
+    Parameters:
+        save_folder (str): Folder path where input files are saved.
+        output_folder (str): Folder path where ORCA output files are stored.
+        generated_input_files (list): List of generated ORCA input files.
+        n_input_files_generated (int): Number of input files generated.
+        input_file_prefix (str): Prefix for input file names.
+    """
+
     def __init__(self, save_folder, input_file_prefix, output_folder="Orca Output"):
         self.save_folder = save_folder
         self.output_folder = output_folder
@@ -15,6 +26,7 @@ class ORCAGenerator(ABC):
         self.input_file_prefix = input_file_prefix
 
     def generate_input_files(self, N, generation_params={"accept_warnings": True}, save_warnings=True, save_errors=True):
+        """Generate N input files."""
         while self.n_input_files_generated < N:
             succes, input_file = self.generate_input_file(
                 **generation_params) 
@@ -28,6 +40,7 @@ class ORCAGenerator(ABC):
             self.n_input_files_generated += succes
 
     def add_parallelization(self, input_file, n_pal):
+        """Add a keyword to the input file to use paralellization"""
         index = input_file.find('!') + 1
         exclamation_mark = input_file[:index]  # Can have whitespace
         rest_of_keywords = input_file[index:]
@@ -38,6 +51,7 @@ class ORCAGenerator(ABC):
         pass
 
     def get_warnings(self, input_file_name):
+        """Extract the warnings out of the ORCA output for a given input file name"""
         try:
             warnings = ORCAInputFileManipulator.extract_warnings(ORCAInputFileManipulator.read_file(os.path.relpath(
                 os.path.join(self.output_folder,
@@ -48,12 +62,15 @@ class ORCAGenerator(ABC):
             return [""]
 
     def write_warnings_to_file(self, input_file, save_path="warnings.txt"):
+        """Append the ORCA warnings to a seperate file"""
         warnings = self.get_warnings(f"{self.input_file_prefix}_{
                                      len(self.generated_input_files) - 1}.inp")
         ORCAInputFileManipulator.write_file(save_path, input_file + "\n" + ("\n".join([" ".join(
             map(str, tup)) for tup in warnings])) + "\n" + "-----------------" + "\n", writing_type="a")
 
     def write_errors_to_file(self, input_file, save_path="errors.txt"):
+        """Append the ORCA errors to a seperate file"""
+
         input_file_name = f"{self.input_file_prefix}_{
             len(self.generated_input_files)}.inp"
         try:
@@ -67,6 +84,7 @@ class ORCAGenerator(ABC):
             pass
         
     def save_inp_to_file(self, input_file):
+        """Save an ORCA input file to the correct folder."""
         input_file_name = f"{self.input_file_prefix}_{
             len(self.generated_input_files)}.inp"
         data_folder = os.path.relpath(self.save_folder, os.getcwd())

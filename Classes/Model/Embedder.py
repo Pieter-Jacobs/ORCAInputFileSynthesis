@@ -6,7 +6,9 @@ import tiktoken
 
 
 class Embedder:
+    """Static class used to handle PDFs and to create embeddings from them for RAG."""
     def split_pdf(pdf_path):
+        """Split a pdf by page"""
         textSplitter = RecursiveCharacterTextSplitter(
             length_function=len,
             chunk_overlap=0)
@@ -15,11 +17,16 @@ class Embedder:
         return text_split_by_page
 
     def save_embedding_to_file(documents, embedding_folder):
-        faiss_index = FAISS.from_documents(documents, OpenAIEmbeddings(model="text-embedding-3-large"))
+        """Use FAISS to embed documents and save them to file"""
+
+        faiss_index = FAISS.from_documents(
+            documents, OpenAIEmbeddings(model="text-embedding-3-large"))
         faiss_index.save_local(embedding_folder)
 
     def add_relevant_context_to_prompt(model, system_prompt, prompt, embedding_folder, k, token_limit):
-        enc = tiktoken.encoding_for_model(model)
+        """Adds k documents to the user prompt and checks that this does not go over the provided token limit"""
+        enc = tiktoken.encoding_for_model(
+            model)  # get the correct token encoding
         contextual_information = ""
         count = 0
 
@@ -29,5 +36,5 @@ class Embedder:
 
         for i in range(k):
             if len(enc.encode(f'''{system_prompt}{prompt}\n#context\n{contextual_information}{manual_texts[count].page_content}\n''')) < token_limit:
-                contextual_information += manual_texts[i].page_content + "\n"
+                contextual_information += manual_texts[i].page_content + "\n" # Add a pdf page
         return f"{prompt}\n#context\n{contextual_information}"

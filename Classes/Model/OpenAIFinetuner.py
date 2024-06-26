@@ -5,10 +5,13 @@ import csv
 
 
 class OpenAIFinetuner:
+    """Simple wrapper class that facilitates the use of the OpenAI SDK"""
+
     def __init__(self):
         self.client = OpenAI()
 
     def upload_dataset(self, dataset_path):
+        """Uploads a dataset so that it can be used for finetuning"""
         path = dataset_path
         file_object = self.client.files.create(
             file=open(path, "rb"),
@@ -17,6 +20,8 @@ class OpenAIFinetuner:
         return file_object.id
 
     def start_finetuning_job_parameterized(self, model, train_file, val_file, suffix, n_epochs, batch_size, learning_rate_multiplier):
+        """Creates a finetuning job with provided parameters"""
+
         self.client.fine_tuning.jobs.create(
             training_file=train_file,
             validation_file=val_file,
@@ -30,14 +35,17 @@ class OpenAIFinetuner:
         )
 
     def start_finetuning_job(self, model, train_file, val_file, suffix):
+        """Creates a finetuning job where OpenAI provides the parameters"""
+
         self.client.fine_tuning.jobs.create(
             training_file=train_file,
             validation_file=val_file,
             model=model,
-            suffix=suffix 
+            suffix=suffix
         )
 
     def save_finetuning_job_results_to_csv(self, csv_filename):
+        """Checks the most recent succesful finetuning job, and saves the results from it to csv"""
         def save_to_csv(content, filename):
             with open(filename, 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile)

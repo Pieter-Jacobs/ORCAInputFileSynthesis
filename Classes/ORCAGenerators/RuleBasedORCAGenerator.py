@@ -17,10 +17,20 @@ import random
 import os
 
 class RuleBasedORCAGenerator(ORCAGenerator):
+    """
+    A class to generate ORCA input files based on hard coded rules about what is valid in ORCA and what is not.
+    	
+    Parameters:
+        save_folder (str): Folder path where input files are saved.
+        input_file_prefix (str): Prefix for input file names.
+        output_folder (str): Folder path where ORCA output files are stored.
+    """
     def __init__(self, save_folder, input_file_prefix="rule_based", output_folder="Orca Output"):
         super().__init__(save_folder, input_file_prefix, output_folder)
 
     def generate_input_file(self, accept_warnings, calculation_type='dft', add_solvation=False):
+        """Generates an ORCA input file for a specified calculation"""
+
         calculation = None 
         xyz, molecule_file, molecule_type = ORCAInputFileManipulator.get_random_xyz(max_atoms=3)
         # We always define the calculation type, the default is a single point (if no calculation type is defined)    
@@ -175,6 +185,7 @@ class RuleBasedORCAGenerator(ORCAGenerator):
         calculation.process_keywords()
         calculation.process_input_blocks()
         input_file = calculation.generate_input_file()
+        # Add parallelization to speed up the calculation
         input_file = self.add_parallelization(input_file=input_file, 
                                                 n_pal=6)
         
@@ -182,6 +193,7 @@ class RuleBasedORCAGenerator(ORCAGenerator):
 
             input_file_name, input_file_path = self.save_inp_to_file(input_file)
 
+            # We try to run the file, if it executes we save it
             completed = ORCARunner.run_orca(
                 self.save_folder, input_file_name, self.output_folder, r"C:\Users\Pieter\Orca\orca.exe")
 
@@ -197,5 +209,6 @@ class RuleBasedORCAGenerator(ORCAGenerator):
         return False, None
 
     def get_supported_calculations():
+        """Getter for all supported calculations in string format"""
         return ['dft', 'hf', 'cc', 'dft_opt', 'hf_opt', 'cc_opt', 
                 'dft_es', 'hf_es', 'cc_es', 'dft_freq', 'hf_freq', 'cc_freq']
