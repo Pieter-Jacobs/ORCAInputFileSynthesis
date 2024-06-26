@@ -6,8 +6,7 @@ import random
 from Data.ExtractedDocumentation import basis_sets
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 
-class BasisSetHandler():
-    
+class BasisSetHandler():    
     def __init__(self, xyz):
         self.elements = ORCAInputFileManipulator.extract_elements(xyz)
         self.possible_basis_sets = self.get_possible_basis_sets([name.lower() for name in bse.get_all_basis_names() if name.lower()
