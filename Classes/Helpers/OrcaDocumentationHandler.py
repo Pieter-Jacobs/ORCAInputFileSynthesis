@@ -31,6 +31,7 @@ class ORCADocumentationHandler:
         return ORCADocumentationHandler.process_documentation('\n'.join(getattr(keywords_simple_input, var) for var in dir(keywords_simple_input) if isinstance(getattr(keywords_simple_input, var), str)))
 
     def process_documentation(documentation):
+        """Creates a dictionary out of the extracted documentation, with the value being the description of the key (an ORCA term)"""
         doc_dictionary = {}
         lines = documentation.split('\n')
         for line in lines:

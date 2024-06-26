@@ -11,6 +11,7 @@ import time
 class ORCARunner():
     """Static class to run an ORCA input file, and handle its corresponding output."""
     def kill_processes_by_file(file_path):
+        """Kills processes associated with a specific input file, mainly usable for when timeouts do not work"""
         # Get a list of all running processes
         for proc in psutil.process_iter(['pid', 'name', 'username']):
             if 'orca' in proc.name().lower() or 'autoci' in proc.name().lower():
@@ -37,9 +38,7 @@ class ORCARunner():
             specific_output_folder, f'{input_file_name}.txt')
         output_file_stderr = os.path.join(
             specific_output_folder, 'error.txt')
-        # Construct the command to run Orca with the input file
-        # command = [orca_executable, input_file_path,
-        #            f'-l {output_file_stdout}']
+
         command = [orca_executable, input_file_path]
         # Run the ORCA process and redirect output
         try:
@@ -86,7 +85,7 @@ class ORCARunner():
                     os.path.join(data_folder_write), input_file_code)
 
     def rename_orca_output(completed_process, output_file_stdout, output_file_stderr):
-        """Writes the output of the orca file. If there was an error, this is made to be seen in the filename."""
+        """Writes the output of ORCA to file. If there was an error, this is made to be seen in the filename."""
         if completed_process.returncode != 0:
             error = ORCAInputFileManipulator.read_file(output_file_stderr)
             new_path = output_file_stdout.removesuffix(
@@ -117,8 +116,7 @@ class ORCARunner():
                     file_path.endswith('scfgrad.inp')) or (
                     file_path.endswith('scfhess.inp')) or (
                         file_path.endswith('cipsi.inp')
-                    ):
-                # Get the filename
+                    ): # there are many types of files with .inp that can get created
                 file_name = os.path.basename(file_path)
                 # Move the file to the destination folder
                 shutil.move(file_path, os.path.join(new_folder, file_name))

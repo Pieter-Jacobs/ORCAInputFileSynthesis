@@ -7,13 +7,18 @@ from molmod import Molecule
 from rdkit.Chem import MolFromSmiles
 from Classes.Helpers.ORCAManualManipulator import ORCAManualManipulator
 
+
 class ORCAInputFileManipulator:
+    """Static class that is able to extract and manipulate different parts of ORCA input files."""
+
     def get_random_xyz(max_atoms=4):
+        """Returns a random xyz coordinate block from the molecules dataset, together with the file and molecule type"""
         found_molecule = False
         molecule_type = random.choice(['Molecules', 'MoleculesRadical'])
         while not found_molecule:
             molecule_file = random.choice(os.listdir(
                 os.path.abspath(f'Data{os.sep}{molecule_type}')))
+            # We search for a molecule that is of the requested number of atoms
             try:
                 molecule_smiles = sf.decoder(sf.encoder(
                     molecule_file.removesuffix('.txt')))
@@ -46,6 +51,7 @@ class ORCAInputFileManipulator:
         return input_file
 
     def replace_xyz(input_file):
+        """Replaces the coordinate block in an input file with its corresponding smiles"""
         molecule_type = "Molecules"
         if "UKS" in input_file or "uks" in input_file or "UHF" in input_file or "uhf" in input_file or "ROHF" in input_file or "rohf" in input_file or "ROKS" in input_file or "roks" in input_file:
             molecule_type = "MoleculesRadical"
@@ -65,6 +71,7 @@ class ORCAInputFileManipulator:
         return input_file, matches
 
     def remove_xyz(input_file):
+        """Removes the coordinate block from an ORCA input file"""
         coordinate_pattern = r'\*\s?xyz.*?\*'
         file_pattern = r'\*\s?xyzfile.*?\n'
         combined_pattern = f'({coordinate_pattern}|{file_pattern})'
@@ -74,6 +81,7 @@ class ORCAInputFileManipulator:
         return input_file
 
     def remove_smiles_comment(input_file):
+        """Removes the SMILES comment we created from an ORCA input file"""
         comment_pattern = r'(#.*\n)\*[\s]?xyz'
         matches = re.findall(comment_pattern, input_file, re.DOTALL)
         for match in matches:
@@ -81,6 +89,8 @@ class ORCAInputFileManipulator:
         return input_file
 
     def extract_molecule(xyz, n_atoms):
+        """Extracts a molecule object from a provided coordinate block"""
+
         xyz_block = f"{n_atoms}\n\n{'\n'.join(xyz.splitlines()[1:-1])}"
         with open('molecule.xyz', 'w') as f:
             f.write(xyz_block)
@@ -89,12 +99,15 @@ class ORCAInputFileManipulator:
         return molecule
 
     def extract_molecule_smiles(input_file):
+        """Extract the SMILES out of an ORCA input file we created"""
         try:
             return re.search(r'#(.*)\n\*[\s]?xyz', input_file).group(1)
         except:
             return False
 
     def extract_elements(input_file):
+        """Extract the different atoms out of an ORCA input file"""
+
         coordinates = ORCAManualManipulator.extract_input_file_coordinates(
             input_file)
         elements_pattern = r'\b[A-Z][a-z]?\b'
@@ -102,6 +115,8 @@ class ORCAInputFileManipulator:
         return elements
 
     def extract_input_blocks(input_file):
+        """Extract all parts of input blocks out of an ORCA input file"""
+
         options = []
         input_blocks = []
         settings = []
@@ -129,7 +144,7 @@ class ORCAInputFileManipulator:
         return input_blocks_raw, options, settings
 
     def extract_keywords(text):
-        """Extract all words out of lines starting with !"""
+        """Extract all words out of lines starting with !, thus extracting keywords"""
         keywords = []
         keyword_lines = re.findall(
             r'![^\n\r]*', text)
@@ -141,15 +156,8 @@ class ORCAInputFileManipulator:
         keywords = [keyword for keyword in keywords if keyword != ""]
         return keywords, keyword_lines
 
-    def read_file(file_path):
-        with open(file_path, 'r', encoding='utf-8') as file:
-            return file.read()
-
-    def write_file(file_path, content, writing_type="w"):
-        with open(file_path, writing_type, encoding="utf-8") as file:
-            file.write(content)
-
     def extract_warnings(orca_output_file):
+        """Extracts ORCA warnings out of a given output file"""
         warning_block_pattern = r'''================================================================================
                                         WARNINGS
                        Please study these warnings very carefully!
@@ -163,3 +171,11 @@ class ORCAInputFileManipulator:
             warning_pattern, warning_block, flags=re.DOTALL)
 
         return warnings_with_changes
+
+    def read_file(file_path):
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return file.read()
+
+    def write_file(file_path, content, writing_type="w"):
+        with open(file_path, writing_type, encoding="utf-8") as file:
+            file.write(content)

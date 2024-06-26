@@ -7,14 +7,17 @@ from Data.ExtractedDocumentation import basis_sets
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 
 class BasisSetHandler():    
+    """Given a molecule, one can use this class to extract all kinds of possible basis sets.
+    Also manages that within calculations, auxiliaries do not get used doubly"""
     def __init__(self, xyz):
         self.elements = ORCAInputFileManipulator.extract_elements(xyz)
         self.possible_basis_sets = self.get_possible_basis_sets([name.lower() for name in bse.get_all_basis_names() if name.lower()
                                                                  in list(ORCADocumentationHandler.get_basis_set_documentation().keys())])
-        self.basis_set = self.sort_basis_sets_by_size(self.possible_basis_sets)[0]
+        self.basis_set = random.choice(self.possible_basis_sets) # Randomly choose the basis set 
         self.added_bs_roles = set() # keep account of roles, so they dont get added twice
 
     def sort_basis_sets_by_size(self, basis_sets):
+        """Sorts basis sets based on their amount of employed basis functions"""
         def count_basis_functions(basis_set_name):
             basis_set_info = bse.get_basis(basis_set_name, elements=self.elements)
             num_basis_functions = 0
@@ -25,6 +28,7 @@ class BasisSetHandler():
         return sorted(basis_sets, key=count_basis_functions)
 
     def get_possible_basis_sets(self, basis_set_names):
+        """Getter for all possible basis sets for the provided molecule"""
         if all(isinstance(item, str) for item in self.elements):
             self.elements = [periodic_table[element] for element in self.elements]
 
@@ -37,28 +41,8 @@ class BasisSetHandler():
                 pass
         return list(set(possible_basis_sets))
 
-    def get_smallest_possible_basis_set(self):
-        def count_basis_functions(basis_set_info):
-            num_basis_functions = 0
-            for element in list(basis_set_info['elements'].keys()):
-                for shell in basis_set_info['elements'][element]['electron_shells']:
-                    num_basis_functions += len(shell['coefficients'])
-            return num_basis_functions
-        
-        least_basis_functions = float('inf')
-        smallest_possible_basis_set = None
-        for name in self.possible_basis_sets:
-            try:
-                basis_set_info = bse.get_basis(name, elements=self.elements)
-                basis_functions = count_basis_functions(basis_set_info)
-                if basis_functions < least_basis_functions: 
-                    least_basis_functions = basis_functions
-                    smallest_possible_basis_set = basis_set_info['names']
-            except Exception as e: 
-                pass
-        return smallest_possible_basis_set[0]
-
     def get_aux_basis_set(self, role):
+        """Returns the auxiliary basis set for the given molecule based on the requested auxiliary role"""
         orca_basis_sets = list(ORCADocumentationHandler.get_basis_set_documentation().keys())
 
         fitted_basis_set = ""
@@ -91,6 +75,7 @@ class BasisSetHandler():
 
 
     def get_f12_basis_set(self):
+        """Getter for an F12 basis set that fits with the used basis set"""
         f12_documentation = ORCADocumentationHandler.process_documentation(basis_sets.basis_set_auxilary_cabs)
         f12_basis_sets = self.get_possible_basis_sets(list(f12_documentation.keys()))
         if len(f12_basis_sets) > 0: 

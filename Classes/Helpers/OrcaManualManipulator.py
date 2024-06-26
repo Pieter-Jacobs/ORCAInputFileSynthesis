@@ -49,8 +49,8 @@ class ORCAManualManipulator:
         keywords.extend([keyword.lower() 
                         for line in keyword_lines 
                         for keyword in line.split() 
-                        if keyword.lower() in list(OrcaDocumentationHandler.get_all_keyword_documentation().keys())])
-        keyword_lines = ([[keyword.lower() for keyword in line.split() if keyword.lower() in list(OrcaDocumentationHandler.get_all_keyword_documentation().keys())] for line in keyword_lines])
+                        if keyword.lower() in list(ORCADocumentationHandler.get_all_keyword_documentation().keys())])
+        keyword_lines = ([[keyword.lower() for keyword in line.split() if keyword.lower() in list(ORCADocumentationHandler.get_all_keyword_documentation().keys())] for line in keyword_lines])
         keyword_lines = list(filter(None, keyword_lines))
         return keywords, keyword_lines
         
