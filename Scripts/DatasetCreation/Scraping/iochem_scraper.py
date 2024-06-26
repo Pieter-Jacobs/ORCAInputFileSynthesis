@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append(os.getcwd())
 import random
 import string
 import requests
@@ -79,7 +81,7 @@ while scraping:
                 download_url = base_url + orca_button['href']
                 response = requests.get(download_url)
                 filename = os.path.join(
-                    f'Data{os.sep}ioChem', download_url.split('/')[-1])
+                    f'Data{os.sep}ORCAExtracted', download_url.split('/')[-1])
 
                 meta_data_string = '_'.join(meta_data[i])
                 filename = get_unique_filename(

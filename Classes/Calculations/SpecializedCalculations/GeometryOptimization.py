@@ -1,8 +1,8 @@
 from Classes.Calculations.SinglePointCalculations.DFTCalculation import DFTCalculation
 from Classes.Calculations.SinglePointCalculations.HFCalculation import HFCalculation
 from Classes.Calculations.SinglePointCalculations.CCCalculation import CCCalculation
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 from Data.Manual.ExtractedDocumentation import keywords_simple_input
 from molmod import bond_length, Molecule, bend_angle, dihed_angle
 import random
@@ -142,7 +142,7 @@ class GeometryOptimization:
         self.basisSetHandler = basisSetHandler
         self.optimization_type = self.choose_optimization_type()
         self.geom_convergence = self.choose_geometry_convergence()
-        self.molecule = OrcaInputFileManipulator.extract_molecule(xyz=xyz,
+        self.molecule = ORCAInputFileManipulator.extract_molecule(xyz=xyz,
                                                                   n_atoms=len(self.basisSetHandler.elements))
 
     def choose_optimization_type(self):
@@ -153,7 +153,7 @@ class GeometryOptimization:
         return random.choice(optimization_types)
 
     def choose_geometry_convergence(self):
-        geom_convergence = OrcaDocumentationHandler.choose_random_keyword(
+        geom_convergence = ORCADocumentationHandler.choose_random_keyword(
             keywords_simple_input.geometry_convergence)
         return geom_convergence
 

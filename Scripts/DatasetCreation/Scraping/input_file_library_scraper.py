@@ -1,15 +1,9 @@
 import os
 import sys
-
-# Add the parent directory (project_root) to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-import random
-import string
+sys.path.append(os.getcwd())
 import requests
-from bs4 import BeautifulSoup
-from Helpers.file_handling import write_file
 import fpdf
+from bs4 import BeautifulSoup
 
 
 # URL of the page to scrape
@@ -43,4 +37,3 @@ for i, link in enumerate(links):
     output_pdf.cell(5, txt=text, align="L")
 
 output_pdf.output('Data\Manual\orca_input_file_library.pdf')
-write_file("Data\Manual\orca_input_file_library.txt", input_library_text)

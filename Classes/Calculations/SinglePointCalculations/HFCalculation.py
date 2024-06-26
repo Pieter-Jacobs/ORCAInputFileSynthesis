@@ -1,5 +1,5 @@
 from Classes.Calculations.Calculation import Calculation
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 from Data.Manual.ExtractedDocumentation import keywords_simple_input
 import random
 
@@ -41,12 +41,12 @@ class HFCalculation(Calculation):
                 self.input_blocks.append("%mdci LocRandom 0 end")
 
     def choose_mp2_ri_method(self):
-        mp2_methods = list(OrcaDocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
+        mp2_methods = list(ORCADocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
         mp2_ri_method = random.choice([method for method in mp2_methods if 'ri' in method])
         return mp2_ri_method
 
     def choose_mp2_method(self):
-        mp2_methods = list(OrcaDocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
+        mp2_methods = list(ORCADocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
         mp2_method = random.choice([method for method in mp2_methods if not 'ri' in method])
         return mp2_method
 
@@ -61,14 +61,14 @@ class HFCalculation(Calculation):
                 else: 
                     return random.choice(['rijcosx', 'rijonx'])
             else: 
-                ri_approximation = OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.ri_computation_for_hf_and_dft)
+                ri_approximation = ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.ri_computation_for_hf_and_dft)
         return ri_approximation
     
     def choose_scf_convergence(self):
-        return OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.scf_convergence_thesholds)
+        return ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.scf_convergence_thesholds)
 
     def choose_accuracy_control(self):
-        return OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.accuracy_control)
+        return ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.accuracy_control)
 
     def add_aux_basis_sets_to_keywords(self):
         if self.ri_approximation is not None:

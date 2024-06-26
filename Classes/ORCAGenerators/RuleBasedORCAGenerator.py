@@ -11,8 +11,8 @@ from Classes.Calculations.SpecializedCalculations.ExcitedStatesCalculation impor
 from Classes.Calculations.SpecializedCalculations.FrequencyCalculation import HFFrequencyCalculation
 from Classes.Calculations.SpecializedCalculations.FrequencyCalculation import DFTFrequencyCalculation
 from Classes.Calculations.SpecializedCalculations.FrequencyCalculation import CCFrequencyCalculation
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
-from Classes.Helpers.OrcaRunner import OrcaRunner
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+from Classes.Helpers.ORCARunner import ORCARunner
 import random
 import os
 
@@ -22,7 +22,7 @@ class RuleBasedORCAGenerator(ORCAGenerator):
 
     def generate_input_file(self, accept_warnings, calculation_type='dft', add_solvation=False):
         calculation = None 
-        xyz, molecule_file, molecule_type = OrcaInputFileManipulator.get_random_xyz(max_atoms=3)
+        xyz, molecule_file, molecule_type = ORCAInputFileManipulator.get_random_xyz(max_atoms=3)
         # We always define the calculation type, the default is a single point (if no calculation type is defined)    
         if calculation_type == "dft":
             print("Generating Single Point Density Functional Theory Calculation...")
@@ -178,11 +178,11 @@ class RuleBasedORCAGenerator(ORCAGenerator):
         input_file = self.add_parallelization(input_file=input_file, 
                                                 n_pal=6)
         
-        if OrcaInputFileManipulator.remove_xyz(OrcaInputFileManipulator.remove_smiles_comment(input_file)) not in self.generated_input_files:
+        if ORCAInputFileManipulator.remove_xyz(ORCAInputFileManipulator.remove_smiles_comment(input_file)) not in self.generated_input_files:
 
             input_file_name, input_file_path = self.save_inp_to_file(input_file)
 
-            completed = OrcaRunner.run_orca(
+            completed = ORCARunner.run_orca(
                 self.save_folder, input_file_name, self.output_folder, r"C:\Users\Pieter\Orca\orca.exe")
 
             if completed != 0:

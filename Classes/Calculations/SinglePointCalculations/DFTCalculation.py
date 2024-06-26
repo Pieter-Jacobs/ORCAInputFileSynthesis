@@ -2,14 +2,14 @@ import sys
 import os
 from Classes.Calculations.Calculation import Calculation
 from Data.Manual.ExtractedDocumentation import keywords_density_functionals, keywords_simple_input
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 import random
 
 class DFTCalculation(Calculation):
     def __init__(self, xyz, molecule_file, molecule_type, add_solvation=False,
                   use_ri_approximation = True, use_dispersion = False, use_nl = False):     
         self.functional, self.functional_type = self.choose_functional(molecule_type=molecule_type)
-        self.functional_description = OrcaDocumentationHandler.get_density_functional_documentation()[self.functional]  
+        self.functional_description = ORCADocumentationHandler.get_density_functional_documentation()[self.functional]  
         super().__init__(xyz=xyz, molecule_file=molecule_file, molecule_type=molecule_type, add_solvation=add_solvation)
         self.ri_approximation = self.choose_ri_approximation() if use_ri_approximation else None
         self.dispersion_correction = self.choose_dispersion_correction() if use_dispersion and not 'b97m' in self.functional else ""
@@ -82,23 +82,23 @@ class DFTCalculation(Calculation):
     
     def choose_grid_type(self):
         # Frequency calcs need defgrid3
-        grid_type = OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.dft_grid_keywords) if not 'm06' in self.functional else 'defgrid3'
+        grid_type = ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.dft_grid_keywords) if not 'm06' in self.functional else 'defgrid3'
         grid_type = 'defgrid3' if grid_type == 'nocosx' and 'rijcosx' in self.keywords else grid_type
         return grid_type
 
     def get_random_non_hybrid_functional(self):
-        non_hybrids = (list(OrcaDocumentationHandler.process_documentation(keywords_density_functionals.dft_meta_gga).keys()))
+        non_hybrids = (list(ORCADocumentationHandler.process_documentation(keywords_density_functionals.dft_meta_gga).keys()))
         return random.choice(non_hybrids)
     
     def get_random_hybrid_functional(self):
-        hybrids = list(OrcaDocumentationHandler.process_documentation(keywords_density_functionals.dft_local_and_gradient_corrected + "\n"
+        hybrids = list(ORCADocumentationHandler.process_documentation(keywords_density_functionals.dft_local_and_gradient_corrected + "\n"
                                            + keywords_density_functionals.dft_hybrid_functionals + "\n" 
                                            + keywords_density_functionals.dft_meta_gga_hybrid + "\n"
                                            + keywords_density_functionals.dft_range_seperated_hybrid + "\n").keys())
         return random.choice(hybrids)
     
     def get_random_double_hybrid_functional(self):
-        return OrcaDocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_global_range_separated_double_hybrid_spin_component_spin_opposite_scaling + "\n"
+        return ORCADocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_global_range_separated_double_hybrid_spin_component_spin_opposite_scaling + "\n"
                             + keywords_density_functionals.dft_range_seperated_double_hybrid + "\n"
                             + keywords_density_functionals.dft_range_seperated_double_hybrid_with_dlpno + "\n"
                             + keywords_density_functionals.dft_range_seperated_double_hybrid_with_ri + "\n"
@@ -118,15 +118,15 @@ class DFTCalculation(Calculation):
         return hf_type
 
     def choose_non_local_correction(self):
-        nl_correction = OrcaDocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_non_local_correlation)
+        nl_correction = ORCADocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_non_local_correlation)
         return nl_correction
 
     def choose_dispersion_correction(self):
-        dispersion_correction = OrcaDocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_dispersion_correction) if 'm06' not in self.functional else 'd3zero'
+        dispersion_correction = ORCADocumentationHandler.choose_random_keyword(keywords_density_functionals.dft_dispersion_correction) if 'm06' not in self.functional else 'd3zero'
         return dispersion_correction
   
     def functional_is_range_seperated(self):
-        return self.functional in list(OrcaDocumentationHandler.process_documentation(keywords_density_functionals.dft_range_seperated_hybrid + 
+        return self.functional in list(ORCADocumentationHandler.process_documentation(keywords_density_functionals.dft_range_seperated_hybrid + 
                                            "\n" + keywords_density_functionals.dft_range_seperated_double_hybrid + 
                                            "\n" + keywords_density_functionals.dft_range_seperated_double_hybrid_with_dlpno
                                            + "\n" + keywords_density_functionals.dft_range_seperated_double_hybrid_with_ri 
@@ -141,7 +141,7 @@ class DFTCalculation(Calculation):
 
     def functional_uses_dlpno(self, functional=None):
         if functional is not None:
-           return ("dlpno" in functional or "DLPNO" in OrcaDocumentationHandler.get_density_functional_documentation()[functional]) 
+           return ("dlpno" in functional or "DLPNO" in ORCADocumentationHandler.get_density_functional_documentation()[functional]) 
         return ("dlpno" in self.functional or "DLPNO" in self.functional_description)
     
     def functional_uses_ri(self):

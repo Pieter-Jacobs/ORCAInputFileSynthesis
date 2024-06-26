@@ -1,16 +1,16 @@
 from Data.periodic_table import periodic_table
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 import re
 import basis_set_exchange as bse
 import random
 from Data.Manual.ExtractedDocumentation import basis_sets
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 class BasisSetHandler():
     
     def __init__(self, xyz):
-        self.elements = OrcaInputFileManipulator.extract_elements(xyz)
+        self.elements = ORCAInputFileManipulator.extract_elements(xyz)
         self.possible_basis_sets = self.get_possible_basis_sets([name.lower() for name in bse.get_all_basis_names() if name.lower()
-                                                                 in list(OrcaDocumentationHandler.get_basis_set_documentation().keys())])
+                                                                 in list(ORCADocumentationHandler.get_basis_set_documentation().keys())])
         self.basis_set = self.sort_basis_sets_by_size(self.possible_basis_sets)[0]
         self.added_bs_roles = set() # keep account of roles, so they dont get added twice
 
@@ -59,7 +59,7 @@ class BasisSetHandler():
         return smallest_possible_basis_set[0]
 
     def get_aux_basis_set(self, role):
-        orca_basis_sets = list(OrcaDocumentationHandler.get_basis_set_documentation().keys())
+        orca_basis_sets = list(ORCADocumentationHandler.get_basis_set_documentation().keys())
 
         fitted_basis_set = ""
         if role == "j":
@@ -91,12 +91,12 @@ class BasisSetHandler():
 
 
     def get_f12_basis_set(self):
-        f12_documentation = OrcaDocumentationHandler.process_documentation(basis_sets.basis_set_auxilary_cabs)
+        f12_documentation = ORCADocumentationHandler.process_documentation(basis_sets.basis_set_auxilary_cabs)
         f12_basis_sets = self.get_possible_basis_sets(list(f12_documentation.keys()))
         if len(f12_basis_sets) > 0: 
             f12_basis_set = random.choice(f12_basis_sets)
         else:
-            f12_basis_set = OrcaDocumentationHandler.choose_random_keyword(f12_documentation)
+            f12_basis_set = ORCADocumentationHandler.choose_random_keyword(f12_documentation)
         is_new_aux = not ('f12' in self.added_bs_roles)
         self.added_bs_roles.add('f12')
         return f12_basis_set.lower(), is_new_aux

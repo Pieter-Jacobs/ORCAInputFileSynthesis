@@ -1,85 +1,80 @@
+
+import os
+import sys
+sys.path.append(os.getcwd())
 from Classes.ORCAGenerators.RuleBasedORCAGenerator import RuleBasedORCAGenerator
 from Classes.ORCAGenerators.BruteForceORCAGenerator import BruteForceORCAGenerator
 from Classes.ORCAGenerators.ManualBasedORCAGenerator import ManualBasedORCAGenerator
-import os
 import random
+import argparse
+
 
 random.seed(2000)
 
-def generate_input_files(method=2, params={"N": 50}):
+
+def parse_arguments():
+    """Parses the arguments to be used in the generation of ORCA input files."""
+    parser = argparse.ArgumentParser(
+        description="Generate input files for different methods.")
+    parser.add_argument('--method', type=int, choices=[0, 1, 2], default=2,
+                        help="Method to use: 0 (brute-force), 1 (manual-based), 2 (rule-based)")
+    parser.add_argument('--N', type=int, default=None,
+                        help="Amount of input files that is to be generated")
+    parser.add_argument('--save_warnings', action='store_true',
+                        help="Save the warnings ORCA returns for executable files")
+    parser.add_argument('--save_errors', action='store_true',
+                        help="Save the errors ORCA returns for executable files")
+    parser.add_argument('--accept_warnings', action='store_true',
+                        help="Only save input files without warnings.")
+    parser.add_argument('--add_input_block', action='store_true',
+                        help="Add an input block to the file when using the brute-force or manual-based method")
+    parser.add_argument('--add_solvation', action='store_true',
+                        help="Set add_solvation to True for the rule-based method")
+    parser.add_argument('--calculation_type', type=str, required=False,
+                        default='dft', choices=['dft', 'hf', 'cc', 'dft_opt', 'hf_opt', 'cc_opt',
+                                                'dft_es', 'hf_es', 'cc_es', 'dft_freq', 'hf_freq', 'cc_freq'],
+                        help="Value for calculation_type parameter")
+    args = parser.parse_args()
+    return args
+
+
+def generate_input_files(method, params):
+    """Generate the ORCA input files with a given method, also checks that only valid params are passed to the generators."""
     generator = None
     if method == 0:
+        valid_args = ['N', 'save_warnings', 'save_errors', 'add_input_block', 'accept_warnings']
+        params = {k: v for k, v in params.items() if k in valid_args}
         generator = BruteForceORCAGenerator(save_folder=f"Data{os.sep}Generated{os.sep}InputFilesBruteForce",
                                             max_len_input_blocks=5,
                                             max_len_keywords=10)
 
     elif method == 1:
+        valid_args = ['N', 'save_warnings', 'save_errors', 'add_input_block', 'accept_warnings']
+        params = {k: v for k, v in params.items() if k in valid_args}
         generator = ManualBasedORCAGenerator(save_folder=f"Data{os.sep}Generated{
-                                             os.sep}InputFilesFromManual")
+                                             os.sep}InputFilesManualBased")
     if method == 2:
+        valid_args = ['N', 'save_warnings', 'save_errors', 'accept_warnings', 'calculation_type', 'add_solvation']
+        params = {k: v for k, v in params.items() if k in valid_args}
         generator = RuleBasedORCAGenerator(
             save_folder=f"Data{os.sep}Generated{os.sep}InputFilesRuleBased")
+        
     generator.generate_input_files(**params)
 
 
 if __name__ == "__main__":
-    brute_force_params = {
-        "N": 100,
-        "few_shot": False,
-        "save_warnings": True,
-        "save_errors": True,
-        "generation_params":
-            {
-                "accept_warnings": True,
-                "add_input_block": True
-            }
-    }
-    from_manual_params = {
-        "N": 100,
-        "few_shot": False,
-        "save_warnings": True,
-        "save_errors": True,
-        "generation_params":
-            {
-                "accept_warnings": True,
-                "add_input_block": False
-            }
-    }
-    rule_based_params = {
-        "N": 1,
-        "few_shot": False,
-        "save_warnings": True,
-        "save_errors": True,
-        "generation_params":
-            {
-                "accept_warnings": True,
-                "calculation_type": "cc_freq",
-                "add_solvation": False
-            }
+    args = parse_arguments()
+
+    params = {
+        "N": args.N,
+        "save_warnings": args.save_warnings,
+        "save_errors": args.save_errors,
+        "generation_params": {
+            "accept_warnings": args.accept_warnings,
+            "add_input_block": args.add_input_block,
+            "calculation_type": args.calculation_type,
+            "add_solvation": args.add_solvation
+        }
     }
 
-    # generate_input_files(method=0, params=brute_force_params)
-
-    # generate_input_files(method=1, params=from_manual_params)
-    # from_manual_params["N"] = 50
-
-    # from_manual_params["generation_params"]["add_input_block"] = True
-    # generate_input_files(method=1, params=from_manual_params)
-    # from_manual_params["N"] = 29
-
-    # from_manual_params["generation_params"]["add_input_block"] = False
-    # generate_input_files(method=1, params=from_manual_params)
-    
-
-    count = 0
-    supported_calculations = [x for x in RuleBasedORCAGenerator.get_supported_calculations() if x != 'cc_freq']
-    while count <= 500:
-        rule_based_params["generation_params"]['add_solvation'] = False
-        for method in supported_calculations:
-            rule_based_params["generation_params"]['calculation_type'] = method
-            generate_input_files(method=2, params=rule_based_params)  
-            count += 1
-        rule_based_params["generation_params"]['add_solvation'] = True
-        rule_based_params["generation_params"]['calculation_type'] = random.choice(supported_calculations)
-        generate_input_files(method=2, params=rule_based_params)  
-        count += 1
+    generate_input_files(method=args.method, params=params)

@@ -1,7 +1,7 @@
 from Classes.ORCAGenerators.ORCAGenerator import ORCAGenerator
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
-from Classes.Helpers.OrcaRunner import OrcaRunner
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+from Classes.Helpers.ORCARunner import ORCARunner
 import random
 import os
 import json
@@ -14,11 +14,11 @@ class BruteForceORCAGenerator(ORCAGenerator):
         self.max_len_keywords = max_len_keywords
         self.max_len_input_blocks = max_len_input_blocks
         self.keywords_simple_input = list(
-            OrcaDocumentationHandler.get_keywords_simple_input_documentation().keys())
+            ORCADocumentationHandler.get_keywords_simple_input_documentation().keys())
         self.keywords_dft = list(
-            OrcaDocumentationHandler.get_density_functional_documentation().keys())
+            ORCADocumentationHandler.get_density_functional_documentation().keys())
         self.basis_sets = list(
-            OrcaDocumentationHandler.get_basis_set_documentation().keys())
+            ORCADocumentationHandler.get_basis_set_documentation().keys())
 
     def generate_input_file(self, accept_warnings, add_input_block=True, use_df=None):
         add_input_block = random.choice(
@@ -37,15 +37,15 @@ class BruteForceORCAGenerator(ORCAGenerator):
             density_functional if use_df else ""}\n{input_block}"
         input_file = self.add_parallelization(input_file=input_file,
                                               n_pal=6)
-        input_file = OrcaInputFileManipulator.add_xyz(input_file)
+        input_file = ORCAInputFileManipulator.add_xyz(input_file)
 
         # Check if the file is unique
-        if OrcaInputFileManipulator.remove_xyz(OrcaInputFileManipulator.remove_smiles_comment(input_file)) not in self.generated_input_files:
+        if ORCAInputFileManipulator.remove_xyz(ORCAInputFileManipulator.remove_smiles_comment(input_file)) not in self.generated_input_files:
 
             input_file_name, input_file_path = self.save_inp_to_file(
                 input_file)
 
-            completed = OrcaRunner.run_orca(
+            completed = ORCARunner.run_orca(
                 self.save_folder, input_file_name, self.output_folder, r"C:\Users\Pieter\Orca\orca.exe")
             if completed != 0:
                 os.remove(input_file_path)

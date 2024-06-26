@@ -3,8 +3,8 @@ import selfies as sf
 from rdkit.Chem.Descriptors import NumRadicalElectrons
 import random
 from Classes.Helpers.BasisSetHandler import BasisSetHandler
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 from Data.Manual.ExtractedDocumentation import keywords_simple_input
 
 from abc import ABC, abstractmethod
@@ -37,7 +37,7 @@ class Calculation(ABC):
         input_file = "!" + " ".join(self.keywords) + "\n"
         input_file += "\n".join(self.input_blocks)
 
-        input_file = OrcaInputFileManipulator.add_xyz(
+        input_file = ORCAInputFileManipulator.add_xyz(
             input_file, molecule_file=self.molecule_file, molecule_type=self.molecule_type)
         return input_file
 
@@ -49,6 +49,6 @@ class Calculation(ABC):
         return random.choice(['uhf', 'rohf'])
 
     def add_solvent(self):
-        solvent = OrcaDocumentationHandler.choose_random_keyword(
+        solvent = ORCADocumentationHandler.choose_random_keyword(
             keywords_simple_input.solvent_types)
         self.keywords.append(solvent)

@@ -4,7 +4,6 @@ from Classes.Calculations.SpecializedCalculations.GeometryOptimization import CC
 from Classes.Calculations.SinglePointCalculations.CCCalculation import CCCalculation
 from Classes.Calculations.SinglePointCalculations.DFTCalculation import DFTCalculation
 from Classes.Calculations.SinglePointCalculations.HFCalculation import HFCalculation
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
 import random
 
 

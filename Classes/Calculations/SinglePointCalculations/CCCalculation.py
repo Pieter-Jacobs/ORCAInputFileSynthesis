@@ -1,6 +1,6 @@
 from Classes.Calculations.Calculation import Calculation
 from Data.Manual.ExtractedDocumentation import keywords_simple_input
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 import random
 
 class CCCalculation(Calculation):
@@ -11,7 +11,7 @@ class CCCalculation(Calculation):
         self.use_densities = use_densities
 
     def choose_functional(self):
-        functional = OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.ci_type + "\n" 
+        functional = ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.ci_type + "\n" 
                                           + keywords_simple_input.local_correlation_mcdi_methods 
                                           + keywords_simple_input.autoci_methods) if self.hf_type != 'rohf' else random.choice(['dlpno-ccsd', 'dlpno-ccsd(t)', 'dlpno-ccsd(t1)'])
         return functional
@@ -33,7 +33,7 @@ class CCCalculation(Calculation):
         
 
     def choose_accuracy_control(self):
-        #  OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.accuracy_control)
+        #  ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.accuracy_control)
         return 'tightpno'
     
     def add_aux_basis_sets_to_keywords(self):

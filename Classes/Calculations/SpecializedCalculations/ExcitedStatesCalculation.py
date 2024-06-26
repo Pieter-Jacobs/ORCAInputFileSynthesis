@@ -3,7 +3,7 @@ from Classes.Calculations.SinglePointCalculations.DFTCalculation import DFTCalcu
 from Classes.Calculations.SinglePointCalculations.HFCalculation import HFCalculation
 from Classes.Calculations.SinglePointCalculations.CCCalculation import CCCalculation
 from Data.Manual.ExtractedDocumentation import keywords_simple_input
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 
 class CCExcitedStatesCalculation(CCCalculation):
     def __init__(self, xyz, molecule_file, molecule_type, add_solvation=False, use_densities=False,
@@ -15,7 +15,7 @@ class CCExcitedStatesCalculation(CCCalculation):
         self.add_solvation = add_solvation
 
     def choose_functional(self):
-        functional =  OrcaDocumentationHandler.choose_random_keyword(keywords_simple_input.mdci_methods_for_excited_states)
+        functional =  ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.mdci_methods_for_excited_states)
         if functional == 'dlpno-steom-ccsd' and self.hf_type == 'uhf':
             functional = 'steom-ccsd'
         return functional
