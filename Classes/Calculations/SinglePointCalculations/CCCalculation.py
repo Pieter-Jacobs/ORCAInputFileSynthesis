@@ -7,7 +7,7 @@ random.seed(2000)
 
 
 class CCCalculation(Calculation):
-    """ Initializes a single point Coupled Cluster calculation, based on the basic Calculation.
+    """ Initializes a single point Coupled Cluster calculation.
 
     Parameters:
     - xyz: coordinate-block of the used molecule.
@@ -53,7 +53,7 @@ class CCCalculation(Calculation):
         return 'tightpno'  # We always use tight accuracy control
 
     def add_aux_basis_sets_to_keywords(self):
-        """Add the necassary auxilary basis sets based on chosen keywords. CC calculations always need a /c basis set."""
+        """Adds the necassary auxilary basis sets based on chosen keywords. CC calculations always need a /c basis set."""
         c_basis_set, is_new_aux = self.basisSetHandler.get_aux_basis_set("c")
         if is_new_aux:
             self.keywords.append(c_basis_set)
