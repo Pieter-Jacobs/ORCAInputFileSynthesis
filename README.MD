@@ -1,16 +1,14 @@
 # Using Large Language Models for Domain Specific Language Synthesis: A Case Study for Quantum Chemistry Simulations with ORCA
-This repository encompasses all code that was used to run the experiments described the paper with the same title shown above.
-Aside from the the code of our system architecture, we include datasets described in the study, which can now be used in further research. 
-Moreover, the repository contains some general helpful classes.
 
-To reproduce the results from our study, we refer you to the `Scripts` folder, where more is explained on the scripts we use to run our experiments 
-and gather our data. To get more insight into the classes used, and how one can implement use them in their own research we refer you to the `Classes` folder.
-Lastly, one could inspect and extract the different datasets we used in the `Data` folder, where all datasets available are explained as well.
+This repository encompasses all code used to run the experiments described in the study titled "Using Large Language Models for Domain Specific Language Synthesis: A Case Study for Quantum Chemistry Simulations with ORCA". 
 
-One general thing to note is that to be able to use the code in this repository, one should have configured their own OpenAI API key
-in their system path. 
+In addition to the code for our system architecture, we include the datasets described in the study, which can be used for further research. The repository also contains some generally helpful classes.
 
-Furthermore, to be sure that you can run all code you can run the following:
+To reproduce the results from our study, refer to the `Scripts` folder, where we explain the scripts used to run our experiments and gather data. For more insight into the classes used and how to implement them in your own research, refer to the `Classes` folder. Additionally, you can inspect and extract the various datasets we used from the `Data` folder, where all available datasets are explained.
+
+One important note is that to use the code in this repository, you should configure your own OpenAI API key in your system path.
+
+Furthermore, to ensure you can run all the code, you can download the necessary dependencies by running the following:
 ```bash
-pip install rdkit langchain basis-set-exchange pandas selfies beautifulsoup4 fpdf pypdf openai molmod basis-set-exchange scikit-learn glob shutil psutil sacrebleu langchain tiktoken
+pip install rdkit langchain basis-set-exchange pandas selfies beautifulsoup4 fpdf pypdf openai molmod basis-set-exchange scikit-learn psutil sacrebleu langchain tiktoken
 ```
