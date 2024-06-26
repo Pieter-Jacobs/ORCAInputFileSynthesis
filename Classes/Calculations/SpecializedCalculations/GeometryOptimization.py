@@ -197,7 +197,8 @@ class DFTGeometryOptimization(DFTCalculation):
 
 
 class GeometryOptimization:
-    """Base class used to build upon for specific single point calculations. As the geometry optimization is similar for all of them, we used this extra class for the shared functionality"""
+    """Base class used to build upon for specific single point calculations. As the geometry optimization is similar for all of them, 
+    we used this extra class for the shared functionality."""
 
     def __init__(self, xyz, do_relaxed_scan, calculate_hessian, use_constraints, basisSetHandler):
         self.do_relaxed_scan = do_relaxed_scan
@@ -210,7 +211,7 @@ class GeometryOptimization:
                                                                   n_atoms=len(self.basisSetHandler.elements))
 
     def choose_optimization_type(self):
-        """Randomly chooses an optimization type"""
+        """Randomly chooses an optimization type."""
         optimization_types = ['opt', 'gdiis-opt', 'copt', 'gdiis-copt']
         # Cartesian optimization not possible with a relaxed scan:
         if self.do_relaxed_scan or self.use_constraints or self.calculate_hessian:
@@ -218,7 +219,7 @@ class GeometryOptimization:
         return random.choice(optimization_types)
 
     def choose_geometry_convergence(self):
-        """Randomly chooses a convergence type"""
+        """Randomly chooses a convergence type."""
         geom_convergence = ORCADocumentationHandler.choose_random_keyword(
             keywords_simple_input.geometry_convergence)
         return geom_convergence
@@ -227,14 +228,14 @@ class GeometryOptimization:
         return "Calc_Hess true\nRecalc_Hess 1"
 
     def get_relaxed_scan_settings(self):
-        """Getter for the settings needed to perform a relaxed surface scan"""
+        """Getter for the settings needed to perform a relaxed surface scan."""
         bond_lengths = self.calculate_bond_lengths()
         scan_lengths = random.choice(['B %d %d = %.2f, %.2f, 5' % (
             distance[0][0], distance[0][1], distance[1], distance[1] * 2) for distance in bond_lengths])
         return f"Scan\n{scan_lengths}\nend"
 
     def get_constraint_settings(self):
-        """Getter for the settings needed for constraining the optimization"""
+        """Getter for the settings needed for constraining the optimization."""
 
         distances, angles, dihedral_angles = self.generate_constraints()
         distance_constraints_block = ['{B %d %d %.2f C}' % (
@@ -246,7 +247,7 @@ class GeometryOptimization:
         return f"Constraints\n{"\n".join(distance_constraints_block)}\nend"
 
     def generate_constraints(self):
-        """Calculate the possible constraint settings based on the provided molecule"""
+        """Calculate the possible constraint settings based on the provided molecule."""
         distance_constraints = self.calculate_bond_lengths()
         self.molecule.set_default_graph()
         angle_constraints = self.calculate_bond_angles()
@@ -258,7 +259,7 @@ class GeometryOptimization:
                 for i in range(len(self.basisSetHandler.elements)) for j in range(i+1, len(self.basisSetHandler.elements))]
 
     def calculate_bond_angles(self):
-        """Calculates the bond angels for the given molecule"""
+        """Calculates the bond angels for the given molecule."""
 
         angle_constraints = []
 
@@ -286,7 +287,7 @@ class GeometryOptimization:
         return angle_constraints
 
     def calculate_dihedral_angles(self):
-        """Calculates the dihedral angels for the given molecule"""
+        """Calculates the dihedral angels for the given molecule."""
         dihedrals = []
         dihedral_constraints = []
 

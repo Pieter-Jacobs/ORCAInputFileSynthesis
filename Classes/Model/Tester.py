@@ -182,7 +182,7 @@ class Tester:
                                                           setting_f1, setting_precision, setting_recall]))
 
     def calculate_f1(self, predicted, reference):
-        """Calculates F1 score for NLP settings"""
+        """Calculates F1 score for NLP settings."""
         if len(predicted) == 0 and len(reference) == 0:
             return 1, 1, 1
         # TP: Amount of ngrams that were predicted that are also in the reference

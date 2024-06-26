@@ -27,7 +27,7 @@ class HFCalculation(Calculation):
             self.keywords.append('nori')
 
     def process_keywords(self):
-        """Implements all necessary keywords for an HF calculation"""
+        """Implements all necessary keywords for an HF calculation."""
 
         mp2_method = self.mp2_method if self.mp2_method is not None else self.mp2_ri_method 
         self.keywords.extend([self.basisSetHandler.basis_set,
@@ -42,7 +42,7 @@ class HFCalculation(Calculation):
         self.add_aux_basis_sets_to_keywords()
         
     def process_input_blocks(self):
-        """Implements all necessary input blocks for an HF calculation"""
+        """Implements all necessary input blocks for an HF calculation."""
 
         mp2_method = self.mp2_method if self.mp2_method is not None else self.mp2_ri_method
         # For ROHF without RI approximation, we need a large amount of iterations for convergence
@@ -58,20 +58,20 @@ class HFCalculation(Calculation):
                 self.input_blocks.append("%mdci LocRandom 0 end")
 
     def choose_mp2_ri_method(self):
-        """Randomly chooses an mp2-ri method"""
+        """Randomly chooses an mp2-ri method."""
         mp2_methods = list(ORCADocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
         mp2_ri_method = random.choice([method for method in mp2_methods if 'ri' in method])
         return mp2_ri_method
 
     def choose_mp2_method(self):
-        """Randomly chooses an mp2 method"""
+        """Randomly chooses an mp2 method."""
 
         mp2_methods = list(ORCADocumentationHandler.process_documentation(keywords_simple_input.basic_mp2_methods + "\n" + keywords_simple_input.local_correlation_mp2_methods).keys())
         mp2_method = random.choice([method for method in mp2_methods if not 'ri' in method])
         return mp2_method
 
     def choose_ri_approximation(self, use_mp2):
-        """Randomly chooses an ri method"""
+        """Randomly chooses an ri method."""
 
         ri_approximation = None
         if self.hf_type == 'rohf':
@@ -87,12 +87,12 @@ class HFCalculation(Calculation):
         return ri_approximation
     
     def choose_scf_convergence(self):
-        """Randomly chooses an scf convergence"""
+        """Randomly chooses an scf convergence."""
 
         return ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.scf_convergence_thesholds)
 
     def choose_accuracy_control(self):
-        """Randomly chooses accuracy control"""
+        """Randomly chooses accuracy control."""
 
         return ORCADocumentationHandler.choose_random_keyword(keywords_simple_input.accuracy_control)
 
@@ -117,7 +117,7 @@ class HFCalculation(Calculation):
                 if is_new_aux: self.keywords.append(f12_basis_set)
 
     def determine_hf_type(self):
-        """Chooses the appropriate hartree fock based on the basis set and mp method"""
+        """Chooses the appropriate hartree fock based on the basis set and mp2 method."""
         hf_type = super().determine_hf_type()
         if hf_type == 'rohf' and (self.mp2_method is not None or self.mp2_ri_method is not None): # MP2 gradient not implemented for rohf
             hf_type = 'uhf'

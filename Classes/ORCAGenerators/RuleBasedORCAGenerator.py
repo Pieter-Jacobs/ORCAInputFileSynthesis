@@ -29,7 +29,7 @@ class RuleBasedORCAGenerator(ORCAGenerator):
         super().__init__(save_folder, input_file_prefix, output_folder)
 
     def generate_input_file(self, accept_warnings, calculation_type='dft', add_solvation=False):
-        """Generates an ORCA input file for a specified calculation"""
+        """Generates an ORCA input file for a specified calculation."""
 
         calculation = None 
         xyz, molecule_file, molecule_type = ORCAInputFileManipulator.get_random_xyz(max_atoms=3)
@@ -209,6 +209,6 @@ class RuleBasedORCAGenerator(ORCAGenerator):
         return False, None
 
     def get_supported_calculations():
-        """Getter for all supported calculations in string format"""
+        """Getter for all supported calculations in string format."""
         return ['dft', 'hf', 'cc', 'dft_opt', 'hf_opt', 'cc_opt', 
                 'dft_es', 'hf_es', 'cc_es', 'dft_freq', 'hf_freq', 'cc_freq']

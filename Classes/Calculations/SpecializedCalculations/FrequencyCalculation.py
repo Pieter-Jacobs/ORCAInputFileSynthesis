@@ -194,7 +194,7 @@ class DFTFrequencyCalculation:
         ) if use_ri_approximation else None
 
     def process_keywords(self):
-        """Implements all necessary keywords for a DFT frequency calculation"""
+        """Implements all necessary keywords for a DFT frequency calculation."""
 
         self.base_class.process_keywords()
         self.base_class.keywords.append(self.freq_gradient)
@@ -206,13 +206,13 @@ class DFTFrequencyCalculation:
             self.base_class.keywords.append(j_basis_set)
 
     def process_input_blocks(self):
-        """Implements all necessary input blocks for a DFT frequency calculation"""
+        """Implements all necessary input blocks for a DFT frequency calculation."""
 
         self.base_class.process_input_blocks()
         self.base_class.input_blocks.append(self.create_freq_input_block())
 
     def get_frequency_gradient(self):
-        """Determines whether to use a numerical or analytical gradient"""
+        """Determines whether to use a numerical or analytical gradient."""
         if (self.base_class.hf_type == 'rohf' or
             self.base_class.ri_approximation == 'ri-jk'
             or self.base_class.ri_approximation == 'rijk'
@@ -222,7 +222,7 @@ class DFTFrequencyCalculation:
         return 'anfreq'
 
     def choose_ri_approximation(self):
-        """Chooses an RI approximation"""
+        """Chooses an RI approximation."""
         ri_approximation = None
         if self.base_class.functional_type == 'non-hybrid':
             ri_approximation = "ri"
@@ -235,7 +235,7 @@ class DFTFrequencyCalculation:
         return ri_approximation
 
     def create_freq_input_block(self):
-        """Creates a frequency input block for DFT"""
+        """Creates a frequency input block for DFT."""
         input_block = "%freq"
         input_block += ('\nHess2ElFlags 1,2,2,1' if self.base_class.ri_approximation ==
                         'rijcosx' else '\nHess2ElFlags 1,1,1,1') if self.freq_gradient == 'anfreq' else ''

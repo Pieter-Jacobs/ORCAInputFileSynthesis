@@ -36,7 +36,7 @@ class BruteForceORCAGenerator(ORCAGenerator):
             ORCADocumentationHandler.get_basis_set_documentation().keys())
 
     def generate_input_file(self, accept_warnings, add_input_block=True, use_df=None):
-        """Generates an input file in a brute-force way by randomly combining different ORCA terms"""
+        """Generates an input file in a brute-force way by randomly combining different ORCA terms."""
 
         add_input_block = random.choice(
             [True, False]) if add_input_block is None else add_input_block
@@ -79,7 +79,7 @@ class BruteForceORCAGenerator(ORCAGenerator):
         return False, None
 
     def generate_random_input_block(self):
-        """Generate an input block in a brute-force manner, by randomly choosing an option and then randomly choosing setting lines for that option"""
+        """Generate an input block in a brute-force manner, by randomly choosing an option and then randomly choosing setting lines for that option."""
         # Parse the JSON data
         with open('Data\Manual\ExtractedDocumentation\input_block_settings.json', 'r') as f:
             data = json.load(f)

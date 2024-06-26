@@ -36,7 +36,7 @@ class Prompter:
         self.input_files = list(map(self.clean_input_file, self.input_files))
 
     def prompt(self, input_files=None, data_folder=None):
-        """Generates prompts from a list of input files"""
+        """Generates prompts from a list of input files."""
         prompts = []
         input_files = self.input_files if input_files is None else input_files
         for input_file in input_files:

@@ -17,14 +17,14 @@ class Embedder:
         return text_split_by_page
 
     def save_embedding_to_file(documents, embedding_folder):
-        """Use FAISS to embed documents and save them to file"""
+        """Use FAISS to embed documents and save them to file."""
 
         faiss_index = FAISS.from_documents(
             documents, OpenAIEmbeddings(model="text-embedding-3-large"))
         faiss_index.save_local(embedding_folder)
 
     def add_relevant_context_to_prompt(model, system_prompt, prompt, embedding_folder, k, token_limit):
-        """Adds k documents to the user prompt and checks that this does not go over the provided token limit"""
+        """Adds k documents to the user prompt and checks that this does not go over the provided token limit."""
         enc = tiktoken.encoding_for_model(
             model)  # get the correct token encoding
         contextual_information = ""
