@@ -10,10 +10,10 @@ def parse_arguments():
         description='Run finetuning with given settings.')
     parser.add_argument('--dataset', type=str, required=True,
                         help='Dataset to train on (BruteForce, ManualBased or RuleBased)')
-    parser.add_argument('--model', type=str, required=True,
+    parser.add_argument('--model', type=str, required=True, default='gpt-3.5-turbo',
                         help='LLM that you want to use')
     parser.add_argument('--prompt_engineering_technique', type=str, required=True, choices=['basic', 'cot'],
-                        help='Type of prompt engineering used (basic or cot)')
+                        default='basic', help='Type of prompt engineering used (basic or cot)')
     parser.add_argument('--lr', type=float, required=True,
                         help='Learning rate Multiplier')
     parser.add_argument('--epochs', type=int, required=True,
@@ -43,8 +43,8 @@ def finetune(model, training_data_path, validation_data_path, dataset, prompt_en
 if __name__ == "__main__":
     args = parse_arguments()
     training_data_path = os.path.join("Data", "Finetuning", args.dataset, f"dataset_{
-                                      args.prompting_technique}.jsonl")
+                                      args.prompt_engineering_technique}.jsonl")
     validation_data_path = os.path.join(
-        "Data", "Test", f"val_{args.prompting_technique}.jsonl")
+        "Data", "Test", f"val_{args.prompt_engineering_technique}.jsonl")
     finetune(model=args.model, training_data_path=training_data_path, validation_data_path=validation_data_path,
              dataset=args.dataset, prompt_engineering_technique=args.prompt_engineering_technique, epochs=args.epochs, batch_size=args.batch_size, lr=args.lr)
