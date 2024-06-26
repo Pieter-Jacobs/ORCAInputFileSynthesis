@@ -1,9 +1,0 @@
-!pal6 dlpno-ccsd cc-pvtz cc-pvtz/c tightscf cpcm(water)
-%rocis NRoots 3
-OrbWin = 1,13,9,22
-end
-#[SH]
-*xyz 0 2 
-S   0.676600000   0.000000000   0.000000000
-H  -0.676600000   0.000000000   0.000000000
-*

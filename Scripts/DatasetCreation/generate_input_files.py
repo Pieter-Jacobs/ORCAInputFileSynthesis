@@ -8,7 +8,6 @@ from Classes.ORCAGenerators.ManualBasedORCAGenerator import ManualBasedORCAGener
 import random
 import argparse
 
-
 random.seed(2000)
 
 

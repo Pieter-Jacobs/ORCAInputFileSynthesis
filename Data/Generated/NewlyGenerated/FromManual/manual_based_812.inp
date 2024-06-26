@@ -1,8 +1,0 @@
-!pal6 b3lyp def2-tzvp(-f) tightscf
-%scf Print[P_SCFMemInfo] 1
-end
-#ClCl
-*xyz 0 1 
-Cl   1.010000000   0.000000000   0.000000000
-Cl  -1.010000000   0.000000000   0.000000000
-*

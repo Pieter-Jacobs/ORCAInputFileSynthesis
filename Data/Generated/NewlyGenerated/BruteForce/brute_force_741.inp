@@ -1,7 +1,0 @@
-!pal6 ano-pvdz cpcm(dmso) aox-qcisd verytightscf trah sc-nevpt2 aox-ncpf/1 double
-#O=C=O
-*xyz 0 1 
-O  -1.405000000  -0.000000000   0.000000000
-C  -0.000000000   0.000000000   0.000000000
-O   1.405000000  -0.000000000   0.000000000
-*

@@ -1,8 +1,0 @@
-!pal6 def2-tzvp def2-tzvp/c tightscf slowconv
-%scf FracOcc true
-end
-#FF
-*xyz 0 1 
-F   0.740000000   0.000000000   0.000000000
-F  -0.740000000   0.000000000   0.000000000
-*

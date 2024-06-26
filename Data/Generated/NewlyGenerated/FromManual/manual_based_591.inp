@@ -1,9 +1,0 @@
-!pal6 b97m-d4 d3bj d4
-%eprnmr gtensor 1
-ori CenterOfElCharge
-end
-#O=O
-*xyz 0 1 
-O   0.570800000   0.000000000   0.000000000
-O  -0.570800000   0.000000000   0.000000000
-*

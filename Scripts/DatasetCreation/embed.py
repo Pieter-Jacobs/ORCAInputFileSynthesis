@@ -1,4 +1,3 @@
-import PyPDF2
 from Classes.Model.Embedder import Embedder
 import os
 import sys

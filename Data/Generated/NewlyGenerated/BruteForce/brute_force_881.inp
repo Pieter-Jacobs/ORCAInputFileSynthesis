@@ -1,7 +1,0 @@
-!pal6 def2-qzvpp/c noiter verytightscf nomoprint cpcm(acetonitrile)
-#C(hashtag)N
-*xyz 0 1 
-C  -0.031700000   0.000000000   0.000000000
-N   1.128300000  -0.000000000   0.000000000
-H  -1.096700000  -0.000000000   0.000000000
-*

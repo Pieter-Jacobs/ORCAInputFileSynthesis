@@ -1,9 +1,0 @@
-!pal6 def2-tzvpp angs
-%basis
-FragECP 3 "SK-MCDHF-RSC"
-end
-#ClCl
-*xyz 0 1 
-Cl   1.010000000   0.000000000   0.000000000
-Cl  -1.010000000   0.000000000   0.000000000
-*

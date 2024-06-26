@@ -1,9 +1,0 @@
-!pal6 rhf def2-svpd def2-svp/c
-%mdci
-density linearized
-end
-#[OH]
-*xyz 0 2 
-O   0.488900000   0.000000000   0.000000000
-H  -0.488900000   0.000000000   0.000000000
-*

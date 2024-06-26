@@ -1,9 +1,0 @@
-!pal6 ri-mp2 def2-tzvpp def2/j def2-tzvpp/c tightscf rijcosx
-%paras
-R = 2.5,0.7, 30
-end
-#[SH]
-*xyz 0 2 
-S   0.676600000   0.000000000   0.000000000
-H  -0.676600000   0.000000000   0.000000000
-*

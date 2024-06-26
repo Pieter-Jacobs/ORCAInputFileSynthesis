@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 import random
 
 class ORCADataset:
@@ -21,7 +21,7 @@ class ORCADataset:
         data = []
         for prompt, input_file in zip(prompts, input_files):
             input_file = input_file.replace("pal6 ", "")
-            input_file = OrcaInputFileManipulator.remove_xyz(input_file)
+            input_file = ORCAInputFileManipulator.remove_xyz(input_file)
             data.append({"messages": [{"role": "system", "content": self.system_prompt},
                                     {"role": "user", "content": prompt},
                                     {"role": "assistant", "content": input_file}]})
@@ -30,7 +30,7 @@ class ORCADataset:
     def build_dataset_csv(self, prompts, input_files):
         data = {
             'sample': prompts,
-            'label': [OrcaInputFileManipulator.remove_xyz(input_file) for input_file in input_files]
+            'label': [ORCAInputFileManipulator.remove_xyz(input_file) for input_file in input_files]
         }
         df = pd.DataFrame(data)
         return df

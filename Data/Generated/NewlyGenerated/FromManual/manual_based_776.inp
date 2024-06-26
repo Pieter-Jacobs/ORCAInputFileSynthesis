@@ -1,9 +1,0 @@
-!pal6 tightscf pbe def2-tzvp ri def2/j
-%method FrozenCore FC_NONE
-end
-#O=NF
-*xyz 0 1 
-O  -1.043200000  -0.268700000   0.000000000
-N  -0.068900000   0.490300000   0.000000000
-F   1.112100000  -0.221600000   0.000000000
-*

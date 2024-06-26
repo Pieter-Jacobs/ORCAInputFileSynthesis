@@ -1,6 +1,3 @@
-import rdkit.Chem as chem
-import selfies as sf
-from rdkit.Chem.Descriptors import NumRadicalElectrons
 import random
 from Classes.Helpers.BasisSetHandler import BasisSetHandler
 from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator

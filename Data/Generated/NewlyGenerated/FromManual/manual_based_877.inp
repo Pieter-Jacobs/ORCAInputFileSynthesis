@@ -1,9 +1,0 @@
-!pal6 scs-mp2 def2-tzvpp tightscf
-%TDDFT NROOTS 5
-IROOT 1
-END
-#[OH]
-*xyz 0 2 
-O   0.488900000   0.000000000   0.000000000
-H  -0.488900000   0.000000000   0.000000000
-*

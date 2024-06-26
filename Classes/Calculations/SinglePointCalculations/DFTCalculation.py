@@ -1,5 +1,3 @@
-import sys
-import os
 from Classes.Calculations.Calculation import Calculation
 from Data.Manual.ExtractedDocumentation import keywords_density_functionals, keywords_simple_input
 from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler

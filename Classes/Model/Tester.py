@@ -6,7 +6,6 @@ from Classes.Helpers.ORCAManualManipulator import ORCAManualManipulator
 from Classes.Helpers.ORCARunner import ORCARunner
 import re
 import os
-import random
 
 class Tester:
     def __init__(self, model, data, system_prompt, eval_file_path, output_file_path, metrics=None, use_embeddings=False):

@@ -1,9 +1,0 @@
-!pal6 sapporo-tzp-2012 loosescf scfconv10 ri34-ccsd lshift angs
-%md
-Timestep 2.0_fs
-end
-#[SH]
-*xyz 0 2 
-S   0.676600000   0.000000000   0.000000000
-H  -0.676600000   0.000000000   0.000000000
-*

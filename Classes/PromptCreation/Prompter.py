@@ -1,7 +1,7 @@
 import os
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
-from Classes.Helpers.OrcaManualManipulator import OrcaManualManipulator
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+from Classes.Helpers.ORCAManualManipulator import ORCAManualManipulator
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 from openai import OpenAI
 import json
 import re
@@ -12,10 +12,10 @@ class Prompter:
         self.client = OpenAI()
         self.contextual_prompt = contextual_prompt
         self.input_files = self.load_input_files(data_folder) if not input_files else input_files
-        self.simple_input_keyword_mappings = OrcaDocumentationHandler.get_keywords_simple_input_documentation()
-        self.df_keyword_mappings = OrcaDocumentationHandler.get_density_functional_documentation()
-        self.basis_set_mappings = OrcaDocumentationHandler.get_basis_set_documentation()
-        self.input_block_mappings = OrcaDocumentationHandler.get_input_block_documentation()
+        self.simple_input_keyword_mappings = ORCADocumentationHandler.get_keywords_simple_input_documentation()
+        self.df_keyword_mappings = ORCADocumentationHandler.get_density_functional_documentation()
+        self.basis_set_mappings = ORCADocumentationHandler.get_basis_set_documentation()
+        self.input_block_mappings = ORCADocumentationHandler.get_input_block_documentation()
         self.prompt_engineered_input_files = list(
             map(self.create_cot_label_from_input_file, self.input_files)) if create_synthetic_labels else None
         self.input_files = list(map(self.clean_input_file, self.input_files))
@@ -28,10 +28,10 @@ class Prompter:
         return prompts
 
     def create_prompt_from_input_file(self, input_file):
-        molecule_smiles = OrcaInputFileManipulator.extract_molecule_smiles(
+        molecule_smiles = ORCAInputFileManipulator.extract_molecule_smiles(
             input_file)
-        keywords, _ = OrcaInputFileManipulator.extract_keywords(input_file)
-        _, input_block_options, input_block_settings = OrcaInputFileManipulator.extract_input_blocks(
+        keywords, _ = ORCAInputFileManipulator.extract_keywords(input_file)
+        _, input_block_options, input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             input_file)
         simple_input_descriptions, density_functional_descriptions, basis_set_descriptions = self.map_keywords(
             keywords)
@@ -91,17 +91,17 @@ class Prompter:
             return False
 
     def load_input_files(self, data_folder):
-        input_files = [OrcaInputFileManipulator.read_file(os.path.join(data_folder, file))
+        input_files = [ORCAInputFileManipulator.read_file(os.path.join(data_folder, file))
                        for file in sorted(os.listdir(data_folder))]
         return input_files
 
     def create_cot_label_from_input_file(self, input_file):
-        keywords, _ = OrcaInputFileManipulator.extract_keywords(input_file)
-        _, input_block_options, input_block_settings = OrcaInputFileManipulator.extract_input_blocks(
+        keywords, _ = ORCAInputFileManipulator.extract_keywords(input_file)
+        _, input_block_options, input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             input_file)
-        molecule_smiles = OrcaInputFileManipulator.extract_molecule_smiles(
+        molecule_smiles = ORCAInputFileManipulator.extract_molecule_smiles(
             input_file)
-        molecule_smiles = OrcaInputFileManipulator.get_random_xyz()[1].removesuffix('.txt') if not molecule_smiles else molecule_smiles
+        molecule_smiles = ORCAInputFileManipulator.get_random_xyz()[1].removesuffix('.txt') if not molecule_smiles else molecule_smiles
         print(molecule_smiles)
         simple_input_descriptions, density_functional_descriptions, basis_set_descriptions = self.map_keywords(
             keywords)
@@ -122,5 +122,5 @@ class Prompter:
     def clean_input_file(self, input_file):
         """"""
         input_file = input_file.replace("pal6 ", "")
-        input_file = OrcaInputFileManipulator.remove_xyz(input_file)
+        input_file = ORCAInputFileManipulator.remove_xyz(input_file)
         return input_file
