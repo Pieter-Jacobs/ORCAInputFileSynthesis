@@ -9,6 +9,20 @@ import random
 
 
 class CCGeometryOptimization(CCCalculation):
+    """Initializes a Coupled Cluster Geometry Optimization.
+
+    Parameters:
+    - xyz: coordinate-block of the used molecule.
+    - molecule_file: file containing molecule data.
+    - molecule_type: Molecule or MoleculeRadical, used to determine what type of molecule is used
+    - use_geom: boolean indicating whether to include a geometry optimization
+    - add_solvation: boolean indicating whether to add a random solvation model.
+    - use_densities: boolean indicating whether to randomly alter the normally used densities.
+    - do_relaxed_scan: boolean indicating whether to perform a relaxed scan in the possible geometry optimization
+    - calculate_hessian: boolean indicating whether to recalculate the Hessian.
+    - use_constraints: boolean indicating whether to constrain the possible geometry optimization.
+    """
+
     def __init__(self, xyz, molecule_file, molecule_type, add_solvation=False, use_densities=False,
                  do_relaxed_scan=False, calculate_hessian=False, use_constraints=False):
         super().__init__(xyz, molecule_file, molecule_type, add_solvation, use_densities)
@@ -19,6 +33,7 @@ class CCGeometryOptimization(CCCalculation):
                                          basisSetHandler=self.basisSetHandler)
 
     def process_keywords(self):
+        """Implements all necessary keywords for a CC Geometry Optimization"""
         super().process_keywords()
         self.keywords.extend([self.geom.optimization_type,
                               self.geom.geom_convergence,
@@ -31,10 +46,13 @@ class CCGeometryOptimization(CCCalculation):
             self.keywords.remove('optts')
 
     def process_input_blocks(self):
+        """Implements all necessary input blocks for a CC Geometry Optimization"""
+
         super().process_input_blocks()
         self.input_blocks.append(self.create_geom_input_block())
 
     def create_geom_input_block(self):
+        """Creates the input block that tunes the settings for a geometry optimization"""
         input_block = "%geom"
         input_block += '\n' + \
             self.geom.get_relaxed_scan_settings() if self.geom.do_relaxed_scan else ''
@@ -47,6 +65,21 @@ class CCGeometryOptimization(CCCalculation):
 
 
 class HFGeometryOptimization(HFCalculation):
+    """Initializes a Hartree Fock Geometry Optimization.
+
+    Parameters:
+    - xyz: coordinate-block of the used molecule.
+    - molecule_file: file containing molecule data.
+    - molecule_type: Molecule or MoleculeRadical, used to determine what type of molecule is used
+    - use_geom: boolean indicating whether to include a geometry optimization
+    - add_solvation: boolean indicating whether to add a random solvation model.
+    - use_ri: boolean indicating whether to add a random RI approximation.
+    - use_mp2: boolean indicating whether to add MP2 theory.
+    - do_relaxed_scan: boolean indicating whether to perform a relaxed scan in the possible geometry optimization
+    - calculate_hessian: boolean indicating whether to recalculate the Hessian.
+    - use_constraints: boolean indicating whether to constrain the possible geometry optimization.
+    """
+
     def __init__(self, xyz, molecule_file, molecule_type, add_solvation=False,
                  use_mp2=False, use_ri=False,
                  do_relaxed_scan=False, calculate_hessian=False, use_constraints=False):
@@ -58,6 +91,8 @@ class HFGeometryOptimization(HFCalculation):
                                          basisSetHandler=self.basisSetHandler)
 
     def process_keywords(self):
+        """Implements all necessary keywords for an HF Geometry Optimization"""
+
         super().process_keywords()
         self.keywords.extend([self.geom.optimization_type,
                               self.geom.geom_convergence,
@@ -69,10 +104,14 @@ class HFGeometryOptimization(HFCalculation):
             self.keywords.remove('optts')
 
     def process_input_blocks(self):
+        """Implements all necessary input blocks for an HF Geometry Optimization"""
+
         super().process_input_blocks()
         self.input_blocks.append(self.create_geom_input_block())
 
     def create_geom_input_block(self):
+        """Creates the input block that tunes the settings for a geometry optimization"""
+
         input_block = "%geom"
         input_block += '\n' + \
             self.geom.get_relaxed_scan_settings() if self.geom.do_relaxed_scan else ''
@@ -85,6 +124,22 @@ class HFGeometryOptimization(HFCalculation):
 
 
 class DFTGeometryOptimization(DFTCalculation):
+    """Initializes a Density Functional Theory based Geometry Optimization.
+
+    Parameters:
+    - xyz: coordinate-block of the used molecule.
+    - molecule_file: file containing molecule data.
+    - molecule_type: Molecule or MoleculeRadical, used to determine what type of molecule is used
+    - use_geom: boolean indicating whether to include a geometry optimization
+    - add_solvation: boolean indicating whether to add a random solvation model.
+    - use_ri_approximation: boolean indicating whether to add a random RI approximation.
+    - use_dispersion: boolean indicating whether to add a random dispersion method.
+    - use_nl: boolean indicating whether to add non-local correction
+    - do_relaxed_scan: boolean indicating whether to perform a relaxed scan in the geometry optimization
+    - calculate_hessian: boolean indicating whether to recalculate the Hessian.
+    - use_constraints: boolean indicating whether to constrain the geometry optimization.
+    """
+
     def __init__(self, xyz, molecule_file, molecule_type, add_solvation=False,
                  use_ri_approximation=True, use_dispersion=False, use_nl=False,
                  do_relaxed_scan=False, calculate_hessian=False, use_constraints=False):
@@ -97,20 +152,25 @@ class DFTGeometryOptimization(DFTCalculation):
                                          basisSetHandler=self.basisSetHandler)
 
     def process_keywords(self):
+        """Implements all necessary keywords for a DFT Geometry Optimization"""
+
         super().process_keywords()
         self.keywords.extend([self.geom.optimization_type,
                               self.geom.geom_convergence,
                               'noautostart'])
-        # Relaxed scan has a specific keyword for combining with optts
+        # Relaxed scan has a specific keyword for combining it with optts
         if self.geom.geom_convergence == 'optts' and self.geom.do_relaxed_scan:
             self.keywords.append("scants")
             self.keywords.remove('optts')
 
     def process_input_blocks(self):
+        """Implements all necessary input blocks for a DFT Geometry Optimization"""
+
         super().process_input_blocks()
         self.input_blocks.append(self.create_geom_input_block())
 
     def choose_ri_approximation(self):
+        """Chooses an RI approximation based on the functional and the hf type"""
         ri_approximation = None
         if self.functional_type == 'non-hybrid':
             ri_approximation = "ri"
@@ -123,6 +183,8 @@ class DFTGeometryOptimization(DFTCalculation):
         return ri_approximation
 
     def create_geom_input_block(self):
+        """Creates the input block that tunes the settings for a geometry optimization"""
+
         input_block = "%geom"
         input_block += '\n' + \
             self.geom.get_relaxed_scan_settings() if self.geom.do_relaxed_scan else ''
@@ -135,6 +197,8 @@ class DFTGeometryOptimization(DFTCalculation):
 
 
 class GeometryOptimization:
+    """Base class used to build upon for specific single point calculations. As the geometry optimization is similar for all of them, we used this extra class for the shared functionality"""
+
     def __init__(self, xyz, do_relaxed_scan, calculate_hessian, use_constraints, basisSetHandler):
         self.do_relaxed_scan = do_relaxed_scan
         self.calculate_hessian = calculate_hessian
@@ -146,6 +210,7 @@ class GeometryOptimization:
                                                                   n_atoms=len(self.basisSetHandler.elements))
 
     def choose_optimization_type(self):
+        """Randomly chooses an optimization type"""
         optimization_types = ['opt', 'gdiis-opt', 'copt', 'gdiis-copt']
         # Cartesian optimization not possible with a relaxed scan:
         if self.do_relaxed_scan or self.use_constraints or self.calculate_hessian:
@@ -153,6 +218,7 @@ class GeometryOptimization:
         return random.choice(optimization_types)
 
     def choose_geometry_convergence(self):
+        """Randomly chooses a convergence type"""
         geom_convergence = ORCADocumentationHandler.choose_random_keyword(
             keywords_simple_input.geometry_convergence)
         return geom_convergence
@@ -161,13 +227,15 @@ class GeometryOptimization:
         return "Calc_Hess true\nRecalc_Hess 1"
 
     def get_relaxed_scan_settings(self):
-        # First perform a relaxed surface scan
+        """Getter for the settings needed to perform a relaxed surface scan"""
         bond_lengths = self.calculate_bond_lengths()
         scan_lengths = random.choice(['B %d %d = %.2f, %.2f, 5' % (
             distance[0][0], distance[0][1], distance[1], distance[1] * 2) for distance in bond_lengths])
         return f"Scan\n{scan_lengths}\nend"
 
     def get_constraint_settings(self):
+        """Getter for the settings needed for constraining the optimization"""
+
         distances, angles, dihedral_angles = self.generate_constraints()
         distance_constraints_block = ['{B %d %d %.2f C}' % (
             distance[0][0], distance[0][1], distance[1]) for distance in distances]
@@ -175,10 +243,10 @@ class GeometryOptimization:
             angle[0][0], angle[0][1], angle[0][2], angle[1]) for angle in angles]
         dihedral_angle_constraints_block = ['{A %d %d %d %d %.2f C}' % (
             angle[0][0], angle[0][1], angle[0][2], angle[0][3], angle[1]) for angle in dihedral_angles]
-        # return "Constraints\n{"\n".join(angle_constraints_block)}\n{"\n".join(dihedral_angle_constraints_block) if len(dihedral_angle_constraints_block) > 0 else ''}end"
         return f"Constraints\n{"\n".join(distance_constraints_block)}\nend"
 
     def generate_constraints(self):
+        """Calculate the possible constraint settings based on the provided molecule"""
         distance_constraints = self.calculate_bond_lengths()
         self.molecule.set_default_graph()
         angle_constraints = self.calculate_bond_angles()
@@ -190,6 +258,8 @@ class GeometryOptimization:
                 for i in range(len(self.basisSetHandler.elements)) for j in range(i+1, len(self.basisSetHandler.elements))]
 
     def calculate_bond_angles(self):
+        """Calculates the bond angels for the given molecule"""
+
         angle_constraints = []
 
         # 1) Build a list of atom indexes involved in angles.
@@ -216,6 +286,7 @@ class GeometryOptimization:
         return angle_constraints
 
     def calculate_dihedral_angles(self):
+        """Calculates the dihedral angels for the given molecule"""
         dihedrals = []
         dihedral_constraints = []
 

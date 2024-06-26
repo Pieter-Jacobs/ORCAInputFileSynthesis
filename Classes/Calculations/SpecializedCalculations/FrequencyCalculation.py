@@ -226,7 +226,8 @@ class DFTFrequencyCalculation:
         ri_approximation = None
         if self.base_class.functional_type == 'non-hybrid':
             ri_approximation = "ri"
-        elif self.base_class.functional_is_range_seperated():  # geom needs rijcosx for range seperated functionals
+        # geom needs rijcosx for range seperated functionals
+        elif self.base_class.functional_is_range_seperated():
             ri_approximation = 'rijcosx'
         else:
             # Rijk is not implemented for rohf
