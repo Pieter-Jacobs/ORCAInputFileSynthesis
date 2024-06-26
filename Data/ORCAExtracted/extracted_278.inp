@@ -1,0 +1,16 @@
+!rks tpssh opt numfreq 6-31g(d,p) autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 1000
+end
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+#n1=po1
+*xyz 0 1 
+n  -0.617400000   0.652900000  -0.000000000
+p   1.023800000   0.096300000   0.000000000
+o  -0.406500000  -0.749200000   0.000000000
+*

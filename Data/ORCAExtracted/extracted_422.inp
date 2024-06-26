@@ -1,0 +1,15 @@
+! b3lyp cc-pvdz ri-jk def2/jk tightopt nofinalgrid miniprint nomoprint kdiis nososcf defgrid3
+%pal nprocs 40 end
+%maxcore 4200
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+#o=bf
+*xyz 0 1 
+o   1.749600000  -0.319800000   0.000000000
+b  -0.180100000   0.764000000   0.000000000
+f  -1.569500000  -0.444200000   0.000000000
+*

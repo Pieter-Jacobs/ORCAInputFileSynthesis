@@ -1,0 +1,11 @@
+!uks tpssh opt numfreq 6-31g(d,p) autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 500
+end
+#[sh]
+*xyz 0 2 
+s   0.676600000   0.000000000   0.000000000
+h  -0.676600000   0.000000000   0.000000000
+*

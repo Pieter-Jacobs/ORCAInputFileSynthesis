@@ -1,0 +1,21 @@
+! b3lyp tightopt def2-svp def2-svp/c rijcosx def2/j tightscf miniprint nomoprint nofinalgrid kdiis nososcf defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%tddft
+tda true
+nroots 4
+iroot 1
+maxcore 4000
+end
+#b1=s=p1
+*xyz 0 1 
+b  -0.419400000   0.629300000   0.000000000
+s  -0.709300000  -0.530100000   0.000000000
+p   1.128800000  -0.099300000   0.000000000
+*

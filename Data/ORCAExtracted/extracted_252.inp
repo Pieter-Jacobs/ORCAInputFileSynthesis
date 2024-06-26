@@ -1,0 +1,16 @@
+!uks b3lyp 6-31g(d,p) autoaux rijcosx nofinalgrid nofinalgridx d3bj moread defgrid3
+%moinp "opt_feiv_bistsmp_is_b3lyp_6_31gdp.gbw"
+%pal nprocs 32
+end
+%maxcore 7500
+%tddft
+donto true
+doquad true
+nroots 50
+end
+#[bh]cl
+*xyz 0 2 
+b  -0.274000000   0.445200000   0.000000000
+cl   1.470800000  -0.154000000   0.000000000
+h  -1.196900000  -0.291200000   0.000000000
+*

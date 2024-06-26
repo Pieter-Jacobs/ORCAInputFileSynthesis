@@ -1,0 +1,28 @@
+! uks b3lyp def2-tzvpp def2/j d3bj verytightscf rijcosx nofinalgrid noautostart slowconv usesym moread noiter uno uco defgrid3
+%moinp "epr_feiv_bistsmp_is_b3lyp_def2_tzvpp_epr_iii_cpppp_gd3bj.gbw"
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end 
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%basis
+newgto h "epr-iii" end
+newgto fe "cp(ppp)" end
+newauxgto h "autoaux" end
+newauxgto fe "def2/j" end
+end
+#[bh]f
+*xyz 0 2 
+b  -0.117700000   0.437200000   0.000000000
+f   1.189900000  -0.184500000   0.000000000
+h  -1.072100000  -0.252700000   0.000000000
+*

@@ -1,0 +1,6 @@
+! bp86 def2-tzvp def2/j tightscf opt nofinalgrid defgrid3
+#f
+*xyz 0 1 
+f   0.493500000   0.000000000   0.000000000
+h  -0.493500000   0.000000000   0.000000000
+*

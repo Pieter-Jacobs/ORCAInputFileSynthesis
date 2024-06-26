@@ -1,0 +1,9 @@
+! pbe d3bj def2-svp def2/j tightopt freq nofinalgrid miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4300
+#b1=ns1
+*xyz 0 1 
+b  -0.794700000  -0.619900000   0.000000000
+n   1.122000000  -0.199900000   0.000000000
+s  -0.327400000   0.819800000   0.000000000
+*

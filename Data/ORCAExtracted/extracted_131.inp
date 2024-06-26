@@ -1,0 +1,55 @@
+! sp ri-mp2 ri-jk def2-sv(p) def2/jk def2-svp/c miniprint printbasis printmos
+%pal nprocs 40 end
+%maxcore 4000
+%base "sp_mp2_2s-p_no"
+%mp2
+density unrelaxed
+natorbs true
+end
+#p1=ps1
+*xyz 0 1 
+p  -1.092100000  -0.596600000   0.000000000
+p   1.092100000  -0.596600000  -0.000000000
+s  -0.000000000   1.193100000   0.000000000
+*
+$new_job
+! sp ri-jk conv def2-sv(p) def2/jk miniprint printbasis printmos moread
+%pal nprocs 40 end
+%maxcore 4000
+%base "sp_casscf_2s-p"
+%moinp "sp_mp2_2s-p_no.mp2nat"
+%casscf
+nel aaaaa
+norb bbbbb
+mult 6
+nroots ddddd
+trafostep ri
+maxiter 500
+end
+#p1=ps1
+*xyz 0 1 
+p  -1.092100000  -0.596600000   0.000000000
+p   1.092100000  -0.596600000  -0.000000000
+s  -0.000000000   1.193100000   0.000000000
+*
+$new_job
+! dlpno-nevpt2 sp ri-jk conv def2-sv(p) def2/jk miniprint printbasis printmos moread
+%pal nprocs 40 end
+%maxcore 4000
+%base "sp_d-nevpt2_2s-p"
+%moinp "sp_casscf_2s-p.gbw"
+%scf
+end
+%casscf
+nel aaaaa
+norb bbbbb
+mult 6
+nroots ddddd
+trafostep ri
+end
+#p1=ps1
+*xyz 0 1 
+p  -1.092100000  -0.596600000   0.000000000
+p   1.092100000  -0.596600000  -0.000000000
+s  -0.000000000   1.193100000   0.000000000
+*

@@ -1,0 +1,9 @@
+! def2-tzvp d4 b3lyp tightscf def2/j rijcosx cpcm(thf) miniprint nomoprint defgrid1 kdiis nososcf nopop float
+%pal nprocs 16 end
+%maxcore 1792
+#n1=s=n1
+*xyz 0 1 
+n  -0.517100000   0.727400000   0.000000000
+s   1.034200000   0.000000000  -0.000000000
+n  -0.517100000  -0.727400000   0.000000000
+*

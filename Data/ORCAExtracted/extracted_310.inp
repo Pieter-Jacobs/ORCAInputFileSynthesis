@@ -1,0 +1,13 @@
+!rks tpssh 6-31g(d,p) autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj moread noiter  defgrid3
+%pal nprocs 24
+end
+%moinp "dianion_tpssh_opt.gbw"
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+#b(hashtag)n
+*xyz 0 1 
+b   0.425800000   0.000000000   0.000000000
+n  -0.425800000   0.000000000   0.000000000
+*

@@ -1,0 +1,13 @@
+! pbe d3bj def2-svp def2/j tightscf irc defgrid3 nofinalgrid miniprint nomoprint
+%pal nprocs 40 end
+%maxcore 4300
+%irc
+inithess read
+hess_filename "freq_pbed3_2sp.hess"
+maxiter 512
+end
+#n(hashtag)n
+*xyz 0 1 
+n   0.730000000   0.000000000   0.000000000
+n  -0.730000000   0.000000000   0.000000000
+*

@@ -1,9 +1,0 @@
-! pbe d3bj def2-svp def2/j normalopt nofinalgrid miniprint nomoprint defgrid3
-%pal nprocs 40 end
-%maxcore 4300
-#o=s=s
-*xyz 0 1 
-o  -1.459800000  -0.393800000   0.000000000
-s  -0.186300000   0.667600000   0.000000000
-s   1.646100000  -0.273700000   0.000000000
-*

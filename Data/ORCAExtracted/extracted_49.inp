@@ -1,0 +1,9 @@
+!b97-3c freq cpcm(thf) tightscf def2/j miniprint nomoprint defgrid1 kdiis nososcf nopop float
+%pal nprocs 16 end
+%maxcore 3000
+#b1=bs1
+*xyz 0 1 
+b   1.428300000  -0.005000000   0.000000000
+b  -0.706100000   0.660500000   0.000000000
+s  -0.722300000  -0.655500000   0.000000000
+*

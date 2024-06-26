@@ -1,8 +1,0 @@
-! pbe def2-tzvp def2/j tightopt nofinalgrid miniprint nomoprint defgrid3
-%pal nprocs 40 end
-%maxcore 4000
-#p(hashtag)p
-*xyz 0 1 
-p   0.942100000   0.000000000   0.000000000
-p  -0.942100000   0.000000000   0.000000000
-*

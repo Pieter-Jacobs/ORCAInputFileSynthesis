@@ -1,0 +1,11 @@
+!b3lyp opt freq 6-31+g* autoaux rijcosx nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 500
+end
+#ff
+*xyz 0 1 
+f   0.740000000   0.000000000   0.000000000
+f  -0.740000000   0.000000000   0.000000000
+*

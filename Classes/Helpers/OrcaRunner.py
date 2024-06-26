@@ -2,13 +2,13 @@ import os
 import subprocess
 import glob
 import shutil
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
 from collections import namedtuple
 import psutil
 import time
 
 
-class OrcaRunner():
+class ORCARunner():
     """Static class to run an ORCA input file, and handle its corresponding output."""
     def kill_processes_by_file(file_path):
         # Get a list of all running processes
@@ -45,18 +45,18 @@ class OrcaRunner():
         try:
             with open(output_file_stdout, 'w') as output_file, open(output_file_stderr, 'w') as error_file:
                 completed_process = subprocess.run(
-                    command, stdout=output_file, stderr=error_file, text=True, timeout=500, encoding='utf-8')
+                    command, stdout=output_file, stderr=error_file, text=True, timeout=5, encoding='utf-8')
         except Exception as e:
             print(e)
             DummyProcess = namedtuple("completed_process", [
                                       "returncode", "stderr"],)
             completed_process = DummyProcess(1, "Timeout")
         try: 
-            OrcaRunner.rename_orca_output(
+            ORCARunner.rename_orca_output(
                 completed_process, output_file_stdout, output_file_stderr)
         except:
             pass
-        OrcaRunner.move_output_files(data_folder, specific_output_folder)
+        ORCARunner.move_output_files(data_folder, specific_output_folder)
 
         return completed_process.returncode
 
@@ -74,26 +74,26 @@ class OrcaRunner():
         for file_name in os.listdir(data_folder_read):
             file_path = os.path.join(data_folder_read, file_name)
             # Try to run the file
-            return_code = OrcaRunner.run_orca(
+            return_code = ORCARunner.run_orca(
                 data_folder_read, file_name, output_folder)
             # If the file does not work and we are working with one data folder, remove it from that folder
             if return_code != 0 and data_folder_write is None:
                 os.remove(file_path)
             # If the file works, we don't remove it and if working with two data folders we write it to the write folder
             elif return_code == 0 and data_folder_write is not None:
-                input_file_code = OrcaInputFileManipulator.read_file(file_path)
-                OrcaInputFileManipulator.write_file(
+                input_file_code = ORCAInputFileManipulator.read_file(file_path)
+                ORCAInputFileManipulator.write_file(
                     os.path.join(data_folder_write), input_file_code)
 
     def rename_orca_output(completed_process, output_file_stdout, output_file_stderr):
         """Writes the output of the orca file. If there was an error, this is made to be seen in the filename."""
         if completed_process.returncode != 0:
-            error = OrcaInputFileManipulator.read_file(output_file_stderr)
+            error = ORCAInputFileManipulator.read_file(output_file_stderr)
             new_path = output_file_stdout.removesuffix(
                 '.txt') + '_error' + '.txt'
             if hasattr(completed_process, 'stderr') and completed_process.stderr == 'Timeout':
                 print('Timed out, killing child processes...')
-                OrcaRunner.kill_processes_by_file(output_file_stdout)
+                ORCARunner.kill_processes_by_file(output_file_stdout)
 
             os.rename(output_file_stdout, new_path)
 

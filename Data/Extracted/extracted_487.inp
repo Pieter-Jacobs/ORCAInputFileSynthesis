@@ -1,6 +1,0 @@
-!b3lyp d3bj def2-tzvpp def2/jk tightopt tightscf
-#b(hashtag)p
-*xyz 0 1 
-b   0.709500000   0.000000000   0.000000000
-p  -0.709500000   0.000000000   0.000000000
-*

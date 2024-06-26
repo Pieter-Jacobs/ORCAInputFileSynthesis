@@ -1,0 +1,17 @@
+!rks b3lyp d3bj def2-svp rijcosx def2/j tightscf nofinalgrid optts freq defgrid3
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+%geom maxiter 500
+      inhess read
+      inhessname "p149-frq-rks.hess"
+      ts_search ef
+      trust 0.3
+      ts_mode {m 1} end
+end
+#b(hashtag)s(hashtag)p
+*xyz 0 1 
+b   2.073800000   0.000800000   0.000000000
+s  -0.211400000  -0.002000000   0.000000000
+p  -1.862500000   0.001200000   0.000000000
+*

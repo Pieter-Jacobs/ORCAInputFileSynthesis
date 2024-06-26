@@ -1,0 +1,32 @@
+! uks b3lyp aug-pc-4 autoaux d3bj verytightscf rijcosx defgrid3 nofinalgrid noautostart slowconv usesym pal8
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%basis 
+newgto h 
+	"aug-pcj-4" 
+	decontract true
+	end
+newauxgto h 
+	"autoaux" 
+	end
+newgto 26 
+	"cp(ppp)" 
+	end
+newauxgto 26 
+	"def2/j" 
+	end 
+end 
+%base"epr_fe_iii_is_b3lyp_def2tzvpp_d3"
+#[bh]cl
+*xyz 0 2 
+b  -0.274000000   0.445200000   0.000000000
+cl   1.470800000  -0.154000000   0.000000000
+h  -1.196900000  -0.291200000   0.000000000
+*
+%eprnmr
+gtensor 1
+dtensor so
+nuclei = all h {aiso, adip, aorb}
+end

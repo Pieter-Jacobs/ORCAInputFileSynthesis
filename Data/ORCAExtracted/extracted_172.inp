@@ -1,0 +1,22 @@
+! ri-sos-wpbepp86 sp def2-svp def2-svp/c rijcosx def2/j strongscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+mode riints_disk
+nroots 8
+triplets true
+dcorr 1
+maxcore 2000
+end
+#b1=c=n1
+*xyz 0 1 
+b  -1.094600000  -0.237100000   0.000000000
+c   1.382000000  -0.114600000   0.000000000
+n  -0.287500000   0.351700000   0.000000000
+*

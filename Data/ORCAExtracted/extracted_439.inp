@@ -1,0 +1,11 @@
+!uks bp86 def2-svp largeprint
+%pal nprocs 6 end
+%scf
+shift shift 0.25 erroff 0.0 end
+end
+#[nh2]
+*xyz 0 2 
+n  -0.000000000   0.400600000   0.000000000
+h  -0.831600000  -0.200300000   0.000000000
+h   0.831600000  -0.200300000   0.000000000
+*

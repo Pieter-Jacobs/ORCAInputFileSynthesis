@@ -1,0 +1,2 @@
+Using CASSCF (6 active orbitals and 6 electrons) 
+and def2-QZVP basis set, please perform a single point energy calculation. 

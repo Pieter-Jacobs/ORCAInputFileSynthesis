@@ -1,0 +1,16 @@
+!b3lyp 6-31+g* autoaux rijcosx nofinalgrid nofinalgridx d3bj neb-ts defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 500
+end
+%neb
+neb_end_xyzfile "neb_ts_read.xyz"
+nimages 8
+end
+#fs(hashtag)p
+*xyz 0 1 
+f  -1.516900000  -0.004700000   0.000000000
+s  -0.051400000   0.008900000   0.000000000
+p   1.568400000  -0.004200000   0.000000000
+*

@@ -1,0 +1,22 @@
+! rhf zindo/1 tightopt norico tightscf miniprint nomoprint kdiis nososcf
+%pal nprocs 1 end
+%maxcore 4000
+%scf
+usecheapints true
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%tddft
+tda true
+nroots 4
+iroot 1
+maxcore 4000
+end
+#n1=ns1
+*xyz 0 1 
+n  -0.516200000   0.620200000   0.000000000
+n  -0.516200000  -0.620200000   0.000000000
+s   1.032400000  -0.000000000   0.000000000
+*

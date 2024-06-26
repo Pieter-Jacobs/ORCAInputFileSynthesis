@@ -1,0 +1,17 @@
+!uks pbe0 def2-tzvpp tightscf  
+%output
+print[ p_atpopmo_l ] 1
+print[ p_reducedorbpopmo_l] 1
+end
+#[ph]cl
+*xyz 0 2 
+p  -0.360200000   0.709200000   0.000000000
+cl   1.464400000  -0.205400000   0.000000000
+h  -1.104200000  -0.503800000   0.000000000
+*
+%eprnmr 
+gtensor true printlevel 3  
+nuclei = all h {aiso, adip, aorb} 
+nuclei = all c {aiso, adip, aorb}
+nuclei = all n {aiso, adip, aorb} 
+end

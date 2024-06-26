@@ -1,7 +1,0 @@
-!b3lyp d3bj def2-tzvpp def2/jk tightopt tightscf cpcm(water)
-#p(hashtag)ccl
-*xyz 0 1 
-p  -1.591500000   0.002800000   0.000000000
-c  -0.068100000  -0.005200000   0.000000000
-cl   1.659600000   0.002400000   0.000000000
-*

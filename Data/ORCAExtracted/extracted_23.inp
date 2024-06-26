@@ -1,0 +1,24 @@
+! 6-31g(d,p) autoaux normalprint moread 
+%pal nprocs 32
+end
+%maxcore 7500
+%moinp "restart_opt_feiv_bistsmp_is_tpssh_6_31gdp.qro"
+%scf
+rotate {227,239,90,0,0} {227,239,90,1,1} end
+end
+%casscf 
+nel 4 
+norb 5 
+mult 3 
+nroots 1 
+end
+%output
+print[ p_basis ] 2
+print[ p_mos ] 1
+end
+#n(hashtag)p=o
+*xyz 0 1 
+n   0.000000000   0.000000000   0.000000000
+p  -0.000000000  -1.500000000   0.000000000
+o  -0.000000000  -3.000000000   0.000000000
+*

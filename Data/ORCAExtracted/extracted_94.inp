@@ -1,0 +1,14 @@
+! tpssh epr-iii tightscf largeprint keepdens
+%plots
+  dim1 80 dim2 80 dim3 80
+  format cube
+  spindens("ch3-pl_spindens.cube");
+  mo("mo3a_pl.cube",3,0);
+  mo("mo3b_pl.cube",3,1);
+  end
+#o1p=p1
+*xyz 0 1 
+o   0.000000000   0.808900000   0.000000000
+p   1.104000000  -0.404400000  -0.000000000
+p  -1.104000000  -0.404400000   0.000000000
+*

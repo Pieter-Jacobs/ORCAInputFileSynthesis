@@ -1,0 +1,11 @@
+! uks tpssh def2-svp def2/j rijcosx somf(1x) largeprint
+#n(hashtag)[ph]
+*xyz 0 2 
+n   1.259800000   0.260200000   0.000000000
+p  -0.190600000  -0.689800000   0.000000000
+h  -1.069200000   0.429600000   0.000000000
+*
+%eprnmr
+  dtensor soc
+  dsoc cp
+ end

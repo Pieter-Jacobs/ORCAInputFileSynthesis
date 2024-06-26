@@ -5,11 +5,9 @@ import re
 import selfies as sf
 from molmod import Molecule
 from rdkit.Chem import MolFromSmiles
-from Classes.Helpers.OrcaManualManipulator import OrcaManualManipulator
-from Data.Manual.ExtractedDocumentation import keywords_simple_input
+from Classes.Helpers.ORCAManualManipulator import ORCAManualManipulator
 
-
-class OrcaInputFileManipulator:
+class ORCAInputFileManipulator:
     def get_random_xyz(max_atoms=4):
         found_molecule = False
         molecule_type = random.choice(['Molecules', 'MoleculesRadical'])
@@ -97,7 +95,7 @@ class OrcaInputFileManipulator:
             return False
 
     def extract_elements(input_file):
-        coordinates = OrcaManualManipulator.extract_input_file_coordinates(
+        coordinates = ORCAManualManipulator.extract_input_file_coordinates(
             input_file)
         elements_pattern = r'\b[A-Z][a-z]?\b'
         elements = re.findall(elements_pattern, coordinates[0])

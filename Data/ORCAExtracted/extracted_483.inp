@@ -1,0 +1,20 @@
+!uks pbe0 def2-tzvpp tightscf opt 
+%output
+print[ p_atpopmo_l ] 1
+print[ p_reducedorbpopmo_l] 1
+end
+%geom scan
+d 1 0 4 5 = 0, 180, 19
+end
+end
+%eprnmr 
+nuclei = all h {aiso, adip, aorb} 
+nuclei = all c {aiso, adip, aorb}
+nuclei = all n {aiso, adip, aorb} 
+end
+#s=[sh]
+*xyz 0 2 
+s   1.490600000  -0.180600000   0.000000000
+s  -0.390400000   0.659200000   0.000000000
+h  -1.100200000  -0.478600000   0.000000000
+*

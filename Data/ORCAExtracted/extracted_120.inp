@@ -1,0 +1,19 @@
+! sp ri-jk conv def2-sv(p) def2/jk miniprint printbasis printmos moread
+%pal nprocs 40 end
+%maxcore 4000
+%moinp "sp_mp2_2s-p_no.mp2nat"
+%scf
+end
+%casscf
+nel aaaaa
+norb bbbbb
+mult 6
+nroots ddddd
+trafostep ri
+end
+#c(hashtag)n
+*xyz 0 1 
+c  -0.031700000   0.000000000   0.000000000
+n   1.128300000  -0.000000000   0.000000000
+h  -1.096700000  -0.000000000   0.000000000
+*

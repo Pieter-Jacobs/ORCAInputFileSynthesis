@@ -1,10 +1,9 @@
 from openai import OpenAI
-from nltk.translate.bleu_score import sentence_bleu
 from sacrebleu.metrics import BLEU
 from Classes.Model.Embedder import Embedder
-from Classes.Helpers.OrcaInputFileManipulator import OrcaInputFileManipulator
-from Classes.Helpers.OrcaManualManipulator import OrcaManualManipulator
-from Classes.Helpers.OrcaRunner import OrcaRunner
+from Classes.Helpers.ORCAInputFileManipulator import ORCAInputFileManipulator
+from Classes.Helpers.ORCAManualManipulator import ORCAManualManipulator
+from Classes.Helpers.ORCARunner import ORCARunner
 import re
 import os
 import random
@@ -79,7 +78,7 @@ class Tester:
             return match, message
         except:
             try:
-                return OrcaManualManipulator.extract_processed_input_files_wo_xyz(message)[-1], message
+                return ORCAManualManipulator.extract_processed_input_files_wo_xyz(message)[-1], message
             except:
                 return "", message
 
@@ -88,19 +87,19 @@ class Tester:
         orca_run_folder = os.path.join('Data', 'Generated', 'Evaluation')
         input_file_name ="predicted.inp"
         with open(os.path.join(orca_run_folder, input_file_name), 'w', encoding='utf-8') as f:
-            f.write(OrcaInputFileManipulator.add_xyz(predicted_input_file,
+            f.write(ORCAInputFileManipulator.add_xyz(predicted_input_file,
                     molecule_type='Molecules', molecule_file='O.txt'))  # add H20 for ease of running
-        return_code = OrcaRunner.run_orca(orca_run_folder,
+        return_code = ORCARunner.run_orca(orca_run_folder,
                                           input_file_name, 'Orca Output', r"C:\Users\Pieter\Orca\orca.exe")
         runnable = 1 if return_code == 0 else 0
         # runnable=1
-        reference_keywords, _ = OrcaInputFileManipulator.extract_keywords(
+        reference_keywords, _ = ORCAInputFileManipulator.extract_keywords(
             reference_input_file)
-        predicted_keywords, _ = OrcaInputFileManipulator.extract_keywords(
+        predicted_keywords, _ = ORCAInputFileManipulator.extract_keywords(
             predicted_input_file)
-        reference_input_blocks, reference_input_block_options, reference_input_block_settings = OrcaInputFileManipulator.extract_input_blocks(
+        reference_input_blocks, reference_input_block_options, reference_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             reference_input_file)
-        predicted_input_blocks, predicted_input_block_options, predicted_input_block_settings = OrcaInputFileManipulator.extract_input_blocks(
+        predicted_input_blocks, predicted_input_block_options, predicted_input_block_settings = ORCAInputFileManipulator.extract_input_blocks(
             predicted_input_file)
 
         # Mark the options with an % to make sure that the evaluation does not count a keyword with the same name as an option

@@ -1,0 +1,22 @@
+! ri-scs-wpbepp86 sp def2-svp def2-svp/c rijcosx def2/j strongscf miniprint printbasis printmos defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+dondo true
+mode riints_disk
+nroots 8
+triplets true
+dcorr 1
+maxcore 2000
+end
+#[h][h]
+*xyz 0 1 
+h   0.349900000   0.000000000   0.000000000
+h  -0.349900000   0.000000000   0.000000000
+*

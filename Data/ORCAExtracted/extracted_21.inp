@@ -1,0 +1,12 @@
+!uks tpssh def2-svp def2/j nofinalgrid nofinalgridx d3bj normalprint moread  defgrid3
+%moinp "restart_opt_feiv_bistsmp_is_tpssh_6_31gdp.gbw" 
+%output
+print[ p_basis ] 2
+print[ p_mos ] 1
+end
+#f[ph]
+*xyz 0 2 
+f   1.166600000  -0.287600000   0.000000000
+p  -0.108000000   0.673300000   0.000000000
+h  -1.058600000  -0.385700000   0.000000000
+*

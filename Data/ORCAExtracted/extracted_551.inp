@@ -1,0 +1,17 @@
+!uks b3lyp d3bj def2-svp rijcosx def2/j tightscf nofinalgrid opt defgrid3
+%geom constraints
+{ b 3 5 c }
+end
+end
+%pal nprocs 8 end
+%maxcore 4000
+%scf maxiter 1000 end
+%geom maxiter 500
+      scan b 8 3 = 2.10, 1.20, 20       end
+end
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*

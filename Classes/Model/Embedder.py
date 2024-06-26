@@ -20,7 +20,6 @@ class Embedder:
 
     def add_relevant_context_to_prompt(model, system_prompt, prompt, embedding_folder, k, token_limit):
         enc = tiktoken.encoding_for_model(model)
-
         contextual_information = ""
         count = 0
 
@@ -32,6 +31,3 @@ class Embedder:
             if len(enc.encode(f'''{system_prompt}{prompt}\n#context\n{contextual_information}{manual_texts[count].page_content}\n''')) < token_limit:
                 contextual_information += manual_texts[i].page_content + "\n"
         return f"{prompt}\n#context\n{contextual_information}"
-
-    def merge_embeddings():
-        pass

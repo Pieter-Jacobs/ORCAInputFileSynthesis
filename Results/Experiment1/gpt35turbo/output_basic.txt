@@ -1,0 +1,61 @@
+---PROMPT---
+ Perform a single point calculation with the def2-SVP basis set, which is a Valence double-zeta basis set with “new” polarization functions. Include correlation fitting for the def2-SVP orbital basis and Weigend’s “universal” Coulomb fitting basis suitable for all def2 type basis sets. Avoid using with ECPs beyond Kr. Use the RI-wB2PLYP density functional, optimized for excitation energies. Utilize the RI approximation. Set the efficient RIJCOSX algorithm and stringent SCF convergence criteria. Turn on Kollmar's DIIS for SCF convergence acceleration, but keep SOSCF off. Set the storage format for numbers to single precision. Employ a heavier, higher-quality grid for Numerical Integration, close to the limit of an enormous grid. #p(hashtag)p. 
+---OUTPUT---
+!ri-wb2plyp def2-svp genfit autoaux kr
+%scf
+    DIISSCF true
+    SOSCF false
+    maxiter 300
+    precision low
+    RI true
+    jcosx true
+end
+%num
+    grid size giant
+end
+%p
+#p
+---END---
+---PROMPT---
+ Perform a geometry optimization calculation using the def2-svp and def2/j basis sets for the Cyclobutadiene molecule. Include the Becke '88 exchange functional with Perdew '86 correlation and Atom-pairwise dispersion correction to the DFT energy with Becke-Johnson damping. Additionally, set the calculation to use closed-shell SCF, employ the RI approximation in DFT calculations, use tight SCF convergence criteria, and utilize a heavier, higher-quality grid for numerical integration. 
+---OUTPUT---
+!b97-d3 def2-svp def2/j
+%scf
+Closed_shell true
+RI true
+TightSCF true
+QualityGrid Heavy end
+%geom
+Calc_Hess true
+Recalc_Hess 1
+end
+#C1=CC=C1
+---END---
+---PROMPT---
+ Perform a quantum chemical calculation using the def2-tzvpp basis set with "new" polarization functions and the def2/jk Coulomb+Exchange fitting for all def2 basis sets. The calculation will be carried out with the B3LYP functional (including 20% HF exchange) and the d3bj atom-pairwise dispersion correction. Tight optimization convergence with specified tolerance for maximum gradient component and tight SCF convergence criteria will be selected. The molecule under study is represented by the SMILES notation: #b(hashtag)p. 
+---OUTPUT---
+!B3LYP def2-tzvpp def2/jk d3bj
+%scf
+MaxIter 300
+Convergence tight
+end
+%opt
+MaxGrad 0.0001
+end
+#b(hashtag)p 
+---END---
+---PROMPT---
+ Perform a quantum chemical calculation with the polarized valence triple-zeta (tzvp) basis set and the B3LYP functional (including 20% HF exchange) for the [bh]f molecule. Utilize spin unrestricted SCF and select tight SCF convergence criteria for this calculation. Additionally, incorporate a heavier, higher-quality grid for numerical integration, taking into account an enormous grid as a reference. Ensure special grid settings for atom 26 and an integration accuracy of 7. 
+---OUTPUT---
+!ub3lyp tzvp
+%scf
+UKS true
+tightscf true
+end
+%num
+Grid=heavier enormous 
+finegrid 26
+Accuracy 7
+end
+#[bh]f
+---END---

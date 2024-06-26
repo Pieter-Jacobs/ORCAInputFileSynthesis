@@ -1,0 +1,1 @@
+I need an ORCA input file for Local energy decomposition analysis. Use dlpno-ccsd(t) and very tight SCF convergence threshold. 

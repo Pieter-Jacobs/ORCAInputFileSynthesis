@@ -1,0 +1,11 @@
+! tpssh epr-ii tightscf largeprint keepdens
+#scl
+*xyz 0 1 
+s  -0.376400000   0.658200000   0.000000000
+cl   1.471600000  -0.184300000   0.000000000
+h  -1.095100000  -0.473900000   0.000000000
+*
+%eprnmr
+   gtensor 1
+   printlevel 3
+end

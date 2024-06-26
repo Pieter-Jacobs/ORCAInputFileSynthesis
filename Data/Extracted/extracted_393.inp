@@ -1,9 +1,0 @@
-! b3lyp def2-svpd ri-jk def2/jk tightopt nofinalgrid miniprint nomoprint defgrid3
-%pal nprocs 40 end
-%maxcore 4000
-#o=ncl
-*xyz 0 1 
-o  -1.111500000  -0.338100000   0.000000000
-n  -0.230600000   0.527500000   0.000000000
-cl   1.342200000  -0.189400000   0.000000000
-*

@@ -1,9 +1,0 @@
-! pbe d3bj def2-svp def2/j tightscf freq nofinalgrid miniprint nomoprint defgrid3
-%pal nprocs 40 end
-%maxcore 4300
-#c1(hashtag)s(hashtag)s1
-*xyz 0 1 
-c   0.000000000   0.840100000   0.000000000
-s   1.106400000  -0.420100000   0.000000000
-s  -1.106400000  -0.420100000   0.000000000
-*

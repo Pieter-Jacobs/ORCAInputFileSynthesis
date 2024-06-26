@@ -1,0 +1,21 @@
+! def2-svp def2/jk conv moread noautostart 
+%moinp "feois-prep1.qro"
+%casscf
+	nel 4
+	norb 5
+	nroots 1
+        mult 3
+	trafostep ri
+	shiftup 1.0
+	shiftdn 1.0
+        ci
+        maxdim 100
+        nguessmat 10000
+        maxiter 100
+        end
+        end
+#[h][h]
+*xyz 0 1 
+h   0.349900000   0.000000000   0.000000000
+h  -0.349900000   0.000000000   0.000000000
+*

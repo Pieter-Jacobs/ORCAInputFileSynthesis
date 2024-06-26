@@ -1,8 +1,0 @@
-!b97-3c optts freq cpcm(thf) tightscf def2/j def2/j miniprint nomoprint defgrid1 kdiis nososcf nopop float
-%pal nprocs 16 end
-%maxcore 3000
-#b(hashtag)n
-*xyz 0 1 
-b   0.425800000   0.000000000   0.000000000
-n  -0.425800000   0.000000000   0.000000000
-*

@@ -1,0 +1,14 @@
+! zora zora-def2-svp def2-svp/c 
+! cpcm(water) somf(1x)
+%casscf
+  nel 4       
+  norb 5     
+  mult 5,3    
+  nroots 5,45 
+ end
+#b(hashtag)s(hashtag)p
+*xyz 0 1 
+b   2.073800000   0.000800000   0.000000000
+s  -0.211400000  -0.002000000   0.000000000
+p  -1.862500000   0.001200000   0.000000000
+*

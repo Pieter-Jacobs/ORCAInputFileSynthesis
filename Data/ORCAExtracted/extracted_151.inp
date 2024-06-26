@@ -1,0 +1,21 @@
+! b3lyp 6-31g* sp rijcosx autoaux tightscf miniprint nomoprint nofinalgrid kdiis nososcf defgrid3
+%pal nprocs 40 end
+%maxcore 4300
+%scf
+scfmode direct
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+nroots 10
+triplets true
+maxcore 4300
+end
+#c1=nn=1
+*xyz 0 1 
+c   0.000000000  -0.575700000   0.000000000
+n  -0.780400000   0.287800000   0.000000000
+n   0.780400000   0.287800000   0.000000000
+*

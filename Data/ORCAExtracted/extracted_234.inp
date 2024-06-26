@@ -1,0 +1,9 @@
+! wb97x-d3 tightopt freq def2-tzvpp def2/j rijcosx tightscf defgrid3
+%maxcore 3200
+%pal nprocs 8 
+end
+#[h][h]
+*xyz 0 1 
+h   0.349900000   0.000000000   0.000000000
+h  -0.349900000   0.000000000   0.000000000
+*

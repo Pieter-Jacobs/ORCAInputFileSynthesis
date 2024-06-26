@@ -1,0 +1,24 @@
+! uks tpssh epr-ii largeprint keepdens
+%plots
+  dim1 80
+  dim2 80
+  dim3 80
+  format cube
+  spindens("benzyl-radical_spindens.cube");
+  mo("mo23a.cube",23,0);
+  mo("mo23b.cube",23,1);
+  mo("mo24a.cube",24,0);
+  mo("mo24b.cube",24,1);
+  mo("mo25a.cube",25,0);
+  mo("mo25b.cube",25,1);
+end
+#[bh]f
+*xyz 0 2 
+b  -0.117700000   0.437200000   0.000000000
+f   1.189900000  -0.184500000   0.000000000
+h  -1.072100000  -0.252700000   0.000000000
+*
+%eprnmr 
+nuclei = all c {aiso} 
+nuclei = all h {aiso} 
+end

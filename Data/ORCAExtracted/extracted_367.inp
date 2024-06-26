@@ -1,0 +1,11 @@
+! optts r2scan-3c tightopt freq defgrid1 miniprint nomoprint
+%pal nprocs 6 end
+%maxcore 2000
+%geom
+calc_hess true
+end
+#s=s
+*xyz 0 1 
+s   1.030000000   0.000000000   0.000000000
+s  -1.030000000   0.000000000   0.000000000
+*

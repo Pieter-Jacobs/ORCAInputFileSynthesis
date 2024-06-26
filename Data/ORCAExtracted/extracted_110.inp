@@ -1,0 +1,30 @@
+! uks b3lyp def2-tzvp tightscf slowconv uno uco d3bj autoaux moread notrah noiter 
+%moinp "3-1_b3lyp_fat_pathologic.qro"
+%scf
+maxiter 2000
+diismaxeq 15
+directresetfreq 1
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%basis
+newgto fe "cp(ppp)" end
+end
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%output
+printlevel normal
+print[ p_basis       ] 2
+print[ p_mos         ] 1
+print[ p_density     ] 1
+print[ p_spindensity ] 1
+end
+#p(hashtag)[ph]
+*xyz 0 2 
+p   1.698000000   0.000800000   0.000000000
+p  -0.147000000  -0.001800000   0.000000000
+h  -1.551000000   0.001000000   0.000000000
+*

@@ -1,7 +1,16 @@
-!def2-tzvpp pbe0-dh/d opt engrad uhf uno defgrid3 rijonx defrec j3 tightscf bp autoaux
-%method nlb 5.0 end
-%scf autotrah false end
-#[nh]f
+!ri-wb2plyp def2-svp def2fit
+%scf
+int 15
+ri true
+ri_jcosx true
+ri_scf true
+scf_conv 7
+scf_algorithm kollmar_diis
+soscf false
+numerical_int_grid huge
+scf_convergence 7
+end
+#p(p)p
 #O
 *xyz 0 1 
 O   0.000000000   0.397800000   0.000000000

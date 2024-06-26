@@ -1,8 +1,0 @@
-! ri-b2plyp def2-tzvp def2/j def2-tzvp/c tightscf opt nofinalgrid defgrid3
-%maxcore 1024
-#c1=pp=1
-*xyz 0 1 
-c   0.000000000   0.939700000   0.000000000
-p   1.161900000  -0.469800000  -0.000000000
-p  -1.161900000  -0.469800000  -0.000000000
-*

@@ -1,0 +1,20 @@
+! uks tpssh rijcosx zora zora-tzvp sarc/j decontractaux
+! nofinalgrid tightscf moread defgrid3
+%moinp "dimer_flipspin.gbw"    
+%rel onecenter true  
+     picturechange true 
+     soctype 3
+     socflags 1,3,3,1
+     end
+%method intacc 6.0   
+        specialgridatoms  25, 8
+        specialgridintacc 11, 9
+        end
+#o=[sh]
+*xyz 0 2 
+o   1.217800000  -0.239200000   0.000000000
+s  -0.063900000   0.520600000   0.000000000
+h  -1.153900000  -0.281300000   0.000000000
+*
+%eprnmr nuclei = 1,2  {aiso, adip, aorb}     
+        end

@@ -1,0 +1,32 @@
+! uks b3lyp aug-pc-4 autoaux d3bj verytightscf rijcosx nofinalgrid noautostart slowconv usesym pal8
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%basis 
+newgto h 
+	"aug-pcj-4" 
+	decontract true
+	end
+newauxgto h 
+	"autoaux" 
+	end
+newgto 26 
+	"cp(ppp)" 
+	end
+newauxgto 26 
+	"def2/j" 
+	end 
+end 
+%base"epr_fe_iii_hs_b3lyp_aug_pc_4_d3"
+#p(hashtag)[ph]
+*xyz 0 2 
+p   1.698000000   0.000800000   0.000000000
+p  -0.147000000  -0.001800000   0.000000000
+h  -1.551000000   0.001000000   0.000000000
+*
+%eprnmr
+gtensor 1
+dtensor so
+nuclei = all h {aiso, adip, aorb}
+end

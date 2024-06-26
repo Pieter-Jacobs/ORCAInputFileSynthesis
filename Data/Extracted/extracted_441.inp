@@ -1,9 +1,0 @@
-! b97-3c looseopt nofinalgrid miniprint nomoprint defgrid3
-%pal nprocs 1 end
-%maxcore 4300
-#o1p=p1
-*xyz 0 1 
-o   0.000000000   0.808900000   0.000000000
-p   1.104000000  -0.404400000  -0.000000000
-p  -1.104000000  -0.404400000   0.000000000
-*

@@ -1,7 +1,7 @@
 import re
-from Classes.Helpers.OrcaDocumentationHandler import OrcaDocumentationHandler
+from Classes.Helpers.ORCADocumentationHandler import ORCADocumentationHandler
 
-class OrcaManualManipulator:
+class ORCAManualManipulator:
     """Static class that is able to handle textual data and can manipulate and extract parts of this text that are relevant
     to ORCA input files."""
     

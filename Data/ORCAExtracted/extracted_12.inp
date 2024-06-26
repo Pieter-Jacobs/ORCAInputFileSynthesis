@@ -1,0 +1,13 @@
+!uks pbe opt numfreq 6-31g(d,p) autoaux ri uno uco nofinalgrid d3bj defgrid3
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*

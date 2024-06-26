@@ -1,0 +1,23 @@
+! freq pbeh-3c rijcosx 
+%freq
+scalfreq 0.95
+end
+%output 
+xyzfile=true 
+end 
+%scf 
+maxiter 250 
+end
+%output
+print[p_hirshfeld] = 1
+end
+% maxcore
+3000
+%pal nprocs 16
+end
+#s1s(hashtag)s1
+*xyz 0 1 
+s   0.625000000  -1.005100000   0.000000000
+s   0.557900000   1.043800000  -0.000000000
+s  -1.182900000  -0.038700000   0.000000000
+*

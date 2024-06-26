@@ -1,0 +1,15 @@
+! b3lyp normalopt def2-svp rijcosx def2/j tightscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+#fc(hashtag)p
+*xyz 0 1 
+f  -1.386900000   0.003500000   0.000000000
+c  -0.069200000  -0.006400000   0.000000000
+p   1.456100000   0.003000000   0.000000000
+*

@@ -1,0 +1,25 @@
+! uks b3lyp def2-tzvp tightscf slowconv d3bj autoaux moread noiter 
+%moinp "3-2-3_b3lyp_fat_pathologic.qro"
+%basis
+newgto fe "cp(ppp)" end
+end
+%pal nprocs 32
+end
+%maxcore 7500
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+%output
+printlevel normal
+print[ p_basis       ] 2
+print[ p_mos         ] 1
+print[ p_density     ] 1
+print[ p_spindensity ] 1
+end
+#[ch]=s
+*xyz 0 2 
+c  -0.244400000  -0.000000000   0.000000000
+s   1.553900000   0.000000000   0.000000000
+h  -1.309400000   0.000000000   0.000000000
+*

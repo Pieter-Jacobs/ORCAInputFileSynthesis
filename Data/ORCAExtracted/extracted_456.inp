@@ -1,0 +1,23 @@
+!wb97x-d3 def2-tzvpp defgrid3 esd(abs)
+%maxcore 8192
+%pal
+nprocs 8
+end
+%tddft
+nroots=25
+iroot=1
+tda false
+end
+%esd
+gshessian "humulone_ag_cisketo_60.hess"
+hessflag vg
+unit nm
+lines gaussian
+usej false
+end
+#o=p(hashtag)p
+*xyz 0 1 
+o   0.000000000   0.000000000   0.000000000
+p   1.299000000   0.750000000   0.000000000
+p   2.598100000   1.500000000   0.000000000
+*

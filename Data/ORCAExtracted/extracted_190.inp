@@ -1,0 +1,23 @@
+! wb97x-d4 normalopt def2-svp rijcosx def2/j def2-svp/c tightscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+mode aoints
+nroots 4
+iroot 1
+irootmult triplet
+triplets true
+maxcore 2000
+end
+#o=p
+*xyz 0 1 
+o   1.215600000  -0.273200000   0.000000000
+p  -0.151800000   0.682800000   0.000000000
+h  -1.063800000  -0.409600000   0.000000000
+*

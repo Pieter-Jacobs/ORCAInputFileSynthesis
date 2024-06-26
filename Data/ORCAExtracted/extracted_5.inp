@@ -1,0 +1,16 @@
+!rhf ri-scs-mp2 def2-tzvp def2/j def2-tzvp/c   tightscf opt miniprint kdiis veryslowconv
+%base"riscs-mp2"
+%maxcore 3000
+%pal nprocs 16 end
+%scf
+    maxiter 999
+    autostart true
+end
+%geom 
+        maxiter 999 end
+#c(hashtag)n
+*xyz 0 1 
+c  -0.031700000   0.000000000   0.000000000
+n   1.128300000  -0.000000000   0.000000000
+h  -1.096700000  -0.000000000   0.000000000
+*

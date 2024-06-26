@@ -1,0 +1,9 @@
+!uks bp d3bj def2-svp ri def2/j uno uco
+%cpcm
+   epsilon 4.000
+end
+#[oh]
+*xyz 0 2 
+o   0.488900000   0.000000000   0.000000000
+h  -0.488900000   0.000000000   0.000000000
+*

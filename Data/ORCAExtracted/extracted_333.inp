@@ -1,0 +1,14 @@
+! uks b3lyp tzvp tzvp/j tightscf nofinalgrid  defgrid3
+%method
+specialgridatoms 26
+specialgridintacc 7
+end
+#[ph2]
+*xyz 0 2 
+p  -0.000000000   0.641500000   0.000000000
+h   1.048300000  -0.320800000   0.000000000
+h  -1.048300000  -0.320800000   0.000000000
+*
+%eprnmr 
+nuclei = all fe {fgrad, rho}
+end

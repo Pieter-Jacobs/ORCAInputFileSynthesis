@@ -1,0 +1,12 @@
+!uks bp86 opt def2-tzvp uno uco def2-tzvp/c nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 24
+end
+%scf
+maxiter 1000
+end
+#p(hashtag)[ph]
+*xyz 0 2 
+p   1.698000000   0.000800000   0.000000000
+p  -0.147000000  -0.001800000   0.000000000
+h  -1.551000000   0.001000000   0.000000000
+*

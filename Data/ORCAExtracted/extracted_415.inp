@@ -1,0 +1,7 @@
+! b3lyp def2-tzvp  tightscf opt nofinalgrid defgrid3
+#n(hashtag)s(hashtag)n
+*xyz 0 1 
+n  -1.362300000   0.347500000   0.000000000
+s   0.000000000  -0.695100000   0.000000000
+n   1.362300000   0.347500000   0.000000000
+*

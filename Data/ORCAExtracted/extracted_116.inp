@@ -1,0 +1,14 @@
+!rks tpssh 6-31g(d,p) autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj moread noiter  defgrid3
+%pal nprocs 24
+end
+%moinp "skatole_opt.gbw"
+%output 
+print[ p_basis ] 2 
+print[ p_mos ] 1 
+end
+#p(hashtag)[sh]
+*xyz 0 1 
+p   1.472900000   0.003300000   0.000000000
+s  -0.155100000  -0.007800000   0.000000000
+h  -1.317800000   0.004600000   0.000000000
+*

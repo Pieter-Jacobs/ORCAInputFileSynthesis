@@ -1,0 +1,9 @@
+! b97-3c sp normalscf finalgrid4 miniprint nomoprint defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+#b1=po1
+*xyz 0 1 
+b  -1.160300000  -0.319200000   0.000000000
+p   1.356800000  -0.198100000   0.000000000
+o  -0.196500000   0.517300000   0.000000000
+*

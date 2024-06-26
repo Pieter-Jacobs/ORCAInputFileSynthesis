@@ -1,0 +1,19 @@
+! dlpno-nevpt2 sp ri-jk conv def2-sv(p) def2/jk miniprint printbasis printmos moread
+%pal nprocs 40 end
+%maxcore 4000
+%moinp "sp_casscf_2s-p.gbw"
+%scf
+end
+%casscf
+nel aaaaa
+norb bbbbb
+mult 6
+nroots ddddd
+trafostep ri
+end
+#s=c=s
+*xyz 0 1 
+s  -1.798300000  -0.000000000   0.000000000
+c   0.000000000   0.000000000   0.000000000
+s   1.798300000  -0.000000000   0.000000000
+*

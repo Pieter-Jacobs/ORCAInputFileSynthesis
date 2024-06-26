@@ -1,0 +1,21 @@
+! b3lyp sp def2-svp rijcosx def2/j strongscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%scf
+scfmode direct
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+nroots 8
+triplets true
+maxcore 2000
+end
+#c1=s=s=1
+*xyz 0 1 
+c   0.000000000  -0.840100000  -0.000000000
+s  -1.106400000   0.420100000  -0.000000000
+s   1.106400000   0.420100000  -0.000000000
+*

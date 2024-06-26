@@ -1,0 +1,27 @@
+! normalopt def2-svp rijcosx def2/j def2-svp/c tightscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 6 end
+%maxcore 2000
+%method
+method dft
+functional hyb_gga_xc_wb97x_v
+end
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+mode aoints
+nroots 4
+iroot 1
+irootmult triplet
+triplets true
+maxcore 2000
+end
+#b(hashtag)s(hashtag)n
+*xyz 0 1 
+b   2.029200000   0.003000000   0.000000000
+s  -0.414900000  -0.009000000   0.000000000
+n  -1.614200000   0.006000000   0.000000000
+*

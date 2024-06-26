@@ -1,0 +1,13 @@
+!uks b3lyp opt freq 6-31g(d,p) autoaux rijcosx uno uco nofinalgrid nofinalgridx d3bj defgrid3
+%pal nprocs 32
+end
+%maxcore 7500
+%scf
+maxiter 500
+end
+#[ch]=o
+*xyz 0 2 
+c  -0.037000000  -0.000000000   0.000000000
+o   1.139000000   0.000000000   0.000000000
+h  -1.102000000   0.000000000   0.000000000
+*

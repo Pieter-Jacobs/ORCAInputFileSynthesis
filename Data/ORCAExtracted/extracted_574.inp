@@ -1,0 +1,28 @@
+! ri-wb2plyp normalopt numgrad def2-sv(p) def2-svp/c rijcosx def2/j tightscf miniprint nomoprint mp2gridx2 nofinalgrid kdiis nososcf float defgrid3
+%pal nprocs 40 end
+%maxcore 4000
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%mp2
+maxcore 4000
+density none
+end
+%cis
+mode riints
+nroots 2
+iroot 1
+irootmult singlet
+triplets true
+dcorr 3
+maxcore 4000
+end
+#n1=p(hashtag)s1
+*xyz 0 1 
+n  -0.023600000   0.887900000   0.000000000
+p   1.068700000  -0.429100000   0.000000000
+s  -1.045100000  -0.458800000   0.000000000
+*

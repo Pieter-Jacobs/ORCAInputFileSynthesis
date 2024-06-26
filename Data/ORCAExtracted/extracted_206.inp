@@ -1,0 +1,22 @@
+! ri-wb2plyp sp def2-svp def2-svp/c rijcosx def2/j strongscf miniprint nomoprint defgrid1 kdiis nososcf float
+%pal nprocs 1 end
+%maxcore 4300
+%scf
+guessmode fmatrix
+maxiter 512
+directresetfreq 10
+diismaxeq 10
+end
+%cis
+mode riints_disk
+nroots 4
+triplets true
+dcorr 1
+maxcore 4300
+end
+#of
+*xyz 0 1 
+o  -0.207900000   0.422000000   0.000000000
+f   1.090500000  -0.144300000   0.000000000
+h  -0.882600000  -0.277700000   0.000000000
+*
