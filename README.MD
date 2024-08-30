@@ -11,5 +11,5 @@ One important note is that to use the code in this repository, you should config
 
 Furthermore, to ensure you can run all the code, you can download the necessary dependencies by running the following:
 ```bash
-pip install rdkit langchain basis-set-exchange pandas selfies beautifulsoup4 fpdf pypdf openai molmod basis-set-exchange scikit-learn psutil sacrebleu langchain tiktoken
+pip install requirements.txt
 ```
