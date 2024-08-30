@@ -58,9 +58,10 @@ class Prompter:
             simple_input_descriptions, density_functional_descriptions,
             basis_set_descriptions, input_block_descriptions,
             input_block_settings, molecule_smiles)
-
+        print(prompt)
         improved_prompt = self.improve_prompt_with_llm(
             prompt)  # Try to make the prompt more human-like
+        print(improved_prompt)
         if not improved_prompt:
             return prompt
         return improved_prompt

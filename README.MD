@@ -1,6 +1,7 @@
 # Using Large Language Models for Domain Specific Language Synthesis: A Case Study for Quantum Chemistry Simulations with ORCA
 
-This repository encompasses all code used to run the experiments described in the study titled *"Using Large Language Models for Domain Specific Language Synthesis: A Case Study for Quantum Chemistry Simulations with ORCA"*s.  
+This repository encompasses all code used to run the experiments described in the study titled *"Developing Large Language Models for Quantum Chem-
+istry Simulation Input Generation"*.  
 
 In addition to the code for our system architecture, we include the datasets described in the study, which can be used for further research. The repository also contains some generally helpful classes.
 
