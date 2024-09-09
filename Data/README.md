@@ -4,7 +4,11 @@ This folder encompasses all datasets used in our research. Below, we explain its
 
 ## Documents
 
-This folder contains the documents used by RAG to add external context to the user prompt. This folder is left empty as we are not the authors of the documents used in our study. Therefore, users that want to test our RAG implementation should add the ORCA manual themselves to the `Documents/Regular` folder in both .txt and .pdf formats, named 'orca_manual_5.0.4'. After running the script to process the documents, their embeddings will be available in the `Documents/Embedded` folder.
+This folder contains the documents used by RAG to add external context to the user prompt. Note that the ORCA manual is copyrighted, and that we are not its copyright holders. The copyright notice is provided in the README in the `Documents` folder. We provide the PDF file of the manual in `Documents/Regular` folder. The manual can also be downloaded from the ORCA forum: https://orcaforum.kofo.mpg.de/index.php. Here, more recent versions of the manual are provided as well. 
+
+Moreover, while we provide a PDF file with the scraped pages of the ORCA input library website, the user can also scrape it themselves by running `Scripts/Scraping/input_file_library_scraper.py`.
+
+The folder also contains the FAISS embeddings used for RAG in the `Documents/Embedded` folder. These can also be recreated by the user by running the script to process the manual and the input file library documents (`embed.py`).
 
 ## ExtractedDocumentation
 

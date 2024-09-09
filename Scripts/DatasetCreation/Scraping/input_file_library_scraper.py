@@ -36,4 +36,4 @@ for i, link in enumerate(links):
     output_pdf.set_font("Arial", size=5) # font and textsize
     output_pdf.cell(5, txt=text, align="L")
 
-output_pdf.output('Data\Manual\orca_input_file_library.pdf')
+output_pdf.output(os.path.join('Data','Documents','Manual','orca_input_file_library.pdf'))
